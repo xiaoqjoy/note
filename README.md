@@ -1,6 +1,8 @@
 //构造函数
  //使自己的对象多次复制，同时实例根据设置的访问等级可以访问其内部的属性和方法
  //当对象被实例化后，构造函数会立即执行它所包含的任何代码
+ 
+ 
  function myObject(msg){
      //特权属性(公有属性)
      this.myMsg = msg; //只在被实例化后的实例中可调用
@@ -39,6 +41,9 @@
  }
  //实例化
  var m1 = new myObject('111');
+ 
+ 
+ 
  //---- 测试属性 ----//
  //console.log(myObject.name); //china
  //console.log(m1.name); //undefined, 静态属性不适用于一般实例
@@ -46,12 +51,14 @@
  //console.log(myObject.address); //undefined, myObject中的this指的不是函数本身，而是调用address的对象，而且只能是对象
  //console.log(m1.address); //上海 此时this指的是实例化后的m1
  
+ 
  //---- 测试方法 ----//
  //myObject.alertname(); //china,直接调用函数的类方法
  //m1.alertname(); //FF: m1.alertname is not a function, alertname 是myObject类的方法，和实例对象没有直接关系
  //m1.constructor.alertname(); //china, 调用该对象构造函数（类函数）的方法（函数）
  //m1.sayHello(); //hello everyone, myObject类的prototype原型下的方法将会被实例继承
  //myObject.sayHello(); //myObject.sayHello is not a function，sayHello是原型方法，不是类的方法
+ 
  
  //---- 测试prototype ----//
  //console.log(m1.prototype); //undefined, 实例对象没有prototype
