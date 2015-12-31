@@ -18,25 +18,25 @@
          alert(that.name);
      }
      
-     //特权方法(公有方法)
-     //能被外部公开访问
-     //这个方法每次实例化都要重新构造而prototype是原型共享，所有实例化后，都共同引用同一个
+     //特权方法(公有方法)  
+     //能被外部公开访问   
+     //这个方法每次实例化都要重新构造而prototype是原型共享，所有实例化后，都共同引用同一个  
      this.sayAge = function(){
          alert(name); //在公有方法中可以访问私有成员
      }
      
-     //私有和特权成员在函数的内部，在构造函数创建的每个实例中都会包含同样的私有和特权成员的副本，
-     //因而实例越多占用的内存越多
+     //私有和特权成员在函数的内部，在构造函数创建的每个实例中都会包含同样的私有和特权成员的副本，  
+     //因而实例越多占用的内存越多 
  }
- 
- //公有方法
- //适用于通过new关键字实例化的该对象的每个实例
- //向prototype中添加成员将会把新方法添加到构造函数的底层中去
+  
+ //公有方法   
+ //适用于通过new关键字实例化的该对象的每个实例   
+ //向prototype中添加成员将会把新方法添加到构造函数的底层中去  
  myObject.prototype.sayHello = function(){
      alert('hello everyone!');
  }
- >//静态属性
- >//适用于对象的特殊实例，就是作为Function对象实例的构造函数本身
+ //静态属性    
+ //适用于对象的特殊实例，就是作为Function对象实例的构造函数本身   
  myObject.name = 'china';
  //静态方法
  myObject.alertname = function(){
@@ -47,9 +47,9 @@
  
  //---- 测试属性 ----//
  //console.log(myObject.name); //china
- //console.log(m1.name); //undefined, 静态属性不适用于一般实例
- //console.log(m1.constructor.name); //china, 想访问类的静态属性，先访问该实例的构造函数，然后在访问该类静态属性
- //console.log(myObject.address); //undefined, myObject中的this指的不是函数本身，而是调用address的对象，而且只能是对象
+ //console.log(m1.name); //undefined, 静态属性不适用于一般实例  
+ //console.log(m1.constructor.name); //china, 想访问类的静态属性，先访问该实例的构造函数，然后在访问该类静态属性  
+ //console.log(myObject.address); //undefined, myObject中的this指的不是函数本身，而是调用address的对象，而且只能是对象  
  //console.log(m1.address); //上海 此时this指的是实例化后的m1
  
  
