@@ -40,13 +40,16 @@
  >//静态属性       
  //适用于对象的特殊实例，就是作为Function对象实例的构造函数本身     
  
- myObject.name = 'china';  
+ myObject.name = 'china';
+ 
     //静态方法  
+    
  myObject.alertname = function(){  
      alert(this.name);  
  }    
  
- //实例化  
+> //实例化  
+ 
  var m1 = new myObject('111');   
  
  >//---- 测试属性 ----//
@@ -64,7 +67,6 @@
  //m1.sayHello(); //hello everyone, myObject类的prototype原型下的方法将会被实例继承  
  //myObject.sayHello(); //myObject.sayHello is not a function，sayHello是原型方法，不是类的方
  <br/>
- 
  <br/>
  >//---- 测试prototype ----//  
  //console.log(m1.prototype); //undefined, 实例对象没有prototype   
