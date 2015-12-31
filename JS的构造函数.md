@@ -2,7 +2,7 @@
  >//使自己的对象多次复制，同时实例根据设置的访问等级可以访问其内部的属性和方法   
  >//当对象被实例化后，构造函数会立即执行它所包含的任何代码  
  
- _function myObject(msg){_  
+ function myObject(msg){
      //特权属性(公有属性)  
       this.myMsg = msg; //只在被实例化后的实例中可调用  
       this.address = '上海';  
@@ -28,14 +28,17 @@
      //因而实例越多占用的内存越多 
  }
   
- //公有方法   
+ >//公有方法   
  //适用于通过new关键字实例化的该对象的每个实例   
  //向prototype中添加成员将会把新方法添加到构造函数的底层中去  
+ 
  myObject.prototype.sayHello = function(){
      alert('hello everyone!');
  }
- //静态属性       
+ 
+ >//静态属性       
  //适用于对象的特殊实例，就是作为Function对象实例的构造函数本身     
+ 
  myObject.name = 'china';  
  //静态方法  
  myObject.alertname = function(){  
