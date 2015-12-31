@@ -4,7 +4,7 @@
 
 >>访问DOM元素是有代价的（“过桥费”你懂的），修改元素代价更是昂贵，因为它会导致浏览器重新计算页面的几何变化（重排和重绘）。
 当然最坏的情况是在循环中访问或者修改元素，看下面两段代码：
-
+```javascript
 var times = 15000;
 
 // code1
@@ -21,7 +21,8 @@ for(var i = 0; i < times; i++) {
   str += 'a';
 }
 document.getElementById('myDiv2').innerHTML = str;
-console.timeEnd(2);
+console.timeEnd(2);   
+```
 结果第一次运行的时间居然是第二次的千倍！(chrome 版本 44.0.2403.130 m)
 
 1: 2846.700ms 2: 1.046ms
