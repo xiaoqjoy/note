@@ -36,3 +36,5 @@ console.timeEnd(2);
 总结：
 
 能减少DOM访问的次数则尽量减少，尽量留在ECMAScript这端处理。
+
+#注意console.time和console.timeEnd的用法，可以用来测试程序运行的时间。
