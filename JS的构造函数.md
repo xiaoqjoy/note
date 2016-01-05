@@ -1,7 +1,7 @@
  #构造函数
  >//使自己的对象多次复制，同时实例根据设置的访问等级可以访问其内部的属性和方法   
  //当对象被实例化后，构造函数会立即执行它所包含的任何代码  
-
+```javascript
  function myObject(msg){
  
      //特权属性(公有属性)  
@@ -51,7 +51,7 @@
 > //实例化  
  
  var m1 = new myObject('111');   
- 
+```
  >//---- 测试属性 ----//
  //console.log(myObject.name); //china
  //console.log(m1.name); //undefined, 静态属性不适用于一般实例  
