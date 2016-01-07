@@ -59,6 +59,9 @@ var cat = new Cat();
 //通过call或apply方法，将原本属于Animal对象的showName()方法交给对象cat来使用了。    
 //输入结果为"Cat"    
 animal.showName.call(cat,",");       //   Cat
+
+错误： animal.call(cat)   这里的animal是一个对象，放到cat里面的只能是函数对象的引用，不能是实例化的animal对象，所以animal.showName函数对象的引用才可以
+
 //animal.showName.apply(cat,[]);  
 ```
 
@@ -78,6 +81,8 @@ function Animal(name){
     
 function Cat(name){    
     Animal.call(this, name);    //相当于直接调用了animal里面的所有的属性和方法，这里函数名animal也是一个对象
+    
+                                //这里的一定要用this，不能像animal直接用函数名，这里的this指向  Cat{}  这个对象，如果用Cat则指向整个函数了 function Cat(name) ，所以一定要用this，否则call两边都是实例化的对象
     
     //this.name = name;      
     //this.showName = function(){      
