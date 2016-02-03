@@ -2,9 +2,9 @@
 Hello {{'World'}}!
 ```
   
- ** ng-app 指令告诉 AngularJS，div 元素是 AngularJS 应用程序 的"所有者"。   
+ **ng-app 指令告诉 AngularJS，div 元素是 AngularJS 应用程序 的"所有者"。   
   ng-model 指令把输入域的值绑定到应用程序变量 name。  
-  ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML。**
+  ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML**
   
   ```javascript
   <p>名字 : <input type="text" ng-model="name"></p>   
@@ -30,7 +30,7 @@ Hello {{'World'}}!
   </div>
   ```
   
- ** AngularJS 表达式写在双大括号内：{{ expression }}。  
+ **AngularJS 表达式写在双大括号内：{{ expression }}。  
   AngularJS 表达式把数据绑定到 HTML，这与 ng-bind 指令有异曲同工之妙。   
   AngularJS 将在表达式书写的位置"输出"数据。  
   AngularJS 表达式 很像 JavaScript 表达式：它们可以包含文字、运算符和变量**
