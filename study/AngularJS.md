@@ -2,9 +2,9 @@
 Hello {{'World'}}!
 ```
   
- ** ng-app 指令告诉 AngularJS，div 元素是 AngularJS 应用程序 的"所有者"。   
+ **ng-app 指令告诉 AngularJS，div 元素是 AngularJS 应用程序 的"所有者"。   
   ng-model 指令把输入域的值绑定到应用程序变量 name。  
-  ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML。**
+  ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML**
   
   ```javascript
   <p>名字 : <input type="text" ng-model="name"></p>   
