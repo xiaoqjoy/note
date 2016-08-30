@@ -1,0 +1,53 @@
+设置系统环境变量，运行Java JDK
+JAVA_HOME    D:\JDK
+%JAVA_HOME%\bin;
+
+
+set path   (设置临时环境变量)
+
+set classpath=c:myclass;   .;c:myclass     set classpath=.;%classpath%
+
+编译  javac *.java    (检查语法错误,编译的是Java文件)    
+
+运行  java *
+
+
+
+关键字、标示符（Java中严格区分大小写）、注释（和js类似）
+
+/**
+Java专用注释符（文档注释）
+
+*/
+
+
+主函数格式
+class Demo
+{
+	public static void main(String[] agrs)
+	{
+	 	System.out.printIn("hello world!");
+	}
+}
+
+
+第一步先写注释（需求），写js也是如此，高手的涵养。
+（
+思路：
+1、定义一个类，因为Java程序都定义类中，Java程序都是以类的形势存在，类的形势其实就是一个字节码文件最终体现。
+2、定义一个主函数。为了让该类可以独立运行。
+
+
+步骤：
+1、用class关键字来完成类的定义，并起一个阅读性强的类名。
+2、主函数：public static void main(String[] args)这是固定格式的。jvm认识
+
+代码仅仅是思想的一种体现形式。 
+）
+
+
+
+用git更新此文件，实现家和公司的共享
+
+
+
