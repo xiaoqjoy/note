@@ -26,7 +26,7 @@ class Demo
 {
 	public static void main(String[] agrs)
 	{
-	 	System.out.printIn("hello world!");
+	 	System.out.println("hello world!");
 	}
 }
 
