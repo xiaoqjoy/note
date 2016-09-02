@@ -4,3 +4,30 @@ background: url(../images/consult.jpg) no-repeat center center;
     width: 100%;
     height: 70%;
     background-size: cover;
+
+
+
+想要消除ul li  里面前面的margin  需要在ul上面写margin:0px;padding:0px;
+
+
+
+
+css向上样式
+.box{
+    position:relative;
+}
+.box:after, .box:before {
+    border: 10px solid transparent;
+    border-bottom: 10px solid #f2f2f2;
+    width: 0px;
+    height: 1px;
+    position: absolute;
+    top: -21px;
+    right: 10px;
+    content: ' ';
+}
+.box:before {
+    border-bottom-color: #c1c1c1;
+    right: 10px;
+    top: -22px;
+}
