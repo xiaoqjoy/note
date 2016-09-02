@@ -17,7 +17,6 @@ set classpath=c:myclass;   .;c:myclass     set classpath=.;%classpath%
 
 /**
 Java专用注释符（文档注释）
-
 */
 
 
@@ -50,6 +49,39 @@ class Demo
 字符常量     将一个数字字母或者符号用单引号('')标示
 
 字符串常量   将一个或者多个字符用双引号("")标示
+
+
+负数的二进制的最高位是1
+
+
+Java强类型语言   //数据类型   变量名 = 初始化值
+
+
+
+整数类型（byte > short > int > long）
+
+浮点类型（float，double）
+
+字符型（char）
+
+布尔型（boolean）
+
+类（class）
+
+接口（interface）
+
+数组（[]）
+
+
+
+
+自动类型提升
+
+
+
+
+
+
 
 
 
