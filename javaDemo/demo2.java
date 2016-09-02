@@ -1,4 +1,4 @@
-class varDemo
+锘縞lass varDemo
 {
 	public static void main(String[] args)
 	{
@@ -9,7 +9,7 @@ class varDemo
 		System.out.println(x);
 		
 		byte b = 3;
-		b = (byte)(b + 4);   //强制类型转换
+		b = (byte)(b + 4);   //寮哄埗绫诲瀷杞崲
 		System.out.println(b);
 		
 		
