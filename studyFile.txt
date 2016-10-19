@@ -1,26 +1,26 @@
-ÉèÖÃÏµÍ³»·¾³±äÁ¿£¬ÔËÐÐJava JDK
+è®¾ç½®ç³»ç»ŸçŽ¯å¢ƒå˜é‡ï¼Œè¿è¡ŒJava JDK
 JAVA_HOME    D:\JDK
 %JAVA_HOME%\bin;
 
 
-set path   (ÉèÖÃÁÙÊ±»·¾³±äÁ¿)
+set path   (è®¾ç½®ä¸´æ—¶çŽ¯å¢ƒå˜é‡)
 
 set classpath=c:myclass;   .;c:myclass     set classpath=.;%classpath%
 
-±àÒë  javac *.java    (¼ì²éÓï·¨´íÎó,±àÒëµÄÊÇJavaÎÄ¼þ)    
+ç¼–è¯‘  javac *.java    (æ£€æŸ¥è¯­æ³•é”™è¯¯,ç¼–è¯‘çš„æ˜¯Javaæ–‡ä»¶)    
 
-ÔËÐÐ  java *
+è¿è¡Œ  java *
 
 
 
-¹Ø¼ü×Ö¡¢±êÊ¾·û£¨JavaÖÐÑÏ¸ñÇø·Ö´óÐ¡Ð´£©¡¢×¢ÊÍ£¨ºÍjsÀàËÆ£©
+å…³é”®å­—ã€æ ‡ç¤ºç¬¦ï¼ˆJavaä¸­ä¸¥æ ¼åŒºåˆ†å¤§å°å†™ï¼‰ã€æ³¨é‡Šï¼ˆå’Œjsç±»ä¼¼ï¼‰
 
 /**
-Java×¨ÓÃ×¢ÊÍ·û£¨ÎÄµµ×¢ÊÍ£©
+Javaä¸“ç”¨æ³¨é‡Šç¬¦ï¼ˆæ–‡æ¡£æ³¨é‡Šï¼‰
 */
 
 
-Ö÷º¯Êý¸ñÊ½
+ä¸»å‡½æ•°æ ¼å¼
 class Demo
 {
 	public static void main(String[] agrs)
@@ -30,77 +30,77 @@ class Demo
 }
 
 
-µÚÒ»²½ÏÈÐ´×¢ÊÍ£¨ÐèÇó£©£¬Ð´jsÒ²ÊÇÈç´Ë£¬¸ßÊÖµÄº­Ñø¡£
-£¨
-Ë¼Â·£º
-1¡¢¶¨ÒåÒ»¸öÀà£¬ÒòÎªJava³ÌÐò¶¼¶¨ÒåÀàÖÐ£¬Java³ÌÐò¶¼ÊÇÒÔÀàµÄÐÎÊÆ´æÔÚ£¬ÀàµÄÐÎÊÆÆäÊµ¾ÍÊÇÒ»¸ö×Ö½ÚÂëÎÄ¼þ×îÖÕÌåÏÖ¡£
-2¡¢¶¨ÒåÒ»¸öÖ÷º¯Êý¡£ÎªÁËÈÃ¸ÃÀà¿ÉÒÔ¶ÀÁ¢ÔËÐÐ¡£
+ç¬¬ä¸€æ­¥å…ˆå†™æ³¨é‡Šï¼ˆéœ€æ±‚ï¼‰ï¼Œå†™jsä¹Ÿæ˜¯å¦‚æ­¤ï¼Œé«˜æ‰‹çš„æ¶µå…»ã€‚
+ï¼ˆ
+æ€è·¯ï¼š
+1ã€å®šä¹‰ä¸€ä¸ªç±»ï¼Œå› ä¸ºJavaç¨‹åºéƒ½å®šä¹‰ç±»ä¸­ï¼ŒJavaç¨‹åºéƒ½æ˜¯ä»¥ç±»çš„å½¢åŠ¿å­˜åœ¨ï¼Œç±»çš„å½¢åŠ¿å…¶å®žå°±æ˜¯ä¸€ä¸ªå­—èŠ‚ç æ–‡ä»¶æœ€ç»ˆä½“çŽ°ã€‚
+2ã€å®šä¹‰ä¸€ä¸ªä¸»å‡½æ•°ã€‚ä¸ºäº†è®©è¯¥ç±»å¯ä»¥ç‹¬ç«‹è¿è¡Œã€‚
 
 
-²½Öè£º
-1¡¢ÓÃclass¹Ø¼ü×ÖÀ´Íê³ÉÀàµÄ¶¨Òå£¬²¢ÆðÒ»¸öÔÄ¶ÁÐÔÇ¿µÄÀàÃû¡£
-2¡¢Ö÷º¯Êý£ºpublic static void main(String[] args)ÕâÊÇ¹Ì¶¨¸ñÊ½µÄ¡£jvmÈÏÊ¶
+æ­¥éª¤ï¼š
+1ã€ç”¨classå…³é”®å­—æ¥å®Œæˆç±»çš„å®šä¹‰ï¼Œå¹¶èµ·ä¸€ä¸ªé˜…è¯»æ€§å¼ºçš„ç±»åã€‚
+2ã€ä¸»å‡½æ•°ï¼špublic static void main(String[] args)è¿™æ˜¯å›ºå®šæ ¼å¼çš„ã€‚jvmè®¤è¯†
 
-´úÂë½ö½öÊÇË¼ÏëµÄÒ»ÖÖÌåÏÖÐÎÊ½¡£ 
-£©
-
-
-
-×Ö·û³£Á¿     ½«Ò»¸öÊý×Ö×ÖÄ¸»òÕß·ûºÅÓÃµ¥ÒýºÅ('')±êÊ¾
-
-×Ö·û´®³£Á¿   ½«Ò»¸ö»òÕß¶à¸ö×Ö·ûÓÃË«ÒýºÅ("")±êÊ¾
-
-
-¸ºÊýµÄ¶þ½øÖÆµÄ×î¸ßÎ»ÊÇ1
-
-
-JavaÇ¿ÀàÐÍÓïÑÔ   //Êý¾ÝÀàÐÍ   ±äÁ¿Ãû = ³õÊ¼»¯Öµ
+ä»£ç ä»…ä»…æ˜¯æ€æƒ³çš„ä¸€ç§ä½“çŽ°å½¢å¼ã€‚ 
+ï¼‰
 
 
 
-ÕûÊýÀàÐÍ£¨byte > short > int > long£©
+å­—ç¬¦å¸¸é‡     å°†ä¸€ä¸ªæ•°å­—å­—æ¯æˆ–è€…ç¬¦å·ç”¨å•å¼•å·('')æ ‡ç¤º
 
-¸¡µãÀàÐÍ£¨float£¬double£©
-
-×Ö·ûÐÍ£¨char£©
-
-²¼¶ûÐÍ£¨boolean£©
-
-Àà£¨class£©
-
-½Ó¿Ú£¨interface£©
-
-Êý×é£¨[]£©
+å­—ç¬¦ä¸²å¸¸é‡   å°†ä¸€ä¸ªæˆ–è€…å¤šä¸ªå­—ç¬¦ç”¨åŒå¼•å·("")æ ‡ç¤º
 
 
-×Ô¶¯ÀàÐÍÌáÉý
+è´Ÿæ•°çš„äºŒè¿›åˆ¶çš„æœ€é«˜ä½æ˜¯1
+
+
+Javaå¼ºç±»åž‹è¯­è¨€   //æ•°æ®ç±»åž‹   å˜é‡å = åˆå§‹åŒ–å€¼
 
 
 
-&&   ¶ÌÂ·¡£µ±×ó±ßÊÇfalseÊ±£¬ÓÒ±ß²»²ÎÓëÔËËãµÄ
+æ•´æ•°ç±»åž‹ï¼ˆbyte > short > int > longï¼‰
 
-&    »á½øÐÐ2´ÎÔËËã£¬ÎÞÂÛ×ó±ßµÄÔËËãÊÇÊ²Ã´£¬ÓÒ±ß¶¼²ÎÓëÔËËã
+æµ®ç‚¹ç±»åž‹ï¼ˆfloatï¼Œdoubleï¼‰
+
+å­—ç¬¦åž‹ï¼ˆcharï¼‰
+
+å¸ƒå°”åž‹ï¼ˆbooleanï¼‰
+
+ç±»ï¼ˆclassï¼‰
+
+æŽ¥å£ï¼ˆinterfaceï¼‰
+
+æ•°ç»„ï¼ˆ[]ï¼‰
+
+
+è‡ªåŠ¨ç±»åž‹æå‡
+
+
+
+&&   çŸ­è·¯ã€‚å½“å·¦è¾¹æ˜¯falseæ—¶ï¼Œå³è¾¹ä¸å‚ä¸Žè¿ç®—çš„
+
+&    ä¼šè¿›è¡Œ2æ¬¡è¿ç®—ï¼Œæ— è®ºå·¦è¾¹çš„è¿ç®—æ˜¯ä»€ä¹ˆï¼Œå³è¾¹éƒ½å‚ä¸Žè¿ç®—
 
 
 
 
-||   µ±×ó±ßÊÇtrueÊ±£¬ÓÒ±ß²»²ÎÓëÔËËãµÄ
+||   å½“å·¦è¾¹æ˜¯trueæ—¶ï¼Œå³è¾¹ä¸å‚ä¸Žè¿ç®—çš„
 
-|    »á½øÐÐ2´ÎÔËËã£¬ÎÞÂÛ×ó±ßµÄÔËËãÊÇÊ²Ã´£¬ÓÒ±ß¶¼²ÎÓëÔËËã
+|    ä¼šè¿›è¡Œ2æ¬¡è¿ç®—ï¼Œæ— è®ºå·¦è¾¹çš„è¿ç®—æ˜¯ä»€ä¹ˆï¼Œå³è¾¹éƒ½å‚ä¸Žè¿ç®—
 
 
 
 System.out.println(6&3);
-//ÓëÔËËã
+//ä¸Žè¿ç®—
 		
 System.out.println(6|3);
-//»òÔËËã
+//æˆ–è¿ç®—
 		
 System.out.println(~6);
-//·´Âë
+//åç 
 
 
-jsÃ»ÓÐ´úÂë¿éµÄ¸ÅÄî
+jsæ²¡æœ‰ä»£ç å—çš„æ¦‚å¿µ
 {
    var a = 1;
    console.log(a)
@@ -108,76 +108,74 @@ jsÃ»ÓÐ´úÂë¿éµÄ¸ÅÄî
    console.log(a)
 
  
-ÕâÀïµÄa¶¼ÄÜ´òÓ¡³öÀ´
+è¿™é‡Œçš„aéƒ½èƒ½æ‰“å°å‡ºæ¥
 
 
 
-JavaÓÐ´úÂë¿éµÄ¸ÅÄî(±äÁ¿Çø¼ä¡¢×÷ÓÃÓò)
-¾Ö²¿´úÂë¿é¿ÉÒÔ¶¨Òå¾Ö²¿±äÁ¿µÄÉúÃüÖÜÆÚ
+Javaæœ‰ä»£ç å—çš„æ¦‚å¿µ(å˜é‡åŒºé—´ã€ä½œç”¨åŸŸ)
+å±€éƒ¨ä»£ç å—å¯ä»¥å®šä¹‰å±€éƒ¨å˜é‡çš„ç”Ÿå‘½å‘¨æœŸ
 
 {
-  //´úÂë¿é
+  //ä»£ç å—
 }
 
 
 if:
-	1¡¢¶Ô¾ßÌåµÄÖµ½øÐÐÅÐ¶Ï
-	2¡¢¶ÔÇø¼äÅÐ¶Ï
-	3¡¢¶ÔÔËËã½á¹ûÊÇbooleanÀàÐÍµÄ±í´ïÊ½½øÐÐÅÐ¶Ï
+	1ã€å¯¹å…·ä½“çš„å€¼è¿›è¡Œåˆ¤æ–­
+	2ã€å¯¹åŒºé—´åˆ¤æ–­
+	3ã€å¯¹è¿ç®—ç»“æžœæ˜¯booleanç±»åž‹çš„è¡¨è¾¾å¼è¿›è¡Œåˆ¤æ–­
 
 
-switch£º
-	1¡¢¶Ô¾ßÌåµÄÖµ½øÐÐÅÐ¶Ï
-	2¡¢ÖµµÃ¸öÊýÍ¨³£ÊÇ¹Ì¶¨µÄ
+switchï¼š
+	1ã€å¯¹å…·ä½“çš„å€¼è¿›è¡Œåˆ¤æ–­
+	2ã€å€¼å¾—ä¸ªæ•°é€šå¸¸æ˜¯å›ºå®šçš„
 
-¶ÔÓÚ¼¸¸ö¹Ì¶¨µÄÖµÅÐ¶Ï£¬½¨ÒéÊ¹ÓÃswitchÓï¾ä£¬ÒòÎªswitchÓï¾ä»á½«¾ßÌåµÄ´ð°¸¶¼¼ÓÔØ½øÄÚ´æ¡£
-Ð§ÂÊÏà¶Ô¸ßÒ»µã¡£
+å¯¹äºŽå‡ ä¸ªå›ºå®šçš„å€¼åˆ¤æ–­ï¼Œå»ºè®®ä½¿ç”¨switchè¯­å¥ï¼Œå› ä¸ºswitchè¯­å¥ä¼šå°†å…·ä½“çš„ç­”æ¡ˆéƒ½åŠ è½½è¿›å†…å­˜ã€‚
+æ•ˆçŽ‡ç›¸å¯¹é«˜ä¸€ç‚¹ã€‚
 
-break£ºÌø³ö
-break×÷ÓÃµÄ·¶Î§£ºÒªÃ´ÊÇswitchÓï¾ä£¬ÒªÃ´ÊÇÑ­»·Óï¾ä¡£
-µ±breakÓï¾ä´æÔÚÊ±£¬ÏÂÃæ²»Òª¶¨ÒåÆäËûÓï¾ä£¬ÒòÎªÖ´ÐÐ²»µ½
+breakï¼šè·³å‡º
+breakä½œç”¨çš„èŒƒå›´ï¼šè¦ä¹ˆæ˜¯switchè¯­å¥ï¼Œè¦ä¹ˆæ˜¯å¾ªçŽ¯è¯­å¥ã€‚
+å½“breakè¯­å¥å­˜åœ¨æ—¶ï¼Œä¸‹é¢ä¸è¦å®šä¹‰å…¶ä»–è¯­å¥ï¼Œå› ä¸ºæ‰§è¡Œä¸åˆ°
 
-breakÌø³öËùÔÚµÄµ±Ç°Ñ­»·
-Èç¹û³öÏÖÁËÑ­»·Ç¶Ì×£¬breakÏëÒªÌø³öÖ¸¶¨µÄÑ­»·£¬¿ÉÒÔÍ¨¹ý±êºÅÀ´Íê³É
+breakè·³å‡ºæ‰€åœ¨çš„å½“å‰å¾ªçŽ¯
+å¦‚æžœå‡ºçŽ°äº†å¾ªçŽ¯åµŒå¥—ï¼Œbreakæƒ³è¦è·³å‡ºæŒ‡å®šçš„å¾ªçŽ¯ï¼Œå¯ä»¥é€šè¿‡æ ‡å·æ¥å®Œæˆ
  
  
-continue:¼ÌÐø
-×÷ÓÃµÄ·¶Î§£ºÑ­»·µÄ½á¹¹
+continue:ç»§ç»­
+ä½œç”¨çš„èŒƒå›´ï¼šå¾ªçŽ¯çš„ç»“æž„
 
-continue£º½áÊø±¾´ÎÑ­»·£¬¼ÌÐøÏÂ´ÎÑ­»·¡£
-Èç¹ûcontinueµ¥¶À´æÔÚÊ±£¬ÏÂÃæ²»ÒªÓÐÈÎºÎÓï¾ä£¬ÒòÎªÖ´ÐÐ²»µ½
+continueï¼šç»“æŸæœ¬æ¬¡å¾ªçŽ¯ï¼Œç»§ç»­ä¸‹æ¬¡å¾ªçŽ¯ã€‚
+å¦‚æžœcontinueå•ç‹¬å­˜åœ¨æ—¶ï¼Œä¸‹é¢ä¸è¦æœ‰ä»»ä½•è¯­å¥ï¼Œå› ä¸ºæ‰§è¡Œä¸åˆ°
 
 
 
-º¯Êý¾ÍÊÇ¶¨ÒåÔÚÀàÖÐµÄ¾ßÓÐÌØ¶¨¹¦ÄÜµÄÒ»¶Î¶ÀÁ¢Ð¡³ÌÐò
-º¯ÊýÒ²³ÆÎª·½·¨
+å‡½æ•°å°±æ˜¯å®šä¹‰åœ¨ç±»ä¸­çš„å…·æœ‰ç‰¹å®šåŠŸèƒ½çš„ä¸€æ®µç‹¬ç«‹å°ç¨‹åº
+å‡½æ•°ä¹Ÿç§°ä¸ºæ–¹æ³•
 
-¶¨Òåº¯ÊýµÄ¸ñÊ½£º
+å®šä¹‰å‡½æ•°çš„æ ¼å¼ï¼š
 
-ÐÞÊÎ·û ·µ»ØÖµÀàÐÍ º¯ÊýÃû£¨²ÎÊýÀàÐÍ ÐÎÊ½²ÎÊý1£¬²ÎÊýÀàÐÍ ÐÎÊ½²ÎÊý2£¬...£©
+ä¿®é¥°ç¬¦ è¿”å›žå€¼ç±»åž‹ å‡½æ•°åï¼ˆå‚æ•°ç±»åž‹ å½¢å¼å‚æ•°1ï¼Œå‚æ•°ç±»åž‹ å½¢å¼å‚æ•°2ï¼Œ...ï¼‰
 {
-	Ö´ÐÐÓï¾ä£»
-	return ·µ»ØÖµ£»
+	æ‰§è¡Œè¯­å¥ï¼›
+	return è¿”å›žå€¼ï¼›
 }
 
-ÌØÊâÇé¿ö£º
-¹¦ÄÜÃ»ÓÐ¾ßÌåµÄ·µ»ØÖµ¡£
+ç‰¹æ®Šæƒ…å†µï¼š
+åŠŸèƒ½æ²¡æœ‰å…·ä½“çš„è¿”å›žå€¼ã€‚
 
-ÕâÊ±returnµÄºóÃæÖ±½ÓÓÃ·ÖºÅ½áÊø
-·µ»ØÖµÀàÐÍÔõÃ´ÌåÏÖÄØ£¿ÒòÎªÃ»ÓÐ¾ßÌåÖµ£¬ËùÓÐ²»¿ÉÒÔÐ´¾ßÌåµÄÊý¾ÝÀàÐÍ¡£
-ÔÚJavaÖÐÖ»ÄÜÓÃÒ»¸ö¹Ø¼ü×ÖÀ´±íÊ¾ÕâÖÖÇé¿ö¡£¹Ø¼ü×ÖÊÇ£ºvoid¡£
+è¿™æ—¶returnçš„åŽé¢ç›´æŽ¥ç”¨åˆ†å·ç»“æŸ
+è¿”å›žå€¼ç±»åž‹æ€Žä¹ˆä½“çŽ°å‘¢ï¼Ÿå› ä¸ºæ²¡æœ‰å…·ä½“å€¼ï¼Œæ‰€æœ‰ä¸å¯ä»¥å†™å…·ä½“çš„æ•°æ®ç±»åž‹ã€‚
+åœ¨Javaä¸­åªèƒ½ç”¨ä¸€ä¸ªå…³é”®å­—æ¥è¡¨ç¤ºè¿™ç§æƒ…å†µã€‚å…³é”®å­—æ˜¯ï¼švoidã€‚
 
-×Ü½á£º Ã»ÓÐ¾ßÌå·µ»ØÖµÊ±£¬·µ»ØÖµÀàÐÍÓÃvoidÀ´±íÊ¾¡£
+æ€»ç»“ï¼š æ²¡æœ‰å…·ä½“è¿”å›žå€¼æ—¶ï¼Œè¿”å›žå€¼ç±»åž‹ç”¨voidæ¥è¡¨ç¤ºã€‚
 
-×¢Òâ£º Èç¹û·µ»ØÖµÀàÐÍÊÇvoid£¬ÄÇÃ´º¯ÊýÖÐµÄreturnÓï¾ä¿ÉÒÔÊ¡ÂÔ²»Ð´¡£
+æ³¨æ„ï¼š å¦‚æžœè¿”å›žå€¼ç±»åž‹æ˜¯voidï¼Œé‚£ä¹ˆå‡½æ•°ä¸­çš„returnè¯­å¥å¯ä»¥çœç•¥ä¸å†™ã€‚
 
-	º¯ÊýÖÐÖ»ÄÜµ÷ÓÃº¯Êý£¬²»¿ÉÒÔÔÚº¯ÊýÄÚ²¿¶¨Òåº¯Êý¡££¨publicÊÇº¯ÊýµÄ¿ªÊ¼£©
+	å‡½æ•°ä¸­åªèƒ½è°ƒç”¨å‡½æ•°ï¼Œä¸å¯ä»¥åœ¨å‡½æ•°å†…éƒ¨å®šä¹‰å‡½æ•°ã€‚ï¼ˆpublicæ˜¯å‡½æ•°çš„å¼€å§‹ï¼‰
 
-	¶¨Òåº¯ÊýÊ±£¬º¯ÊýµÄ½á¹ûÓ¦¸Ã·µ»Ø¸øµ÷ÓÃÕß£¬½»ÓÉµ÷ÓÃÕß´¦Àí¡£
+	å®šä¹‰å‡½æ•°æ—¶ï¼Œå‡½æ•°çš„ç»“æžœåº”è¯¥è¿”å›žç»™è°ƒç”¨è€…ï¼Œäº¤ç”±è°ƒç”¨è€…å¤„ç†ã€‚
 
 
-
-11111111111111111111111
 
  
 	
