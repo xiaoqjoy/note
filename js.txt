@@ -72,8 +72,10 @@ table{border-collapse:collapse;}
 
 
 
-1111
+<input type="file" accept=".txt">    只 接受TXT文件的上传
 
+
+enctype="multipart/form-data"    form表单提交
 
 
 
