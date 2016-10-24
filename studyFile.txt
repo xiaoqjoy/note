@@ -1,4 +1,4 @@
-设置系统环境变量，运行Java JDK
+﻿设置系统环境变量，运行Java JDK
 JAVA_HOME    D:\JDK
 %JAVA_HOME%\bin;
 
