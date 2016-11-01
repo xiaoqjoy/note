@@ -79,9 +79,42 @@ enctype="multipart/form-data"    form表单提交
 
 
 
+移动端固定页面不让上下左右拖动css最外层盒子需要  position: fixed  absolute relative一路定位下来
+
+
+针对iPhone和 安卓的不同可以写兼容性代码
+var ua = navigator.userAgent.toLowerCase();
+if(/iphone|ipad|ipod/.test(ua)){
+
+}else if(/android/.test(ua)){
+ 
+}
 
 
 
+
+
+前端用rem来自适应开发移动端页面
+
+设计师给的psd图片应设置成750px  或者  640px    fz设置成100(也方便计算)
+
+var util={
+    init:function(){
+        this.calcREM();
+    },
+    calcREM:function(){
+        var size = 750,
+            fz = 100,
+            baseDom = document.getElementsByTagName("html")[0],
+            calcSz =  baseDom.getBoundingClientRect().width/ size,
+            fullSz = calcSz * fz;
+        baseDom.style.fontSize = fullSz + "px";
+    }
+};
+
+util.init();
+
+这个js能在html上生成基础(动态)尺寸font-size，以此页面来根据写的rem值进行自适应
 
 
 
