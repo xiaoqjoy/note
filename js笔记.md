@@ -7,13 +7,12 @@ background: url(../images/consult.jpg) no-repeat center center;
     width: 100%;
     height: 70%;
     background-size: cover;
+```
 
 //想要消除ul li  里面前面的margin  需要在ul上面写margin:0px;padding:0px;
 
-
-
-
-css向上样式
+//css向上样式
+```javascript
 .box{
     position:relative;
 }
@@ -32,7 +31,7 @@ css向上样式
     right: 10px;
     top: -22px;
 }
-
+```
 
 
 location：子对象
