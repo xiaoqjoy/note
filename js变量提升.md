@@ -10,8 +10,8 @@
    } 
    foo(); 
 //虽然是strict模式，但语句var x = 'Hello, ' + y;并不报错，原因是变量y在稍后申明了。
-但是alert显示Hello, undefined，说明变量y的值为undefined。
-这正是因为JavaScript引擎自动提升了变量y的声明，但不会提升变量y的赋值。
+//但是alert显示Hello, undefined，说明变量y的值为undefined。
+//这正是因为JavaScript引擎自动提升了变量y的声明，但不会提升变量y的赋值。
 
 //对于上述foo()函数，JavaScript引擎看到的代码相当于：
 
@@ -22,7 +22,7 @@
    y = 'Bob';
  } 
 //由于JavaScript的这一怪异的“特性”，我们在函数内部定义变量时，请严格遵守“在函数内部首先申明所有变量”这一规则。
-最常见的做法是用一个var申明函数内部用到的所有变量：
+//最常见的做法是用一个var申明函数内部用到的所有变量：
 
  function foo() {   
    var    x = 1, // x初始化为1     
