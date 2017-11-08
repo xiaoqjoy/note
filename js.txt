@@ -1,4 +1,6 @@
-Í¼Æ¬×ÔÊÊÓ¦css´úÂë
+å›¾ç‰‡è‡ªé€‚åº”cssä»£ç 
+
+333333333333333333333333
 
 background: url(../images/consult.jpg) no-repeat center center;
     width: 100%;
@@ -7,12 +9,12 @@ background: url(../images/consult.jpg) no-repeat center center;
 
 
 
-ÏëÒªÏû³ıul li  ÀïÃæÇ°ÃæµÄmargin  ĞèÒªÔÚulÉÏÃæĞ´margin:0px;padding:0px;
+æƒ³è¦æ¶ˆé™¤ul li  é‡Œé¢å‰é¢çš„margin  éœ€è¦åœ¨ulä¸Šé¢å†™margin:0px;padding:0px;
 
 
 
 
-cssÏòÉÏÑùÊ½
+csså‘ä¸Šæ ·å¼
 .box{
     position:relative;
 }
@@ -34,55 +36,55 @@ cssÏòÉÏÑùÊ½
 
 
 
-location£º×Ó¶ÔÏó
-document.location.hash          // #ºÅºóµÄ²¿·Ö
-document.location.host          // ÓòÃû+¶Ë¿ÚºÅ
-document.location.hostname      // ÓòÃû
-document.location.href          // ÍêÕûURL
-document.location.pathname      // Ä¿Â¼²¿·Ö
-document.location.port          // ¶Ë¿ÚºÅ
-document.location.protocol      // ÍøÂçĞ­Òé(http:)
-document.location.search        // ?ºÅºóµÄ²¿·Ö
+locationï¼šå­å¯¹è±¡
+document.location.hash          // #å·åçš„éƒ¨åˆ†
+document.location.host          // åŸŸå+ç«¯å£å·
+document.location.hostname      // åŸŸå
+document.location.href          // å®Œæ•´URL
+document.location.pathname      // ç›®å½•éƒ¨åˆ†
+document.location.port          // ç«¯å£å·
+document.location.protocol      // ç½‘ç»œåè®®(http:)
+document.location.search        // ?å·åçš„éƒ¨åˆ†
 
 
-encodeURIComponent()     ±àÂë(ÖĞÎÄ£¬ÓÃ»§Ãû(Êı×Ö£¬Ó¢ÎÄ²»ÊÇ±àÂë))
+encodeURIComponent()     ç¼–ç (ä¸­æ–‡ï¼Œç”¨æˆ·å(æ•°å­—ï¼Œè‹±æ–‡ä¸æ˜¯ç¼–ç ))
 
-decodeURIComponent()     ½âÂë
-
-
-
+decodeURIComponent()     è§£ç 
 
 
 
-/* ÉèÖÃ¹ö¶¯ÌõµÄÑùÊ½ */
+
+
+
+/* è®¾ç½®æ»šåŠ¨æ¡çš„æ ·å¼ */
 ::-webkit-scrollbar{width: 6px;}
-/* ¹ö¶¯²Û */
+/* æ»šåŠ¨æ§½ */
 ::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);border-radius: 10px;}
-/* ¹ö¶¯Ìõ»¬¿é */
+/* æ»šåŠ¨æ¡æ»‘å— */
 ::-webkit-scrollbar-thumb{border-radius:10px;background: rgba(0,0,0,0.3);-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);}
-/*¹ö¶¯ÌõhoverÑùÊ½*/
+/*æ»šåŠ¨æ¡hoveræ ·å¼*/
 /*::-webkit-scrollbar-thumb:window-inactive{background: rgba(255,0,0,0.4);}*/
 
 
 
-Îª±í¸ñÉèÖÃºÏ²¢±ß¿òÄ£ĞÍ£º
+ä¸ºè¡¨æ ¼è®¾ç½®åˆå¹¶è¾¹æ¡†æ¨¡å‹ï¼š
 
 table{border-collapse:collapse;}
 
 
 
 
-<input type="file" accept=".txt">    Ö» ½ÓÊÜTXTÎÄ¼şµÄÉÏ´«
+<input type="file" accept=".txt">    åª æ¥å—TXTæ–‡ä»¶çš„ä¸Šä¼ 
 
 
-enctype="multipart/form-data"    form±íµ¥Ìá½»
+enctype="multipart/form-data"    formè¡¨å•æäº¤
 
 
 
-ÒÆ¶¯¶Ë¹Ì¶¨Ò³Ãæ²»ÈÃÉÏÏÂ×óÓÒÍÏ¶¯css×îÍâ²ãºĞ×ÓĞèÒª  position: fixed  absolute relativeÒ»Â·¶¨Î»ÏÂÀ´
+ç§»åŠ¨ç«¯å›ºå®šé¡µé¢ä¸è®©ä¸Šä¸‹å·¦å³æ‹–åŠ¨cssæœ€å¤–å±‚ç›’å­éœ€è¦  position: fixed  absolute relativeä¸€è·¯å®šä½ä¸‹æ¥
 
 
-Õë¶ÔiPhoneºÍ °²×¿µÄ²»Í¬¿ÉÒÔĞ´¼æÈİĞÔ´úÂë
+é’ˆå¯¹iPhoneå’Œ å®‰å“çš„ä¸åŒå¯ä»¥å†™å…¼å®¹æ€§ä»£ç 
 var ua = navigator.userAgent.toLowerCase();
 if(/iphone|ipad|ipod/.test(ua)){
 
@@ -94,9 +96,9 @@ if(/iphone|ipad|ipod/.test(ua)){
 
 
 
-Ç°¶ËÓÃremÀ´×ÔÊÊÓ¦¿ª·¢ÒÆ¶¯¶ËÒ³Ãæ
+å‰ç«¯ç”¨remæ¥è‡ªé€‚åº”å¼€å‘ç§»åŠ¨ç«¯é¡µé¢
 
-Éè¼ÆÊ¦¸øµÄpsdÍ¼Æ¬Ó¦ÉèÖÃ³É750px  »òÕß  640px    fzÉèÖÃ³É100(Ò²·½±ã¼ÆËã)
+è®¾è®¡å¸ˆç»™çš„psdå›¾ç‰‡åº”è®¾ç½®æˆ750px  æˆ–è€…  640px    fzè®¾ç½®æˆ100(ä¹Ÿæ–¹ä¾¿è®¡ç®—)
 
 var util={
     init:function(){
@@ -114,12 +116,12 @@ var util={
 
 util.init();
 
-Õâ¸öjsÄÜÔÚhtmlÉÏÉú³É»ù´¡(¶¯Ì¬)³ß´çfont-size£¬ÒÔ´ËÒ³ÃæÀ´¸ù¾İĞ´µÄremÖµ½øĞĞ×ÔÊÊÓ¦
+è¿™ä¸ªjsèƒ½åœ¨htmlä¸Šç”ŸæˆåŸºç¡€(åŠ¨æ€)å°ºå¯¸font-sizeï¼Œä»¥æ­¤é¡µé¢æ¥æ ¹æ®å†™çš„remå€¼è¿›è¡Œè‡ªé€‚åº”
 
 
 
 
-    postMessage ½â¾öÒ³ÃæÇëÇó¿çÓòÎÊÌâ
+    postMessage è§£å†³é¡µé¢è¯·æ±‚è·¨åŸŸé—®é¢˜
 
     window.addEventListener('message',function(e){
 
