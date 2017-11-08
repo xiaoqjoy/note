@@ -35,7 +35,9 @@ background: url(../images/consult.jpg) no-repeat center center;
 
 
 location：子对象
+
 document.location.hash          // #号后的部分
+
 document.location.host          // 域名+端口号
 document.location.hostname      // 域名
 document.location.href          // 完整URL
