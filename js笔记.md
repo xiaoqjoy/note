@@ -34,17 +34,15 @@ background: url(../images/consult.jpg) no-repeat center center;
 ```
 
 
-location：子对象
-
-document.location.hash          // #号后的部分
-
-document.location.host          // 域名+端口号
-document.location.hostname      // 域名
-document.location.href          // 完整URL
-document.location.pathname      // 目录部分
-document.location.port          // 端口号
-document.location.protocol      // 网络协议(http:)
-document.location.search        // ?号后的部分
+location：子对象            
+document.location.hash          // #号后的部分       
+document.location.host          // 域名+端口号           
+document.location.hostname      // 域名       
+document.location.href          // 完整URL        
+document.location.pathname      // 目录部分         
+document.location.port          // 端口号          
+document.location.protocol      // 网络协议(http:)      
+document.location.search        // ?号后的部分       
 
 
 encodeURIComponent()     编码(中文，用户名(数字，英文不是编码))
@@ -52,13 +50,13 @@ encodeURIComponent()     编码(中文，用户名(数字，英文不是编码))
 decodeURIComponent()     解码
                 
 /* 设置滚动条的样式 */
-::-webkit-scrollbar{width: 6px;}
-/* 滚动槽 */
-::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);border-radius: 10px;}
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb{border-radius:10px;background: rgba(0,0,0,0.3);-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);}
-/*滚动条hover样式*/
-/*::-webkit-scrollbar-thumb:window-inactive{background: rgba(255,0,0,0.4);}*/
+::-webkit-scrollbar{width: 6px;}        
+/* 滚动槽 */           
+::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);border-radius: 10px;}         
+/* 滚动条滑块 */         
+::-webkit-scrollbar-thumb{border-radius:10px;background: rgba(0,0,0,0.3);-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);}    
+/*滚动条hover样式*/          
+/*::-webkit-scrollbar-thumb:window-inactive{background: rgba(255,0,0,0.4);}*/       
                 
 
 
