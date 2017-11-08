@@ -48,12 +48,7 @@ document.location.search        // ?号后的部分
 encodeURIComponent()     编码(中文，用户名(数字，英文不是编码))
 
 decodeURIComponent()     解码
-
-
-
-
-
-
+                
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar{width: 6px;}
 /* 滚动槽 */
@@ -62,22 +57,18 @@ decodeURIComponent()     解码
 ::-webkit-scrollbar-thumb{border-radius:10px;background: rgba(0,0,0,0.3);-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);}
 /*滚动条hover样式*/
 /*::-webkit-scrollbar-thumb:window-inactive{background: rgba(255,0,0,0.4);}*/
-
+                
 
 
 为表格设置合并边框模型：
 
 table{border-collapse:collapse;}
-
-
-
-
+            
 <input type="file" accept=".txt">    只 接受TXT文件的上传
-
-
+            
 enctype="multipart/form-data"    form表单提交
 
-
+                
 
 
 
