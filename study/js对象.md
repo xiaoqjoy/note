@@ -1,4 +1,5 @@
-####javascript 基本类型和引用类型的值    
+####javascript 基本类型和引用类型的值
+
 
 1.基本类型指的是简单的数据段，引用类型值指那些可能由多个值构成的对象
 
@@ -90,3 +91,42 @@ function clone(obj) {
 } 
 
 ```
+
+深复制和浅复制只针对像 Object, Array 这样的复杂对象的。
+简单来说，浅复制只复制一层对象的属性，而深复制则递归复制了所有层级
+
+抛开jQuery，上代码例子。下面是一个简单的浅复制实现：
+
+```javascript
+//浅复制
+var obj = { a:1, arr: [2,3] };
+var shallowObj = shallowCopy(obj);
+
+function shallowCopy(src) {
+  var dst = {};
+  for (var prop in src) {
+    if (src.hasOwnProperty(prop)) {
+      dst[prop] = src[prop];
+    }
+  }
+  return dst;
+}
+```
+
+因为浅复制只会将对象的各个属性进行依次复制，并不会进行递归复制，
+而 JavaScript 存储对象都是存地址的，
+所以浅复制会导致 obj.arr 和 shallowObj.arr 指向同一块内存地址，大概的示意图如下。
+
+<img src='1.jpg'>
+
+导致的结果就是：
+
+```javascript
+shallowObj.arr[1] = 5;
+obj.arr[1]   // = 5
+```
+
+
+
+
+
