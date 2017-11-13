@@ -129,6 +129,30 @@ for (var [name, value] of es6) {
 该数组的两个成员分别为当前Map成员的键名和键值。
 
 
+<span style='color:red'>
+var 和 let的区别:   
+使用let时，不能重新let一个变量名    
+eg:  let a = 1; let a = 2;  
+//Identifier 'ii' has already been declared;    
+但是var不同，会重新覆盖
+</span>
+
+
+entries() 返回一个遍历器对象，用来遍历[键名, 键值]组成的数组。对于数组，键名就是索引值；对于Set，键名与键值相同。Map结构的iterator接口，默认就是调用entries方法。
+keys() 返回一个遍历器对象，用来遍历所有的键名。
+values() 返回一个遍历器对象，用来遍历所有的键值。
+
+```javascript
+let arr = ['a', 'b', 'c'];
+for (let pair of arr.entries()) {
+  console.log(pair);
+}
+// [0, 'a']
+// [1, 'b']
+// [2, 'c']
+```
+
+
 
 
 
