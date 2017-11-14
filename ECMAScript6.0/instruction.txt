@@ -1,1 +1,1 @@
-node搭建的环境把ECMAScript6转成ECMAScript5
+锘縩ode鎼缓鐨勭幆澧冩妸ECMAScript6杞垚ECMAScript5
