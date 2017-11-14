@@ -152,6 +152,8 @@ for (let pair of arr.entries()) {
 // [2, 'c']
 ```
 
+#####     ES6 扩展
+<img src="2.png">
 
 
 
