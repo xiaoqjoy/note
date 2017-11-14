@@ -70,12 +70,12 @@
 "use strict";
 
 
-var _circle = __webpack_require__(1);
+var circle = __webpack_require__(1);
+//import { area, circumference } from './circle.js';
 
 //console.log(circle)
-console.log("圆面积：" + (0, _circle.area)(4)); //var circle = require('./circle.js');
-
-console.log("圆周长：" + (0, _circle.circumference)(14));
+console.log("圆面积：" + circle.area(4));
+console.log("圆周长：" + circle.circumference(14));
 
 /***/ }),
 /* 1 */
@@ -96,6 +96,13 @@ function area(radius) {
 function circumference(radius) {
     return 2 * Math.PI * radius;
 }
+
+(function () {
+    var fn = function fn(index) {
+        return index + 1;
+    };
+    console.log(fn(2));
+})();
 
 /***/ })
 /******/ ]);

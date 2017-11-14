@@ -1,0 +1,1 @@
+node搭建的环境把ECMAScript6转成ECMAScript5
