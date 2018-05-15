@@ -1,0 +1,39 @@
+git 基本用法
+
+git clone 'url'
+
+cd note
+
+登录git
+
+git config --global user.name 'xiaoqijoy'
+git config --global user.email 'dream_w@yeah.net'
+
+
+git --version   //查看git的版本信息
+git config --global user.name   //获取当前登录的用户
+git config --global user.email  //获取当前登录用户的邮箱
+
+
+git add -A    //全部添加到缓存区
+
+git commit -m '备注信息'
+
+git push origin master  将文件给推到服务器上
+
+git pull origin master  将服务器文件拉到本地
+
+
+git branch 查看本地所有分支
+
+
+git status 查看当前状态 
+
+git log    显示提交日志
+
+git init   初始化版本库
+
+
+git命令大全地址  
+
+https://blog.csdn.net/halaoda/article/details/78661334
