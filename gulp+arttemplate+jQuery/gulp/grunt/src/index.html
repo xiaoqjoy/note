@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>乐盈电竞</title>
+    <link rel="stylesheet" href="css/guessEnd.css"/>
+    <link rel="stylesheet" href="css/bootstrapDatetimepicker.css"/>
+    <script type="text/javascript">
+        //国际化
+        var common_button_previous = '上一页';
+        var common_button_next = '下一页';
+        var common_words_di = '第';
+        var common_words_ye = '页';
+
+        var league_tips_not_login = '未登录';
+        var common_words_nodata = '暂无数据';
+        var league_words_guess = '竞猜';
+        var league_words_gold = '金币';
+        var league_words_tips = '温馨提示';
+        var league_tips_min = '最小投注金额不能少于10金币';
+        var league_tips_max = '最大投注金额100000！';
+        var league_tips_before = '开赛前五分钟，禁止投注';
+
+        var league_tips_balance = '金币不足，请充值';
+        var personal_button_recharge = '充值';
+        var league_tips_success = '投注成功';
+        var league_tips_requeried = '请输入金额';
+        var league_tips_failed = '投注失败';
+        var league_tips_system_error = '系统异常';
+        var data_words_all = '全部';
+        var data_words_hot = '热门';
+
+        var personal_words_nodata = '暂无收益记录';
+        var data_words_win = '胜';
+        var data_words_defeat = '负';
+        var personal_words_invalid = '无效';
+        var personal_words_gold = '金币';
+        var personal_words_total_income = '有效总收益';
+        var personal_button_detail = '详情';
+        var personal_words_lottery = '已开奖';
+        var personal_words_no_lottery = '未开奖';
+        var personal_tips_nodata = '当天没有竞猜数据';
+        var data_words_di = '第';
+        var data_words_ju = '局';
+        var personal_center_nodata = '暂无数据';
+        var personal_center_orderno = '订单号';
+        var personal_center_traded = '交易成功';
+        var common_button_confirm = '确 定';
+
+
+        var common_tip_message1 = '提示：请输入昵称';
+        var common_tip_message2 = '提示：昵称已被占用';
+        var common_tip_message3 = '提示：昵称可用';
+        var common_tip_message4 = '提示：昵称中包含非法字符';
+        var common_tip_message5 = '提示：昵称超过最大长度';
+        var common_tip_message6 = '温馨提示';
+        var common_tip_message7 = '个人资料修改成功';
+        var common_tip_message8 = '个人资料修改失败，请核对信息后重试';
+        var common_tips_system_error = '系统错误';
+
+        var common_words_soon = '敬请期待';
+        var op_message_success = '操作成功';
+        var op_message_error = '操作失败';
+
+
+        var league_tips_param_error = '参数错误';
+        var league_tips_count_not_exists = '账户不存在';
+        var league_tips_balance_not_enouth = '账户可用余额不足';
+        var league_tips_bet_limitation = '投注额已达上限';
+
+        var personal_words_curr_total_income = '当页有效总收益';
+        /******************国际化游戏名称*******************/
+        var data_game_code_name_lol = '英雄联盟';
+        var data_game_code_name_cf = '穿越火线';
+        var data_game_code_name_ow = '守望先锋';
+        var data_game_code_name_dota2 = 'DOTA2';
+        var data_game_code_name_hearthstone = '炉石传说';
+        var data_game_code_name_csgo = 'CSGO';
+        var data_game_code_name_kg = '王者荣耀';
+        var data_game_code_name_cos = '英魂之刃';
+
+        var popup_bet_balance = '可用余额';
+        var match_number_one = '一';
+        var match_number_two = '二';
+        var match_number_three = '三';
+        var match_number_four = '四';
+        var match_number_five = '五';
+        var match_number_six = '六';
+        var match_number_total = '总';
+
+        var guess_other_play = '其他玩法';
+        var guess_big = '大';
+        var guess_little = '小';
+        var guess_simple = '单';
+        var guess_double = '双';
+        var guess_greater_that = '大于';
+        var guess_less_that = '小于';
+
+        var common_words_give = '新用户首次登录赠送200金币';
+        var league_button_confirm = '确定';
+        var league_button_cancel = '取消';
+        var common_header_log_out = '退出';
+        var personal_center_recharge = '充值';
+        var index_words_end = '已结束';
+        var index_title_video = '观看记录';
+        var index_button_competition = '比赛竞猜';
+        var data_tips_two_teams = '请选择两个战队进行比较';
+        var common_words_no_open = '暂未开放';
+
+        var personal_center_sign = '签到';
+        var personal_center_signed = '已签到';
+
+        var account_is_locked = '该账户已锁定';
+        var competition_not_exist = '该竞猜无效或不存在';
+        var competition_not_betting = '该竞猜已停盘';
+    </script>
+</head>
+<body class="indexPage">
+<div class="topBar">
+    <div class="headTop"></div>
+    <div class="headNav"></div>
+</div>
+<div class="content container">
+    <div class="scroll_box" style="top: 75px;">
+        <div class="quizDirectory">
+            <ul class="gameClass clearFix">
+            </ul>
+        </div>
+        <div class="matchSelect">
+            <i class="icon_cata"></i>
+            <div class="list">
+                <ul class="matchClass clearFix">
+                </ul>
+                <div class="moreDate"><span>更多</span><i class="icon_more"></i></div>
+            </div>
+        </div>
+        <div class="guessStateTab">
+            <a href="javascript:;" class="active"><i class="icon_guessing"></i><span>竞猜中</span></a>
+            <a href="javascript:;"><i class="icon_end"></i><span>已结束</span></a>
+            <a href="javascript:;"><i class="icon_intro"></i><span>玩法介绍</span></a>
+        </div>
+    </div>
+
+    <div class="quizList singleStyle">
+        <div class="game-guesting">
+        </div>
+        <div class="game-end">
+        </div>
+        <div class="game-rule">
+        </div>
+    </div>
+    <div class="loaderMore"><span class="loaderImg"></span></div>
+    <ul class="contentLeft">
+    </ul>
+</div>
+<!--<div class="log_out">-->
+    <!--<p></p>-->
+<!--</div>-->
+
+<div class="footBar"></div>
+<div class="mask"></div>
+<div class="bet"></div>
+<div class="sign_popup"></div>
+<script src="js/template.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/commonUtil.js"></script>
+<script type="text/javascript" src="js/stomp.js"></script>
+<script type="text/javascript" src="js/langauge.js"></script>
+<script type="text/javascript" src="js/dateFormart.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="http://platform.1332255.com/scripts/lib/login/login.js"></script>
+<script type="text/javascript" src="js/stomp.js"></script>
+<script type="text/javascript" src="js/sign-calander.js"></script>
+<script type="text/javascript" src="js/sign.js"></script>
+<script type="text/javascript" src="js/guess.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{{if team.length>0}}
+<div class="team_panel {{if act != 'team'}}hide{{/if}}">
+    <div class="title">战队竞猜</div>
+    <ul class="guess_all_list">
+        {{each team}}
+        <li data-matchDetailId="{{matchDetailId}}" data-competitionCode="{{$value.competitionCode}}">
+            <img src="images/pHead02.jpg">
+            <span>{{$value.competitionName}}</span>
+            <input type="button" value="选择">
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+{{/if}}

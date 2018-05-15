@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*
+ *竞猜大厅公共部分样式
+*/
+
+.matchSelect {
+  background:#272a2e;
+  padding:9px 0;
+  position:relative;
+  min-height: 22px;
+  .icon_cata {
+    background-position:-70px -283px;
+    height:25px;
+    margin-left:5px;
+    position:absolute;
+    top:8px;
+    width:25px;
+  }
+  .list {
+    line-height:22px;
+    margin:0 auto;
+    width:960px;
+    li {
+      float:left;
+      width:25%;
+    }
+    a {
+      color:#8a929c;
+      display:block;
+      padding-left:15px;
+      padding-right:10px;
+      position:relative;
+    }
+    span {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover {
+        color:#d8d7f4;
+      }
+    }
+  }
+  .icon_radio {
+    background-position:-669px -534px;
+    cursor: pointer;
+    height:12px;
+    left:0px;
+    margin-top:-6px;
+    position:absolute;
+    top:50%;
+    width:12px;
+  }
+  .selected {
+    color:red;
+    &:after {
+      background-position:-641px -537px;
+      color:#d8d7f4;
+      content:"";
+      height:8px;
+      left:2px;
+      position:absolute;
+      top:2px;
+      width:8px;
+    }
+  }
+  li {
+    span {
+      display:inline-block;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      width: 215px;
+      vertical-align: top;
+    }
+  }
+  .moreDate {
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:7px;
+    .icon_more {
+      -moz-transition:-moz-transform .2s ease-in;
+      -o-transition: -o-transform .2s ease-in;
+      -webkit-transition: -webkit-transform .2s ease-in;
+      background-position:-262px -289px;
+      height:9px;
+      width:15px;
+    }
+    .up {
+      -moz-transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+      -o-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      transform:rotate(180deg);
+    }
+    span {
+      color:#8a929c;
+      display:inline-block;
+      padding-right:4px;
+      vertical-align:middle;
+    }
+  }
+}
+.matchNoData {
+	//margin-bottom:10px;
+}
+
+//.content .guessEndItem:nth-of-type(odd) .matchVsScore{
+////  background:rgba(15,15,16,0.25);  //0f0f10, 25%透明.
+//  filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000)";
+  ///* older safari/Chrome browsers */
+  //-webkit-opacity: 0.25;
+  ///* Netscape and Older than Firefox 0.9 */
+  //-moz-opacity: 0.25;
+  ///* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+  //-khtml-opacity: 0.25;
+  ///* IE9 + etc...modern browsers */
+  //opacity: .25;
+  ///* IE 4-9 */
+  //filter:alpha(opacity=25);
+  ///*This works in IE 8 & 9 too*/
+  //-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  ///*IE4-IE9*/
+  //filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+//}
+//.content .guessEndItem:nth-of-type(even) .matchVsScore{
+//  background:rgba(0,0,0,0.33);
+//  filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000)";
+//}
+.matchVsScore {
+  //background:rgba(0,0,0,0.33);
+  //filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000)";
+  position:relative;
+  .matchTitle {
+    color:#bdbdbd;
+    font-size:13px;
+    position:absolute;
+    top:5px;
+    .trophy {
+      //margin-left:10px;
+      margin-left:18px;
+    }
+    .date{
+      color:#99a0ae;
+      padding-left:14px;
+    }
+  }
+  .right_date {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #bdbdbd;
+    font-size: 13px;
+  }
+}

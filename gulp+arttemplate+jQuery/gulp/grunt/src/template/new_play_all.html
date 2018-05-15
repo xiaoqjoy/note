@@ -1,0 +1,31 @@
+{{if matchList}}
+{{each matchList}}
+<div class="new_play">
+    <p>{{$value.matchName}}</p>
+    <p>{{$value.startDate | formatDate:"yyyy-MM hh:mm"}}-{{$value.endDate | formatDate:"yyyy-MM hh:mm"}}</p>
+    {{if $value.matchDetailList}}
+    <ul class="list">
+        {{if $value.matchDetailList.hero.length}}
+        <li class="hero {{if $value.matchDetailList.act == 'hero'}}active{{/if}}">英雄</li>
+        {{/if}}
+        {{if $value.matchDetailList.team.length}}
+        <li class="team {{if $value.matchDetailList.act == 'team'}}active{{/if}}">战队</li>
+        {{/if}}
+        {{if $value.matchDetailList.player.length}}
+        <li class="player {{if $value.matchDetailList.act == 'player'}}active{{/if}}">选手</li>
+        {{/if}}
+        {{if $value.matchDetailList.other.length}}
+        <li class="other {{if $value.matchDetailList.act == 'other'}}active{{/if}}">其他</li>
+        {{/if}}
+    </ul>
+    {{/if}}
+    <div class="panel">
+        {{include './new_play_hero' $value.matchDetailList}}
+        {{include './new_play_team' $value.matchDetailList}}
+        {{include './new_play_player' $value.matchDetailList}}
+        {{include './new_play_other' $value.matchDetailList}}
+    </div>
+
+</div>
+{{/each}}
+{{/if}}

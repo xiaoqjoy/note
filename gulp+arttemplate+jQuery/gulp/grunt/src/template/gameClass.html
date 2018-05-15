@@ -1,0 +1,7 @@
+﻿{{if data && data.length>0}}
+    {{each data}}
+        <li data-gameCode="{{$value.portal.code}}"><a href="javascript:;"><img src="{{$value.portal.guessImgPath}}"/><br><span>{{$value.count}}</span></a></li>
+    {{/each}}
+{{else}}
+    <div class="emptyData">暂无数据</div>
+{{/if}}

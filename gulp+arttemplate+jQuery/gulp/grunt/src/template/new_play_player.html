@@ -1,0 +1,16 @@
+{{if player.length>0}}
+<div class="player_panel {{if act != 'player'}}hide{{/if}}">
+    <div class="title">选手竞猜</div>
+    <ul class="guess_all_list">
+        {{each player}}
+        <li data-matchDetailId="{{matchDetailId}}" data-competitionCode="{{$value.competitionCode}}">
+            <img src="images/pHead02.jpg">
+            <span>{{$value.competitionName}}</span>
+            <input type="button" value="选择">
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+
+

@@ -1,0 +1,142 @@
+@charset "utg-8";
+@import "common";
+@import "simplePagination";
+.shop_box{
+  display: inline-block;
+  margin: 15px 40px;
+}
+.shop_box .icon_limitTime{
+  width: 35px;
+  height: 35px;
+  background-position: -495px -677px;
+}
+.shop_box .limit_time{
+  vertical-align: sub;
+}
+.shop_box .goods{
+  border: 1px solid #43474e;
+  width: 300px;
+  height: 145px;
+}
+.goods img{
+  float: left;
+}
+.goods .goods_detail{
+  float: left;
+  width: 150px;
+}
+.goods .goods_detail p{
+  background: #2b2d31;
+}
+.goods .goods_detail p span{
+  padding: 5px;
+  display: inline-block;
+  width: 140px;
+  overflow: hidden;
+  word-break: break-all;
+  height: 40px;
+}
+.goods .goods_detail ul{
+  height: 64px;
+}
+.goods .goods_detail ul li{
+  margin-left: 5px;
+}
+.goods .goods_detail ul li.price{
+  text-decoration: line-through;
+}
+.goods .goods_detail input{
+  width: 110px;
+  height: 25px;
+  background: #504f7d;
+  border-radius: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.goods .goods_detail .goods_btn{
+  text-align: center;
+}
+.goods .goods_detail .goods_btn_disable input{
+  width: 110px;
+  height: 25px;
+  background: #81818a;
+  border-radius: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.top_shop{
+  height: 90px;
+  background: #131313;
+  background-color:rgba(0,0,0,0.3);
+  margin-top: 20px;
+  line-height: 90px;
+  color: white;
+}
+.top_shop i.icon_shopCar{
+  width: 42px;
+  height: 40px;
+  background-position: -383px -674px;
+  margin-left: 30px;
+}
+.top_shop input[type="button"]{
+  width: 82px;
+  height: 35px;
+  border: 1px solid #43474e;
+  margin: 0 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+.shop_active{
+  background: #43474e;
+}
+.top_shop .search_shop{
+  float: right;
+}
+.top_shop .search_shop i.icon_search{
+  width: 42px;
+  height: 42px;
+  background-position: -440px -677px;
+}
+.top_shop .search_shop .search_key{
+  width: 120px!important;
+  margin-left: -8px;
+}
+.top_shop .search_shop input[type="text"]{
+  width: 80px;
+  height: 32px;
+  border: 1px solid #43474e;
+  color: #8a929c;
+  text-indent: 10px;
+  line-height: 32px;
+}
+.top_shop .search_shop span{
+  margin: 0 10px;
+}
+.top_shop .search_shop .shop_btn{
+  background: #504f7d;
+  width: 80px;
+  height: 25px;
+  border-radius: 12px;
+  margin-right: 50px;
+}
+
+.limit_shop{
+  background: #131313;
+  background-color:rgba(22, 24, 26, 0.31);
+  margin-top: 20px;
+  color: white;
+}
+.pageBar{
+  color:#8a929c;
+  width:1240px;
+  height:45px;
+  display:inline-block;
+  margin-top: 50px;
+  padding-left: 65px;
+  .pagination{
+    margin-top: 10px;
+    bottom:inherit;
+  }
+}

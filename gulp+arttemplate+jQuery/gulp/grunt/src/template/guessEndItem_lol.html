@@ -1,0 +1,401 @@
+<div class="guessEndItem">
+    <div class="matchVsScore">
+        <div class="matchTitle"><a href="{{gameCode | endRootUrl}}/matchType/view/{{bGameId}}" target="_blank"><i class="trophy">{{gameName}}</i>—<span>{{bMatchName}}</span></a></div>
+        <div class="matchDetail clearFix">
+            <div class="dispayTable team fl">
+                <div class="img">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamA}}" target="_blank">
+                        <img src="{{teamALogo}}" alt=""/>
+                    </a>
+                    {{else}}<img src="{{teamALogo}}" alt=""/>
+                    {{/if}}
+                </div>
+                <div class="teamName">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamA}}" target="_blank">
+                        {{teamAName}}
+                    </a>
+                    {{else}}{{teamAName}}
+                    {{/if}}
+                </div>
+            </div>
+            <div class="dispayTable teamVs fl">
+                <div class="score {{if scoreA > scoreB}}highLight{{/if}}">{{scoreA}}</div>
+                <div class="vsDotted">:</div>
+                <div class="score {{if scoreA < scoreB}}highLight{{/if}}">{{scoreB}}</div>
+            </div>
+            <div class="dispayTable team fr">
+                <div class="teamName otherName">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamB}}" target="_blank">
+                        {{teamBName}}
+                    </a>
+                    {{else}}{{teamBName}}
+                    {{/if}}
+                </div>
+                <div class="img">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamB}}" target="_blank">
+                        <img src="{{teamBLogo}}" alt="" width="100px"/>
+                    </a>
+                    {{else}}<img src="{{teamBLogo}}" alt="" width="100px"/>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        <span class="right_date">{{ matchDate | dateFormat:'yyyy-MM-dd hh:mm' }}</span>
+    </div>
+    {{if matchDetailList && matchDetailList.length>0}}
+    {{if gameCode=='lol' || gameCode=='dota2' || gameCode=='kg' || gameCode=='cos'}}
+    <div class="matchEnd" id="M_{{bMatchId}}">
+        <div id="{{bMatchId}}">
+            <table>
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>{{1 | lg:'guess_end_headers'}}</th>
+                    {{if gameCode=='lol'|| gameCode=='dota2'}}
+                    <th>{{1 | lg:'guess_end_last_hits'}}</th>
+                    {{/if}}
+                    <th>{{1 | lg:'guess_end_helps'}}</th>
+                    <th>{{1 | lg:'guess_end_hit_towers'}}</th>
+                    <th>{{1 | lg:'guess_end_first_bloods'}}</th>
+                    <th>{{1 | lg:'guess_end_first_tower'}}</th>
+                    {{if gameCode=='lol'}}
+                    <th>{{1 | lg:'guess_end_first_little_dragon'}}</th>
+                    <th>{{1 | lg:'guess_end_first_big_dragon'}}</th>
+                    {{else if gameCode=='dota2'}}
+                    <th>{{1 | lg:'guess_end_first_roushan'}}</th>
+                    {{else if gameCode=='kg'}}
+                    <th>{{1 | lg:'guess_end_first_bj'}}</th>
+                    <th>{{1 | lg:'guess_end_first_zz'}}</th>
+                    {{else if gameCode == 'cos'}}
+                    <th>{{1 | lg:'guess_end_first_boss'}}</th>
+                    {{/if}}
+                </tr>
+                </thead>
+                {{each matchDetailList as value i}}
+                <tr>
+                    <td>{{value.bo | getChinese}}</td>
+                    <td>
+                        <ul>
+                            <li {{if value.winTeamId==value.teamAId}}class="win"{{/if}}>{{value.teamAName}}</li>
+                            <li {{if value.winTeamId==value.teamBId}}class="win"{{/if}}>{{value.teamBName}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{value.teamAHeads | getNumOrNull}}</li>
+                            <li>{{value.teamBHeads | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    {{if gameCode=='lol'|| gameCode=='dota2'}}
+                    <td>
+                        <ul>
+                            <li>{{value.teamALastHitNum | getNumOrNull}}</li>
+                            <li>{{value.teamBLastHitNum | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    {{/if}}
+                    <td>
+                        <ul>
+                            <li>{{value.teamAAssistNum | getNumOrNull}}</li>
+                            <li>{{value.teamBAssistNum | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{value.teamAHittower | getNumOrNull}}</li>
+                            <li>{{value.teamBHittower | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+
+                            <li>
+                                {{if value.firstBloodTeamId != null}}
+                                {{if value.teamAId == value.firstBloodTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstBloodTeamId != null}}
+                                {{if value.teamBId == value.firstBloodTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.firstTowerTeamId != null}}
+                                {{if value.teamAId == value.firstTowerTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstTowerTeamId != null}}
+                                {{if value.teamBId == value.firstTowerTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    {{if gameCode=='lol'}}
+
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.fsdTeamId != null}}
+                                {{if value.teamAId == value.fsdTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.fsdTeamId != null}}
+                                {{if value.teamBId == value.fsdTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamAId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamBId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    {{else if gameCode=='dota2'}}
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamAId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamBId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    {{else if gameCode=='kg'}}
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.fsdTeamId != null}}
+                                {{if value.teamAId == value.fsdTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.fsdTeamId != null}}
+                                {{if value.teamBId == value.fsdTeamId}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamAId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamBId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    {{else if gameCode=='cos'}}
+                    <td>
+                        <ul>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamAId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                            <li>
+                                {{if value.firstRoushan != null}}
+                                {{if value.teamBId == value.firstRoushan}}
+                                {{1 | lg:'common_words_yes'}}
+                                {{else}}
+                                {{1 | lg:'common_words_no'}}
+                                {{/if}}
+                                {{else}}
+                                -
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{else if gameCode=='csgo'}}
+    <div class="matchEnd" id="M_{{bMatchId}}">
+        <div id="{{bMatchId}}">
+            <table>
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>{{1 | lg:'match_end_cf_round'}}</th>
+                    <th>{{1 | lg:'match_end_csgo_ct'}}</th>
+                    <th>{{1 | lg:'match_end_csgo_t'}}</th>
+                    <th>{{1 | lg:'guess_end_headers'}}</th>
+                    <th>{{1 | lg:'guess_end_helps'}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{each data.matchDetailList as value i}}
+                {{if bMatchId == value.bMatchId}}
+                <tr>
+                    <td>{{1 | lg:'value.bo'}}</td>
+                    <td>
+                        <ul>
+                            <li {{if value.winTeamId==value.teamAId}}class="win"{{/if}}>{{value.teamAName}}</li>
+                            <li {{if value.winTeamId==value.teamBId}}class="win"{{/if}}>{{value.teamBName}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{1 | lg:'value.teamARoundPoints'}}</li>
+                            <li>{{1 | lg:'value.teamBRoundPoints'}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{1 | lg:'value.teamACT'}}</li>
+                            <li>{{1 | lg:'value.teamBCT'}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{1 | lg:'value.teamAT'}}</li>
+                            <li>{{1 | lg:'value.teamBT'}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{1 | lg:'value.teamAHeads'}}</li>
+                            <li>{{1 | lg:'value.teamBHeads'}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{1 | lg:'value.teamAAssistNum'}}</li>
+                            <li>{{1 | lg:'value.teamBAssistNum'}}</li>
+                        </ul>
+                    </td>
+                </tr>
+                {{/if}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/if}}
+    {{/if}}
+
+</div>
