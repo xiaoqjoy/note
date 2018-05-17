@@ -108,6 +108,71 @@ class Clock extends React.Component {
     }
 }
 
+function handleClick(e){
+    e.preventDefault();
+    console.log("click");
+
+    /*const Person = {
+        'name': 'little bear',
+        'age': 18,
+        'sayHello': function () {          //对象的括号是不能封闭作用域的。所以此时的this还是指向全局对象。
+            console.log(this);
+            console.log('我叫' + this.name + '我今年' + this.age + '岁!')
+            return function(){
+                console.log(this);
+                //console.log('我叫' + this.name + '我今年' + this.age + '岁!')
+            }
+
+        }
+    }
+    //Person.sayHello();
+    Person.sayHello()();*/
+
+    /*function Person () {
+        this.name = 'little bear';
+        this.age = 18;
+        let self = this;
+        setInterval(function sayHello () {
+            console.log('我叫' + self.name + '我今年' + self.age + '岁!')
+        }, 1000)
+    }
+    let p = new Person()*/
+
+    function Person () {
+        this.name = 'little bear';
+        this.age = 18;
+        setInterval(() => {
+            console.log('我叫' + this.name + '我今年' + this.age + '岁')
+        },1000)
+    }
+    let p = new Person()
+
+}
+
+class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        );
+    }
+}
+
 
 class App extends Component {    //App组件类
   render() {
@@ -124,6 +189,8 @@ class App extends Component {    //App组件类
         <h1>Hello, {formatName(user)}!</h1>
         { element } { aElement }
         <Clock />
+        <Toggle />
+        <a href="#" className="click" onClick={handleClick}>click</a>
         <Welcome name="Sara" />
         <Welcome name="Cahal" />
         <Welcome name="Edite" />
