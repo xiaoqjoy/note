@@ -1,0 +1,77 @@
+<view class='content'>
+  <view class='ticket'>
+    <view class='left_cont'>
+      <view class='title'>代金券</view>
+      <view class='money'>9.5折
+        <view class='extra'>满199可用</view>
+      </view>
+      <view class='intro'>全场菜品通用</view>
+      <view class='time'>有效期：2018-04-04 ~ 2018-05-06</view>
+    </view>
+    <view class='right_cont'>
+      <view>兑换积分</view>
+      <view class='score'>99积分</view>
+      <view bindtap='change' class='btn'>立即兑换</view>
+    </view>
+  </view>
+
+  <view class='ticket'>
+    <view class='left_cont'>
+      <view class='title'>代金券</view>
+      <view class='money'>9.5折
+        <view class='extra'>满199可用</view>
+      </view>
+      <view class='intro'>全场菜品通用</view>
+      <view class='time'>有效期：2018-04-04 ~ 2018-05-06</view>
+    </view>
+    <view class='right_cont'>
+      <view>兑换积分</view>
+      <view class='score'>99积分</view>
+      <view bindtap='change' class='btn'>立即兑换</view>
+    </view>
+  </view>
+
+  <view class='ticket'>
+    <view class='left_cont'>
+      <view class='title'>代金券</view>
+      <view class='money'>9.5折
+        <view class='extra'>满199可用</view>
+      </view>
+      <view class='intro'>全场菜品通用</view>
+      <view class='time'>有效期：2018-04-04 ~ 2018-05-06</view>
+    </view>
+    <view class='right_cont'>
+      <view>兑换积分</view>
+      <view class='score'>99积分</view>
+      <view bindtap='change' class='btn'>立即兑换</view>
+    </view>
+  </view>
+
+
+</view>
+<view class='window' style='display:{{ hidden }};'>
+  <view class='close'>
+    <image src="../../../../images/mine/close.png" bindtap='close'></image>
+  </view>
+  <view class='ticket_box'>
+    <view class='title'>代金券</view>
+    <view class='money'>9.5折
+      <view class='extra'>满199可用</view>
+    </view>
+    <view>适用门店: 全部门店</view>
+    <view>适用门店: 全部门店</view>
+    <view>有效期：2018-04-04 ~ 2018-05-06</view>
+  </view>
+
+  <view class='btn_box'>
+    <view class='btn' bindtap='changeIntegral'>花费99积分兑换</view>
+  </view>
+  
+    
+</view>
+
+<view class='shadow' bindtap='close' style='display:{{ hidden }};'></view>
+
+<view class='dialog'>
+  <image src='../../../../images/mine/fail.png'></image>兑换成功
+</view>

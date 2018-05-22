@@ -1,0 +1,19 @@
+<view class='container-score'>
+  <view class='title'>‘<span>A</span>’小程序积分规则</view>
+  <view class='content'>
+    <p>1、积分获取方式</p>
+    <view class='cont'>注册“A”小程序并根据提示绑定手机号后，您使用小程序进行点餐，可在您点餐完毕并完成订单号后自动积分。</view>
+  </view>
+  <view class='content'>
+    <p>1、积分获取方式</p>
+    <view class='cont'>注册“A”小程序并根据提示绑定手机号后，您使用小程序进行点餐，可在您点餐完毕并完成订单号后自动积分。</view>
+  </view>
+  <view class='content'>
+    <p>1、积分获取方式</p>
+    <view class='cont'>注册“A”小程序并根据提示绑定手机号后，您使用小程序进行点餐，可在您点餐完毕并完成订单号后自动积分。</view>
+  </view>
+  <view class='content'>
+    <p>1、积分获取方式</p>
+    <view class='cont'>注册“A”小程序并根据提示绑定手机号后，您使用小程序进行点餐，可在您点餐完毕并完成订单号后自动积分。</view>
+  </view>
+</view>

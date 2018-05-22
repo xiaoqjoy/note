@@ -173,7 +173,6 @@ class Toggle extends React.Component {
     }
 }
 
-
 class App extends Component {    //App组件类
   render() {
     return (
