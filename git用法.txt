@@ -18,7 +18,7 @@ git config --global user.name   //获取当前登录的用户
 git config --global user.email  //获取当前登录用户的邮箱
 
 
-git add -A    //全部添加到缓存区
+git add . -A    //全部添加到缓存区
 
 git commit -m '备注信息'
 
