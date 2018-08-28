@@ -5,13 +5,11 @@
     <img src="./assets/logo.png">
     <p>{{ parm }}-----------------APP页面</p>
     <ul>
-      <li
-        v-for="todo in todos"
-        :key="todo.id"
-      >
+      <li v-for="todo in todos" :key="todo.id">
         {{ todo.text }}
       </li>
     </ul>
+    <button @click="addData">click</button>
     <p v-html="title"></p>
     <test v-bind:searchQuery="searchQuery"
           v-bind:gridData="gridData"
@@ -23,11 +21,11 @@
       <form id="search">
         Search <input v-model="searchQuery">
       </form>
-      <demo-grid
+      <!--<demo-grid
         :data="gridData"
         :columns="gridColumns"
         :filter-key="searchQuery">
-      </demo-grid>
+      </demo-grid>-->
     </div>
 
     <example :searchQuery="searchQuery" :gridData="gridData" :gridColumns="gridColumns"></example>
@@ -93,6 +91,16 @@
             text: '学习使用 key'
           }
         ]
+      }
+    },
+    methods: {
+      addData: function(){
+        let len = this.todos.length;
+        //Vue.set(this.todos,len,{id: 3, text: '学习使用 input'})
+        this.$set(this.todos,len,{id: 3, text: '学习使用 input'})    //注意这里的 写法 this.$  以后vue提供的方法都可以这样写的
+        console.log(Vue == this);
+        console.log(Vue);
+        console.log(this);
       }
     },
     store,

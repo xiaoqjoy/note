@@ -37,11 +37,14 @@
         <a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a>
       </li>
     </ul>
+    <comp ref="comp"></comp>
+    <h1 style="color: blue">{{ abc }}</h1>
   </div>
 </template>
 
 <script>
-  console.log(this)
+  import comp from "./comp";
+
 export default {
   name: 'HelloWorld',
   props: ['parm'],
@@ -54,10 +57,19 @@ export default {
       this.$emit('listen-child',this.a)
     }
   },
+  components: {
+    comp
+  },
+  mounted(){
+    console.log(this.$refs)
+    this.abc = this.$refs.comp._data.comp
+    console.log(111111111111111111111111)
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      a: '我是要向父组件传值的'
+      a: '我是要向父组件传值的',
+      abc: ''
     }
   }
 }

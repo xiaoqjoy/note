@@ -1,6 +1,6 @@
 <template>
   <div id="test">
-    <p>222222222222222222222222222</p>
+    <p v-clickTest:foo.a.b="message">222222222222222222222222222</p>
     <p style="color: red;">看看我从儿子处获得的消息：{{ helloChild }}</p>
     <textarea v-model="helloChild" placeholder="add multiple lines"></textarea>
     <HelloWorld v-bind:parm="message" v-on:listen-child="getMsg"></HelloWorld>
@@ -12,6 +12,8 @@
     </comp>-->
     <Render></Render>
     <h1>{{ a }}</h1>
+    <input type="text" ref="input">
+    <button @click="add">click</button>
   </div>
 </template>
 
@@ -30,10 +32,32 @@
       }
     },
     methods: {
+      add: function(){
+        this.$refs.input.value = 999999
+      },
       getMsg: function(msg){
         this.helloChild = msg;
       },
       clickGetChild: function(){
+      }
+    },
+    directives: {
+      clickTest: {
+        bind(el,binding,vnode,oldvnode){
+          el.addEventListener('click',() => {
+            console.log(binding)
+            console.log(vnode)
+            console.log(oldvnode)
+          })
+          var s = JSON.stringify
+          el.innerHTML =
+            'name: '       + s(binding.name) + '<br>' +
+            'value: '      + s(binding.value) + '<br>' +
+            'expression: ' + s(binding.expression) + '<br>' +
+            'argument: '   + s(binding.arg) + '<br>' +
+            'modifiers: '  + s(binding.modifiers) + '<br>' +
+            'vnode keys: ' + Object.keys(vnode).join(', ')
+        }
       }
     },
     components: {
@@ -57,6 +81,7 @@
       console.log(this.$el)
     },
     mounted: function() {
+      this.$refs.input.value = 555555;
       console.log("mount之后")
       console.log(this.a)
       console.log(this.$el)
