@@ -20,28 +20,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.demo-ruleForm1 {
-  display: block;
-  margin: 0 30px;
-}
-.demo-ruleForm1 .el-form-item {
-  width: 16%;
-  display: inline-block;
-}
-.el-input {
-  resize: none !important;
-}
-.fonts {
-  color: #ccc;
-}
-.warn {
-  position: absolute;
-  width: 100%;
-  color: red;
-  line-height: 12px;
-  font-size: 12px;
-}
-.row .col select {
-  width: 107px;
-}
 </style>
