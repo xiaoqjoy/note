@@ -28,3 +28,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+这里写了插件的开发使用过程， slot插槽使用 ， props父组件向子组件传值的方法 ， ref的使用等
