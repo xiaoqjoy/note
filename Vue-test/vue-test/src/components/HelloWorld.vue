@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <children>
+    <children ref="profile" :message="message">
       <div slot="up">
         <span>菜单1</span>
         <span>菜单2</span>
@@ -18,6 +18,8 @@
         <span v-for="item in user.data" class="user">{{ item }}</span>
       </template>
     </children>
+
+    <span ref="father" @click="getChild">111111</span>
   </div>
 </template>
 
@@ -28,7 +30,14 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      list: '菜单7'
+      list: '菜单7',
+      message: 'aaaaaaaaaaaaaaaaaa'
+    }
+  },
+  methods: {
+    getChild: function(){
+      var child = this.$children[0].$refs.child.innerHTML;
+      console.log(child)
     }
   },
   components: {

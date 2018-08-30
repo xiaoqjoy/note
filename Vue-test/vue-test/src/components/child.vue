@@ -4,23 +4,43 @@
       <slot name="up"></slot>
       <slot name="down"></slot>  <!--具名插槽  数据由父组件提供-->
 
-<!--正好相反-->
-
-
+      <!--正好相反-->
       <slot :data="data"></slot>  <!--作用域插槽  数据由子组件提供-->
 
       <!--样式父组件说了算，但内容可以显示子组件插槽绑定的-->
+
+
+      <input type="text" ref="input">
+      <button @click="getInput">赋值</button>
+
+      <span ref="child">3333333333333</span>
+      <p>{{ message }}</p>
     </div>
 </template>
 <script>
+
     export default {
+        props: {
+          message: String    //父组件向子组件传值
+        },
         name: 'child',
         data() {
             return {
               data: ['zhangsan','lisi','wanwu','zhaoliu','tianqi','xiaoba']
             }
         },
-        methods: {}
+        methods: {
+          getInput: function(){
+            this.$refs.input.value = '2222'    //this.$refs.input  减少获取dom节点的消耗
+            var father = this.$parent.$refs.father.innerHTML;    //引用父组件 需用 $
+            console.log(father)
+            console.log(this.$parent.$refs.profile)
+          }
+        },
+        created: function(){
+          console.log(this.$msg)
+          console.log(this)
+        }
     }
 </script>
 <style>
