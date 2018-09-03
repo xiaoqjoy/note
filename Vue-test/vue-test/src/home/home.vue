@@ -11,10 +11,10 @@
       <button @click="goIndex">
         go to index
       </button>
-      <router-link to="/home/homePage">homepage</router-link>
-      <router-link to="/home/index">index</router-link>
-      <!--<button class="btn" @click="goHome">homepage</button>
-      <button class="btn" @click="godex">index</button>-->
+      <!--<router-link to="/home/homePage">homepage</router-link>
+      <router-link to="/home/index">index</router-link>-->
+      <button class="btn" @click="goHome">homepage</button>
+      <button class="btn" @click="godex">index</button>
       <router-view @testRouter="testRouter"></router-view>
     </div>
 </template>
@@ -31,7 +31,7 @@
             }
         },
         created(){
-
+          this.$router.push('/home/homePage')
         },
         methods: {
           testRouter: function(parm,str){
@@ -41,12 +41,12 @@
           goIndex: function(){
             this.$router.push('/')
           },
-          /*goHome: function(){
-            this.$router.push('homePage')
+          goHome: function(){
+            this.$router.push('./homePage')
           },
           godex: function(){
-            this.$router.push('index')
-          },*/
+            this.$router.push('./index')
+          },
           changeMsg() {
             console.time(2);
             this.msg = "Hello world."

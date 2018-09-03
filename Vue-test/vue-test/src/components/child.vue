@@ -10,7 +10,7 @@
       <!--样式父组件说了算，但内容可以显示子组件插槽绑定的-->
 
 
-      <input type="text" ref="input">
+      <input type="text" ref="input" @change="getValue" v-model="msg">
       <button @click="getInput">赋值</button>
 
       <span ref="child">3333333333333</span>
@@ -27,10 +27,15 @@
         name: 'child',
         data() {
             return {
-              data: ['zhangsan','lisi','wanwu','zhaoliu','tianqi','xiaoba']
+              data: ['zhangsan','lisi','wanwu','zhaoliu','tianqi','xiaoba'],
+              msg: '88883333'
             }
         },
         methods: {
+          getValue: function(e){
+            console.log(e.target.value)
+            this.msg = 'uuuuuuuuuuuuuuu'
+          },
           getInput: function(){
             this.$refs.input.value = '2222'    //this.$refs.input  减少获取dom节点的消耗
             var father = this.$parent.$refs.father.innerHTML;    //引用父组件 需用 $
