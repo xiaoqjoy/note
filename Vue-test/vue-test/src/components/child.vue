@@ -15,6 +15,7 @@
 
       <span ref="child">3333333333333</span>
       <p>{{ message }}</p>
+      <span @click="goList">跳转到list页</span>
     </div>
 </template>
 <script>
@@ -35,11 +36,22 @@
             var father = this.$parent.$refs.father.innerHTML;    //引用父组件 需用 $
             console.log(father)
             console.log(this.$parent.$refs.profile)
+          },
+          goList: function(){
+            this.$router.push({
+              path: '/list',
+              query: {
+                id: 111111,
+                name: 2222
+              }
+            })
           }
         },
         created: function(){
           console.log(this.$msg)
           console.log(this)
+          console.log(this.$slots)
+          console.log(this.$slots.up)
         }
     }
 </script>
