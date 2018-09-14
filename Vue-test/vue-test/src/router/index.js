@@ -9,7 +9,7 @@ import index from '@/home/index'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -29,15 +29,26 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: home,
-      children:[{
+      children:[
+        {
         path: 'homePage',
         component: homePage
-      },
-      {
-        path: 'index',
-        component: index
-      }
+        },
+        {
+          path: 'index',
+          component: index
+        }
       ]
     }
   ]
 })
+
+/*router.beforeEach((to,from,next) => {
+  //console.log('router.beforeEach')
+})*/
+
+router.afterEach((to,from,next) => {
+  console.log('router.afterEach')
+})
+
+export default router;

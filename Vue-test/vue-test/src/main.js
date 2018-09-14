@@ -7,6 +7,11 @@ import router from './router'
 
 Vue.config.productionTip = false
 Vue.use(toast)
+
+Vue.prototype.customAlert = function(){
+  console.log('alert!!!')
+}
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

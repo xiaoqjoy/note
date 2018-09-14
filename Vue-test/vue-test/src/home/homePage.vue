@@ -3,6 +3,7 @@
       <p>homepage----homepage</p>
       <span @click="testHome">888888888888888</span>
       <p>{{ msg }}</p>
+      <input type="text" v-model="msg">
     </div>
 </template>
 <script>
@@ -13,6 +14,9 @@
               msg: 'this is a homepage',
               i: 'this is a test'
             }
+        },
+        created: function(){
+          console.log(this.msg)
         },
         methods: {
           testHome: function(){
