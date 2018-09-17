@@ -5,6 +5,15 @@
       <p>{{ $route.query.name }}</p>
       <span @click="goHome">go home page</span>
       <footerComponent></footerComponent>
+
+      <ul>
+        <li>
+          <span>1111111</span>
+          <span>2222222</span>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
 </template>
 <script>
@@ -41,5 +50,13 @@
         }*/
     }
 </script>
-<style>
+<style scoped type="text/css">
+  ul li{
+    height: 60px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
 </style>

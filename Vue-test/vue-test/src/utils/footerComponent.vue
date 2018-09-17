@@ -82,5 +82,5 @@
   background-size: 7.52rem 38rem;    //这里是背景图 宽高/100
 }
 i.check{
-  background-position: -0.06rem -25.95rem;  
+  background-position: -0.06rem -25.95rem;
 }-->
