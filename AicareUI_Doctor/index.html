@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title></title>
+    <script type="text/javascript">
+      // 检测用户是否手动设置了浏览器字体大小 , 如果有 , 更改回原大小 , 会有闪烁问题
+      (function() {
+        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+          handleFontSize();
+        } else {
+          if (document.addEventListener) {
+
+            document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+
+          } else if (document.attachEvent) {
+
+            document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+
+            document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          }
+        }
+
+        function handleFontSize() {
+
+          // 设置网页字体为默认大小
+          WeixinJSBridge.invoke('setFontSizeCallback', {
+
+            'fontSize': 0
+
+          });
+          // 重写设置网页字体大小的事件
+          WeixinJSBridge.on('menu:setfont', function() {
+
+            WeixinJSBridge.invoke('setFontSizeCallback', {
+
+              'fontSize': 0
+
+            });
+
+          });
+
+        }
+      })();
+    </script>
+    <script type="text/javascript">
+      // 检测用户是否手动设置了浏览器字体大小 , 如果有 , 更改回原大小 , 会有闪烁问题
+      (function() {
+        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+          handleFontSize();
+        } else {
+          if (document.addEventListener) {
+
+            document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+
+          } else if (document.attachEvent) {
+
+            document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+
+            document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          }
+        }
+
+        function handleFontSize() {
+
+          // 设置网页字体为默认大小
+          WeixinJSBridge.invoke('setFontSizeCallback', {
+
+            'fontSize': 0
+
+          });
+          // 重写设置网页字体大小的事件
+          WeixinJSBridge.on('menu:setfont', function() {
+
+            WeixinJSBridge.invoke('setFontSizeCallback', {
+
+              'fontSize': 0
+
+            });
+
+          });
+
+        }
+      })();
+    </script>
+    <script type="text/javascript">
+      // import fastclick from 'fastclick';
+      (function() {
+        var constMaxWidth = 752;
+        var constMaxHtmlFontSize = 100; //1rem=constMaxHtmlFontSize
+        var minUnit = 1 / constMaxHtmlFontSize; //最小刻度
+        var self = window;
+        self.width = constMaxWidth; //设置默认最大宽度
+        self.fontSize = constMaxHtmlFontSize; //默认字体大小
+        self.widthProportion = function() {
+          var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / self.width;
+          return p < minUnit ? minUnit : p;
+        };
+        self.changePage = function() {
+          self.val = self.widthProportion() * self.fontSize;
+          if (self.val > constMaxHtmlFontSize) {
+            self.val = constMaxHtmlFontSize
+          }
+          document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + self.val + "px !important");
+        }
+        self.changePage();
+        window.addEventListener("resize", function() {
+          self.changePage();
+        }, false);
+        // window.addEventListener('load', function() {
+        //     fastclick.attach(document.body);
+        // }, false);
+      })();
+    </script>
+    <script src="../static/js/tencentIMJS/spark-md5.js"></script>
+    <script src="../static/js/tencentIMJS/require.js"></script>
+    <script src="../static/js/tencentIMJS/webim.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

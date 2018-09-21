@@ -1,0 +1,64 @@
+1、数据库备份  Navicat  还原误操作之前的数据表   或者要对那张表进行增删改查时进行备份，方便误操作恢复
+
+
+
+
+2、公共样式全部放在common.css里，组件样式以scoped的形式存在当前组件里  luo whw
+
+
+3、所有的icon全部让设计弄成雪碧图，注意雪碧图要具备可拓展性，不能改变位置
+如果图片足够小且因为用处的特殊性无法被制作成雪碧图（CssSprites），在整个网站的复用性很高且基本不会被更新。
+import a from 'a.jpg'
+<div style='backgroundImage: url(a.jpg)'></div>   luo
+
+
+4、尽量不要用 行内样式 luo
+
+
+5、方法尽量封装，一处封装多处调用  luo whw
+
+
+6、后台请求尽量用post请求(安全性，get请求data参数不能太大)
+
+
+
+https://www.npmjs.com/    npm包管理网站
+
+
+for循环 length   少用alert   少用 visible show      whw
+
+
+document.querySelectorAll('*')
+
+
+分析homepage页面的http请求，哪些请求是可以干掉的，从 服务端来分析，从 图片来看       luo
+
+
+分析package.json  哪些npm包是没必要的，可以干掉   whw  ?
+
+
+使用keep-alive对页面进行缓存   whw  哪些页面需要改 写出来
+
+
+弹窗模糊   luo
+
+
+统计 切换 bug    whw
+
+
+echart 图标方法封装   whw
+
+
+loading方法 放在http拦截器里    whw
+
+
+空格字符 全部干掉    用 样式 替换  whw
+
+
+
+
+测试人员 测试网站性能 要对 Chrome Firefox IE(重点) Safari  进行测试    打桩测试js的运行速度
+
+Chrome F12   Memory    heap snapshot 可以查看内存的引用情况  直接输入对象名即可查看引用情况
+
+
