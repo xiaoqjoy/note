@@ -1,0 +1,21 @@
+ref 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。
+
+如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例：
+
+input的引用信息为input1 ，$refs 是所有注册过的ref的一个集合，
+
+console.log(this.$refs.input1)//<input type="text" id="input1">
+
+console.log(document.getElementById('input1'))//<input type="text" id="input1">
+
+这两种方法获得的都是Dom节点，而$refs相对document.getElementById的方法，会减少获取dom节点的消耗。
+
+
+$refs  this.$refs.comp._data.comp(读取子组件数据)  ref  
+
+子组件的引用
+
+相对于事件传值来说，又提供了一种子组件向父组件传值的方式
+
+
+
