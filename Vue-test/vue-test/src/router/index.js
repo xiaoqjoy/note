@@ -6,10 +6,12 @@ import list from '@/list/list'
 import home from '@/home/home'
 import homePage from '@/home/homePage'
 import index from '@/home/index'
+import test from '@/home/test'
 
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -39,7 +41,12 @@ const router = new Router({
           component: index
         }
       ]
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
+    },
   ]
 })
 

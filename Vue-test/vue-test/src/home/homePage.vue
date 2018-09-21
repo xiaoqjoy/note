@@ -21,7 +21,7 @@
         methods: {
           testHome: function(){
             this.$emit("testRouter",this,'主页')
-            this.$parent.goIndex();
+            //this.$parent.goIndex();
           }
         }
     }

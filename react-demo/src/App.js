@@ -141,9 +141,10 @@ function handleClick(e){
     function Person () {
         this.name = 'little bear';
         this.age = 18;
-        setInterval(() => {
+        console.log('我叫' + this.name + '我今年' + this.age + '岁')
+        /*setInterval(() => {
             console.log('我叫' + this.name + '我今年' + this.age + '岁')
-        },1000)
+        },1000)*/
     }
     let p = new Person()
 

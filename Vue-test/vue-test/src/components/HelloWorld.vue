@@ -21,8 +21,7 @@
 
     <span ref="father" @click="getChild">111111</span>
 
-
-
+    <p style="color: red;">better-scroll  左右滚动demo  适用于移动端</p>
     <div class="tab" ref="tab">
       <ul class="tab_content" ref="tabWrapper">
         <li class="tab_item" v-for="item in itemList" ref="tabitem">

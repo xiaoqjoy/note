@@ -15,7 +15,11 @@
       <router-link to="/home/index">index</router-link>-->
       <button class="btn" @click="goHome">homepage</button>
       <button class="btn" @click="godex">index</button>
+
+      <!--这里是一个容器，用来接收路由组件的内容-->
       <router-view @testRouter="testRouter"></router-view>
+
+      <button @click="goTestPage">去test页</button>
     </div>
 </template>
 <script>
@@ -34,6 +38,9 @@
           this.$router.push('/home/homePage')
         },
         methods: {
+          goTestPage: function(){
+            this.$router.push('/test')
+          },
           testRouter: function(parm,str){
             console.log(parm)
             console.log(str)
