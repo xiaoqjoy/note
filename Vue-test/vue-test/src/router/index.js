@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import child from '@/components/child'
+import second from '@/components/second'
 import list from '@/list/list'
 import home from '@/home/home'
 import homePage from '@/home/homePage'
@@ -17,11 +18,17 @@ const router = new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld,
-      children: [{
+      children: [
+      {
         path: 'child',
         component: child
-      }]
-    },
+      },
+      {
+        path: 'second',
+        component: second
+      }
+    ]
+  },
     {
       path: '/list',
       name: 'list',

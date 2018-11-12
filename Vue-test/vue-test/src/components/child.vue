@@ -1,6 +1,6 @@
 <template>
     <div>
-      <p>这里是子组件</p>
+      <p @click="sendMsg">这里是子组件</p>
       <slot name="up"></slot>
       <slot name="down"></slot>  <!--具名插槽  数据由父组件提供-->
 
@@ -19,7 +19,7 @@
     </div>
 </template>
 <script>
-
+import bus from '../assets/eventBus.js'
     export default {
         props: {
           message: String    //父组件向子组件传值
@@ -32,6 +32,10 @@
             }
         },
         methods: {
+
+          sendMsg: function(){
+            bus.$emit("userEvent","我是兄弟组件现在已经传值过来了!")
+          },
           getValue: function(e){
             console.log(e.target.value)
             this.msg = 'uuuuuuuuuuuuuuu'

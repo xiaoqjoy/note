@@ -19,6 +19,8 @@
       </template>
     </children>
 
+    <second @centerKey="fatherEvent"></second>
+
     <span ref="father" @click="getChild">111111</span>
 
     <p style="color: red;">better-scroll  左右滚动demo  适用于移动端</p>
@@ -34,7 +36,9 @@
 </template>
 
 <script>
+
   import children from './child'
+  import second from './second'
   import BScroll from 'better-scroll'
 export default {
   name: 'HelloWorld',
@@ -102,6 +106,9 @@ export default {
       var child = this.$children[0].$refs.child.innerHTML;
       console.log(child)
     },
+    fatherEvent: function(){
+      this.message = 'bbbbbbbbbbbbbbbbbbbbbbbb'
+    },
     InitTabScroll(){
       let width = 0;
       for (let i = 0; i < this.itemList.length; i++) {
@@ -129,7 +136,8 @@ export default {
     });
   },
   components: {
-    children
+    children,
+    second
   }
 }
 </script>
