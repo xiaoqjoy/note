@@ -167,17 +167,40 @@ class Toggle extends React.Component {
 
     render() {
         return (
-            <button onClick={this.handleClick}>
-                {this.state.isToggleOn ? 'ON' : 'OFF'}
-            </button>
+            <div>
+                <button onClick={this.handleClick}>
+                    {this.state.isToggleOn ? 'ON' : 'OFF'}
+                </button>
+                <p>22222222222222222222222</p>
+            </div>
         );
     }
 }
+
+class ShoppingList extends React.Component {
+    render() {
+        return (
+        <div className="shopping-list">
+            <h1>Shopping List for</h1>
+            <ul>
+            <li>Instagram</li>
+            <li>WhatsApp</li>
+            <li>Oculus</li>
+            </ul>
+        </div>
+        );
+    }
+}
+
+let pic = {
+    uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+};
 
 class App extends Component {    //App组件类
   render() {
     return (
       <div className="App">
+        <img src={pic.uri} style={{width: 193, height: 110}} />
         <header className="App-header">
           <img src={ logo } className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
@@ -190,6 +213,7 @@ class App extends Component {    //App组件类
         { element } { aElement }
         <Clock />
         <Toggle />
+        <ShoppingList></ShoppingList>
         <a href="#" className="click" onClick={handleClick}>click</a>
         <Welcome name="Sara" />
         <Welcome name="Cahal" />
@@ -271,4 +295,3 @@ ReactDOM.render(
     document.getElementById('root')
 );
 */
-

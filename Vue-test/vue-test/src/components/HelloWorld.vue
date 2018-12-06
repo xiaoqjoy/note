@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <children ref="profile" :message="message">
-      <div slot="up">
+      <div slot="up" class="list">
         <span>菜单1</span>
         <span>菜单2</span>
         <span>菜单3</span>
@@ -16,6 +16,7 @@
       </div>
       <template slot-scope="user">
         <span v-for="item in user.data" class="user">{{ item }}</span>
+        <p>作用域插槽</p>
       </template>
     </children>
 
@@ -47,7 +48,6 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       list: '菜单7',
       message: 'aaaaaaaaaaaaaaaaaa',
-
       itemList:[
         {
           'title':'关注'
@@ -174,5 +174,15 @@ a {
 .tab_item{
   flex: 0 0 60px;
   width: 60px;
+}
+.list{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.list span{
+  background: red;
+  color: white;
+  margin: 0 15px;
+  align-self: flex-end;
 }
 </style>

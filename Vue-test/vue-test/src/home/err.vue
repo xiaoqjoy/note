@@ -1,15 +1,16 @@
 <template>
-    <div class="test">
+    <div class="err">
+      <h1>错误页面</h1>
     </div>
 </template>
 <script>
 import G6Editor from '@antv/g6-editor';
     export default {
-        name: 'test',
+        name: 'err',
         data() {
-            return {
+          return {
 
-            }
+          }
         },
         mounted: function(){
 
@@ -18,9 +19,6 @@ import G6Editor from '@antv/g6-editor';
 
         },
         methods: {
-          // goIndex: function(){
-          //   this.$router.push('/')
-          // }
         }
     }
 </script>

@@ -8,6 +8,7 @@ import home from '@/home/home'
 import homePage from '@/home/homePage'
 import index from '@/home/index'
 import test from '@/home/test'
+import err from '@/home/err'
 
 Vue.use(Router)
 
@@ -28,7 +29,7 @@ const router = new Router({
         component: second
       }
     ]
-  },
+    },
     {
       path: '/list',
       name: 'list',
@@ -54,6 +55,15 @@ const router = new Router({
       name: 'test',
       component: test
     },
+    {
+      path: '*',
+      name: '错误页面',
+      component: err     //当用户输入无效的URL时，进入err页面
+    }
+    // {
+    //   path: '/test',
+    //   redirect: '/'
+    // }
   ]
 })
 
