@@ -1,7 +1,7 @@
 /* 个人项目 gulpfile.js 1.0.0;
  *createTime: 2016.12.23;
  *updateTime: 2017.1.8 23:35;
- *author: '程兆成';
+ *author: '吴海伟';
  * 现在 雪碧图
  **/
 "use strict";//严格模式
