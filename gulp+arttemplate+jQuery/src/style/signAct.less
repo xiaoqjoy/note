@@ -1,0 +1,233 @@
+@charset "utf-8";
+@bdcor:#443e64;
+.act_sign_mask{
+  left: 0;
+  top: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: .7;
+  z-index: 39;
+  filter: alpha(opacity=70);
+  display: block;
+  position: fixed;
+}
+.act_sign_box{
+  //background: rgba(0,0,0,0.33);
+  position: fixed;
+  top:0px;
+  width:1240px;
+  height:100%;
+  left:50%;
+  margin-left:-620px;
+  padding-left: 120px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 99;
+  .bg{
+    width:1001px;
+    height:652px;
+    background: url(../images/sign_ca/big_bg.png) no-repeat;
+    position: relative;
+    top:173px;
+  }
+  .big_title{
+    position: relative;
+    top:-636px;
+    left: 218px;
+  }
+  .act_sign_des{
+    width: 608px;
+    height:77px;
+    background: url(../images/sign_ca/des_title.png) no-repeat;
+    position: relative;
+    top: -648px;
+    left: 184px;
+    p{
+      color: #939299;
+      width: 332px;
+      margin-left: 315px;
+      font-size: 14px;
+      padding-top: 10px;
+      line-height: 18px;
+      .guize{
+        color: #e7e5f2;
+      }
+      .red{
+        color: #eabb7f;
+      }
+    }
+  }
+  .red{
+    color: #eabb7f;
+  }
+  .main_box{
+    font-size: 14px;
+    position: relative;
+    top: -624px;
+    width:1000px;
+    height:500px;
+    .calendar{
+      width: 456px;
+      margin-left:22px;
+      float:left;
+    }
+    .btn_rule{
+      float:left;
+      widht:400px;
+      float:left;
+
+      p{
+        color:#939299;
+      }
+      .sign_btn_box{
+        width: 500px;
+        text-align: center;
+        padding-top: 42px;
+        .sign_days{
+          color:#8e89a7;
+          font-size: 20px;
+        }
+        .sign_coin_num{
+          font-size: 17px;
+          letter-spacing: 1px;
+          padding-top: 20px;
+        }
+        a{
+          width: 254px;
+          height: 80px;
+          display: block;
+          margin: 0 auto;
+          padding-top: 23px;
+        }
+      }
+      .act_sign_rule{
+        padding-top: 56px;
+        font-size: 14px;
+        padding-left: 41px;
+        margin-top: 14px;
+        p{
+          //color:#8e89a7;
+          width:450px;
+          display: block;
+          line-height:21px;
+          margin: 0px 0px;
+        }
+      }
+      .act_qrcode{
+        padding-left: 41px;
+        font-size:14px;
+        p{
+          color:#d4d2de;
+          //line-height:20px;
+          margin: 0px 0px;
+        }
+        img{
+          width: 90px;
+          height: 90px;
+          position: relative;
+          top: -13px;
+          left: 334px;
+        }
+
+      }
+
+    }
+
+  }
+  .act_close {
+    width: 32px;
+    height: 32px;
+    float: right;
+    cursor: pointer;
+    background: url(../images/sign_ca/clo.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 54px;
+    left: 838px;
+  }
+  .contentLeft{
+    top: 328px;
+    left: -7px;
+  }
+}
+.sign_calendar{
+  .calendar_title{
+    height:35px;
+    a{
+      width:64px;
+      height:33px;
+      border-right: 1px solid @bdcor;
+      border-bottom: 1px solid @bdcor;
+      border-top:1px solid @bdcor;
+      background: url(../images/sign_ca/ca_title_bg.png);
+      display: block;
+      float: left;
+      text-align: center;
+      vertical-align: middle;
+      line-height:33px;
+      color:#c9c6df;
+      &.weekend{
+        color:#f7f389;
+      }
+    }
+    a:nth-of-type(1){
+      border-left: 1px solid @bdcor;
+    }
+  }
+  .date{
+    a{
+      height:73px;
+      width: 64px;
+      border-right: 1px solid @bdcor;
+      border-bottom: 1px solid @bdcor;
+      display: block;
+      float: left;
+      background: #272538;
+      &:nth-of-type(1),&:nth-of-type(8),&:nth-of-type(15),&:nth-of-type(22),&:nth-of-type(29),&:nth-of-type(36){
+        border-left: 1px solid @bdcor;
+      }
+      p{
+        color:#8e89a7;
+        display: inline-block;
+        text-align: center;
+        width:64px;
+      }
+      .date_num{
+        font-size: 29px;
+        line-height:30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      .month{
+        font-size: 13px;
+        line-height:13px;
+        height:13px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        top:-5px;
+      }
+      .coin_text{
+        font-size:12px;
+        height:12px;
+        color: #eabb7f;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        top: -10px;
+        position: relative;
+      }
+      .gou{
+        width: 30px;
+        height: 21px;
+        position: relative;
+        margin-top: 0;
+        margin-left: 19px;
+        top: -50px;
+      }
+    }
+
+  }
+}

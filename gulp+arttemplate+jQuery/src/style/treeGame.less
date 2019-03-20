@@ -1,0 +1,454 @@
+/*���ͼ*/
+.treeGame {
+  position: relative;
+  //top: -8px;
+  min-height: 650px;
+  font-family: "Microsoft YaHei";
+  margin: 0 auto;
+  background: rgb(25, 27, 28);
+}
+.treeGame .first {
+  height: 100%;
+}
+.treeGame .self {
+  width: 132px;
+  /*height:;*/
+  position: relative;
+  /*background:rgba(2,19,47,0.7);*/
+  /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B202132f,endColorstr=#b202132f);*/
+}
+.treeGame .self:hover {
+  /*background: #292d3c url(images/self_bg.png) 0 0 no-repeat;*/
+}
+.treeGame .self .team1, .treeGame .self .team2, .treeGame .self .time {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  color: #8c9499;
+  position: relative;
+  cursor: pointer;
+}
+.treeGame .self>div img {
+  float: left;
+  padding-left: 10px;
+  margin-top: 1px;
+  width:30px;
+  height:30px;
+}
+.treeGame .self>div span {
+  float: left;
+  width: 70px;
+  text-align: center;
+}
+.treeGame .self>div em {
+  font-style: normal;
+}
+.treeGame .self>div.team1 {
+  border: 1px solid #393e45;
+  border-bottom: 1px solid #393e45;
+}
+.treeGame .self>div.team2 {
+  border: 1px solid #393e45;
+}
+.treeGame .self>div.time {
+  background:#2e3135;
+  text-align: center;
+  font-size: 12px;
+  color: #929292;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -20px;
+}
+.treeGame .self-nth.on1>.self>.team1 {
+  padding: 0;
+  border: 1px solid #a2991d;
+  color: #e6c173;
+}
+.treeGame .self-nth.on2>.self>.team1 {
+  border-bottom: none;
+  padding-bottom: 1px;
+}
+.treeGame .self-nth.on2>.self>.team2 {
+  border: 1px solid #a2991d;
+  color: #e6c173;
+}
+.treeGame .self-nth.on2>.self>.time {
+  border-color: #c03831;
+  color: #e6c173;
+}
+.treeGame .self-nth.on1>.self>.team1>.team-after {
+  border-color: #a2991d;
+}
+.treeGame .self-nth.on2>.self>.team2>.team-after {
+  border-color: #a2991d;
+}
+.treeGame .self-nth.on1>i.before, .treeGame .self-nth.on2>i.before {
+  background: #a2991d;
+}
+.treeGame .self-nth.on1>i.after, .treeGame .self-nth.on2>i.after {
+  border-color: #a2991d;
+}
+.treeGame .self-nth .before {
+  position: absolute;
+  right: -33px;
+  height: 1px;
+  width: 19px;
+  background: #444952;
+  border-left: none;
+  border-bottom: none;
+  bottom: 0;
+  top: 51px;
+}
+.treeGame .self-nth .after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  height: 17px;
+  width: 10px;
+  border: 1px solid #444952;
+  border-left: none;
+  border-bottom: none;
+  top: 50%;
+}
+.treeGame .self-nth.last>.before {
+  top: 16px
+}
+.treeGame .self-nth.last>.after {
+  bottom: 50%;
+  top: auto;
+  border: 1px solid #444952;
+  border-left: none;
+  border-top: none;
+}
+.colspan .self-nth .empty-before{
+  width: 184px;
+  right: -198px;
+}
+.treeGame .after-top{
+  height: 305px !important;
+}
+.treeGame .after-bottom{
+  height: 258px !important;
+}
+.treeGame .before-line{
+  width: 19px;
+  height: 1px;
+  background: #71787c;
+}
+.treeGame.other{
+  position:absolute;top:518px;left:990px
+}
+.team1 .team-after {
+  content: "";
+  width: 5px;
+  height: 17px;
+  border: 1px solid #444952;
+  border-width: 1px 1px 0 0;
+  position: absolute;
+  right: -6px;
+  top: 17px;
+}
+.team2 .team-after {
+  content: "";
+  width: 5px;
+  height: 17px;
+  border: 1px solid #444952;
+  border-width: 0 1px 1px 0;
+  position: absolute;
+  right: -6px;
+  top: 0;
+}
+.self-nth .self {
+  position: relative;
+}
+.empty-s {
+  height: 34px;
+}
+.empty-d {
+  height: 68px;
+}
+.self-nth {
+  width: 133px;
+  position: relative;
+}
+.self-nth.last {
+  bottom: 0;
+}
+.self-nth.middle {
+  top: 20px;
+}
+.colspan {
+  float: left;
+  width: 165px;
+}
+.colspan-tit {
+  overflow: hidden;
+  width:100%;
+  margin:10px 0px 35px;
+}
+.colspan-tit span {
+  float: left;
+  color:#929292;
+  width: 133px;
+  padding-right: 32px;
+  text-align: center;
+  line-height: 30px;
+}
+.colspan-tit span.y {
+  color: #e6c173;
+}
+.treeGame .self-nth.middle>.before {
+  width: 29px;
+  margin-top: 0;
+}
+.treeGame .self-nth.first>.before {
+  top: 50%;
+  width: 29px;
+}
+.treeGame .win {
+  /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B202132f,endColorstr=#b202132f);*/
+  width: 132px;
+  height: 82px;
+  padding-top: 6px;
+  border: 1px solid #a2991d;
+}
+.treeGame .win img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #1d2336;
+}
+.treeGame .win span {
+  text-align: center;
+  font-size: 16px;
+  color: #e6c173;
+  display: block;
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+}
+.treeGame .tit {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  width: 132px;
+  right: 0;
+  top: -40px;
+  color: #929292;
+}
+.treeGame .icon-champion{
+  width:32px;
+  height:26px;
+  display: inline-block;
+  background-position:-264px -139px;
+}
+.treeGame .champion{
+  top: -28px;
+}
+.treeGame .tit strong {
+  color: #e6c173;
+  font-weight: normal;
+}
+.treeGame .self.through {
+  height: 1px;
+  padding: 0;
+  margin-top: 0;
+  background: #6488a1;
+  margin-right: -4px;
+  width: 136px;
+}
+.treeGame .self.through div {
+  visibility: hidden;
+}
+.treeGame .self-nth.on1 .self.through, .treeGame .self-nth.on2 .self.through {
+  background: #c03831;
+}
+.round {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  zoom: 1;
+}
+.round>i {
+  display: inline-block;
+  height: 14px;
+  margin: 5px 20px 6px 0;
+  vertical-align: middle;
+  border-left: 1px solid #4d6373;
+  float: left;
+}
+.round span {
+  float: left;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 25px;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+.round span i {
+  display: inline-block;
+  width: 9px;
+  height: 5px;
+  margin-left: 5px;
+  visibility: hidden;
+  vertical-align: middle;
+  background: url(images/down_arr.png) no-repeat;
+}
+.round .hover {
+  color: #dae5f1;
+}
+.round .hover i {
+  visibility: visible;
+}
+.round span:hover {
+  color: #dae5f1;
+}
+.round span:hover i {
+  visibility: visible;
+}
+.after1 {
+  height: 51px !important;
+}
+
+/* 17+34*/
+.before1 {
+  top: 85px !important;
+}
+
+/* 51+34*/
+.last .before1 {
+  top: -18px !important
+}
+
+/* 16-34*/
+.after2 {
+  height: 85px !important;
+}
+
+/* 17+34+34*/
+.before2 {
+  top: 119px !important;
+}
+
+/* 51+34+34*/
+.last .before2 {
+  top: -52px !important
+}
+
+/* 16-34-34*/
+.after3 {
+  height: 119px !important;
+}
+
+/* 17+34+34+34*/
+.before3 {
+  top: 153px !important;
+}
+
+/* 51+34+34+34*/
+.last .before3 {
+  top: -86px !important
+}
+
+/* 16-34-34-34*/
+.after4 {
+  height: 153px !important;
+}
+
+/* 17+34+34+34+34*/
+.before4 {
+  top: 187px !important;
+}
+
+/* 51+34+34+34+34*/
+.last .before4 {
+  top: -120px !important
+}
+
+/* 16-34-34-34-34*/
+.after5 {
+  height: 187px !important;
+}
+
+/* 17+34+34+34+34+34*/
+.before5 {
+  top: 221px !important;
+}
+
+/* 51+34+34+34+34+34*/
+.last .before5 {
+  top: -154px !important
+}
+
+/* 16-34-34-34-34-34*/
+.after6 {
+  height: 221px !important;
+}
+
+/* 17+34+34+34+34+34+34*/
+.before6 {
+  top: 255px !important;
+}
+
+/* 51+34+34+34+34+34+34*/
+.last .before6 {
+  top: -188px !important
+}
+
+/* 16-34-34-34-34-34-34*/
+
+/*���end*/
+
+/*���������end*/
+.schedule-title {
+  margin: 10px auto;
+  width: 1200px;
+}
+.schedule-title span {
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center
+}
+.schedule-title i {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  margin: 0 20px;
+  margin-top: 8px;
+  vertical-align: top;
+  background: url(http://static.a.carry6.com/dota2/css/images/dota2/right_arr.png) no-repeat
+}
+.schedule-title .hover, .schedule-title span:hover {
+  color: #e6c173;
+  background: #191c20
+}
+.rand-right .hd {
+  text-align: center
+}
+.rand-right .hd li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 20px 0;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: #71787c;
+  cursor: pointer
+}
+.rand-right .hd .on {
+  background: #e6c173
+}

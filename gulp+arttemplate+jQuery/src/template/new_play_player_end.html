@@ -1,0 +1,18 @@
+{{if player.length>0}}
+<div class="player_panel {{if act != 'player'}}hide{{/if}}">
+    <div class="title">选手竞猜</div>
+    <ul class="guess_all_list">
+        {{each player}}
+        {{if $value.fieldValues && $value.fieldValues.length>0}}
+            <li data-matchDetailId="{{matchDetailId}}" data-competitionCode="{{$value.competitionCode}}">
+                <img src="{{$value.fieldValues[0].playerImg}}">
+                <span>{{$value.fieldValues[0].playerName}}</span>
+                <span>{{$value.competitionName}}</span>
+            </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+{{/if}}
+
+

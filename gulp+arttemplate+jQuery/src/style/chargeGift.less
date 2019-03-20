@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import "common";
+@import "secNav";
+
+body {
+  &:before {
+    background: none !important;
+  }
+}
+
+.banner {
+  height: 525px;
+  width: 100%;
+  background: url(../images/chargeGift_banner.png) no-repeat;
+  margin-top: 41px;
+}
+
+.page_chargeGift {
+  position: relative;
+  top:-565px;
+  .main {
+    position: absolute;
+    top: 640px;
+    margin-bottom: 20px;
+    .mainContent{
+      margin-bottom: 26px;
+      .header {
+        overflow: hidden;
+        li {
+          float: left;
+          color: #d0cedd;
+          width: 286px;
+          height: 46px;
+          line-height: 46px;
+          text-align: center;
+          background: #34304e;
+          margin-right: 1px;
+        }
+      }
+      .detail {
+        .header;
+        li {
+          background: rgba(17, 18, 19, 0.5);
+          margin-bottom: 2px;
+          color:#6d7683;
+          input[type='button'] {
+            width: 102px;
+            height: 36px;
+            position: relative;
+            cursor: pointer;
+            background: rgb(45,49,51);
+            border-radius: 20px;
+            font-size: 18px;
+            color: rgb(108,113,120);
+            &.active{
+              background: url(../images/charge_Sprite.png);
+              background-position: -0px -65px;
+              color: none;
+            }
+          }
+        }
+      }
+    }
+    .explain {
+      overflow: hidden;
+      margin-bottom: 40px;
+      .left{
+        width: 57px;
+        height: 142px;
+        text-align: center;
+        font-size: 22px;
+        color: #d0cedd;
+        float: left;
+        background: #34304e;
+        span{
+          display: inline-block;
+          width: 20px;
+          position: relative;
+          top: 44px;
+          line-height: 22px;
+        }
+      }
+      .right{
+        float: left;
+        width: 1090px;
+        font-size: 16px;
+        color: #6d7683;
+        ul{
+          padding: 20px 0;
+          margin-bottom: 2px;
+          background: rgba(17, 18, 19, 0.5);
+          padding-left: 40px;
+          li{
+            margin-bottom: 10px;
+          }
+        }
+        .mention{
+          padding-left: 40px;
+          height: 68px;
+          line-height:68px;
+          background: rgba(17, 18, 19, 0.5);
+
+        }
+      }
+    }
+    .btnArea{
+      input[type='button']{
+        width: 334px;
+        height: 65px;
+        font-size: 22px;
+        margin-left: 150px;
+        margin-bottom: 300px;
+        color:#f7efd9;
+        background: url(../images/charge_Sprite.png);
+        cursor: pointer;
+      }
+    }
+  }
+
+}

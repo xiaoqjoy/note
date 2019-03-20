@@ -1,0 +1,175 @@
+<div class="guessEndItem">
+    <div class="matchVsScore">
+        <div class="matchTitle"><i class="trophy">{{gameName}}</i>—<span>{{bMatchName}}</span></div>
+        <div class="matchDetail clearFix">
+            <div class="dispayTable team fl">
+                <div class="img">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamA}}" target="_blank">
+                        <img src="{{teamALogo}}" alt=""/>
+                    </a>
+                    {{else}}<img src="{{teamALogo}}" alt=""/>
+                    {{/if}}
+                </div>
+                <div class="teamName">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamA}}" target="_blank">
+                        {{teamAName}}
+                    </a>
+                    {{else}}{{teamAName}}
+                    {{/if}}
+                </div>
+            </div>
+            <div class="dispayTable teamVs fl">
+                <div class="score {{if scoreA > scoreB}}highLight{{/if}}">{{scoreA}}</div>
+                <div class="vsDotted">:</div>
+                <div class="score {{if scoreA < scoreB}}highLight{{/if}}">{{scoreB}}</div>
+            </div>
+            <div class="dispayTable team fr">
+                <div class="teamName otherName">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamB}}" target="_blank">
+                        {{teamBName}}
+                    </a>
+                    {{else}}{{teamBName}}
+                    {{/if}}
+                </div>
+                <div class="img">
+                    {{if gameCode == 'lol' || gameCode == 'dota2'}}
+                    <a href="{{gameCode | endRootUrl}}/team/record/{{teamB}}" target="_blank">
+                        <img src="{{teamBLogo}}" alt="" width="100px"/>
+                    </a>
+                    {{else}}<img src="{{teamBLogo}}" alt="" width="100px"/>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        <span class="right_date">{{ matchDate | formatDate:'yyyy-MM-dd hh:mm' }}</span>
+    </div>
+
+    {{if matchDetailList !=null && matchDetailList !='undefined' && matchDetailList.length>0}}
+    <div class="matchEnd game_swxf" id="M_{{bMatchId}}">
+        <div id="{{bMatchId}}">
+            <table>
+                <thead>
+                <th width="12.5%">&nbsp;</th>
+                <th width="12.5%">{{1 | lg:'match_end_cf_map'}}</th>
+                <th width="12.5%">{{1 | lg:'match_end_cf_time'}}</th>
+                <th width="12.5%">{{1 | lg:'match_end_cf_mode'}}</th>
+                <th width="156px">&nbsp;</th>
+                {{if gameCode=='ow'}}
+                <th>{{1 | lg:'league_title_rt'}}</th>
+                <th>{{1 | lg:'match_end_ow_zd'}}</th>
+                <th>{{1 | lg:'league_title_win_team'}}</th>
+                <th>{{1 | lg:'match_end_ow_mvp'}}</th>
+                {{else if(gameCode=='cf')}}
+                <th>{{1 | lg:'match_end_cf_kill'}}</th>
+                <th>{{1 | lg:'match_end_cf_round'}}</th>
+                <th>{{1 | lg:'league_title_win_team'}}</th>
+                {{/if}}
+                </thead>
+                <tbody>
+
+                {{each matchDetailList as value i}}
+                {{if bMatchId == value.bMatchId}}
+                <tr>
+                    <td>{{value.bo | getChinese}}</td>
+                    <td>{{value.matchMap | getNumOrNull}}</td>
+                    <td>{{value.hadTime | getNumOrNull}}</td>
+                    <td>{{value.matchModeName | getNumOrNull}}</td>
+                    <td class="number-border">
+                        <ul>
+                            <li>{{value.teamAName}}</li>
+                            <li>{{value.teamBName}}</li>
+                        </ul>
+                    </td>
+                    {{if gameCode=='ow'}}
+                    <td>
+                        <ul>
+                            <li>{{value.teamAHeads | getNumOrNull}}</li>
+                            <li>{{value.teamBHeads | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{value.teamAPoints | getNumOrNull}}</li>
+                            <li>{{value.teamBPoints | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        {{if value.winTeamId==value.teamAId}}
+                        {{value.teamAName}}
+                        {{else}}
+                        {{value.teamBName}}
+                        {{/if}}
+                    </td>
+                    <td>
+                        {{value.matchMVP | getNumOrNull}}
+                    </td>
+                    {{else if(gameCode=='cf')}}
+                    {{if value.bo == 0}}
+                    <td>
+                        <ul>
+                            <li>{{value.teamAHeads | getNumOrNull}}</li>
+                            <li>{{value.teamBHeads | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{value.teamARoundPoints | getNumOrNull}}</li>
+                            <li>{{value.teamBRoundPoints | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+
+                    {{else}}
+
+                    {{if value.matchMode == "cc"}}
+
+                    <td>
+                        <ul>
+                            <li>{{value.teamAHeads | getNumOrNull}}</li>
+                            <li>{{value.teamBHeads | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+                    </td>
+                    {{else}}
+                    <td>
+                        <ul>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>{{value.teamARoundPoints | getNumOrNull}}</li>
+                            <li>{{value.teamBRoundPoints | getNumOrNull}}</li>
+                        </ul>
+                    </td>
+
+                    {{/if}}
+                    {{/if}}
+
+                    <td>
+                        {{if value.winTeamId==value.teamAId}}
+                        {{value.teamAName}}
+                        {{else}}
+                        {{value.teamBName}}
+                        {{/if}}
+                    </td>
+                    {{/if}}
+                </tr>
+
+                {{/if}}
+                {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/if}}
+</div>

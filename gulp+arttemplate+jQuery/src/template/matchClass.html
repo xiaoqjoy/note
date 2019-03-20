@@ -1,0 +1,8 @@
+﻿{{if data && data.length>0}}
+    <li><a href="#" data-id=""><label class="icon_radio allMatch selected"></label><span>全部赛事</span></a></li>
+    {{each data}}
+        <li><a href="#" data-id="{{$value.matchTypeId}}"><label class="icon_radio"></label><span>{{$value.matchTypeName}}</span></a></li>
+    {{/each}}
+{{else}}
+    <div class="emptyData">暂无数据</div>
+{{/if}}
