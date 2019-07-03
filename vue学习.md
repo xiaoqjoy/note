@@ -32,3 +32,5 @@ computed: mapState({
   
   
 理解：  用在vuex里直接拿数据出来，而且要放在computed使用
+
+
