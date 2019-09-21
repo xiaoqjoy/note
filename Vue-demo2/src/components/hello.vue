@@ -31,6 +31,9 @@
         a: 'hello world!'
       }
     },
+    created(){
+      
+    },
     methods: {
       add: function(){
         this.$refs.input.value = 999999
@@ -67,6 +70,7 @@
     },
     beforeCreate: function() {
       console.log("创建前")
+      console.log(this.$route)
       console.log(this.a)
       console.log(this.$el)
     },

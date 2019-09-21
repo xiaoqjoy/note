@@ -16,14 +16,16 @@
         }
       },
       name: "test",
+      created(){
+        console.log(this.$store)
+      },
       computed: {
         num(){
           return 11
         }
       },
       mounted(){
-        console.log(this.$store.state.name);
-        console.log(this.$store.state.count);
+        
       }
     }
 </script>

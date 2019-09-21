@@ -38,16 +38,25 @@
       </li>
     </ul>
     <comp ref="comp"></comp>
+    <test/>
     <h1 style="color: blue">{{ abc }}</h1>
   </div>
 </template>
 
 <script>
   import comp from "./comp";
+  import test from "./test";
 
 export default {
   name: 'HelloWorld',
   props: ['parm'],
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      a: '我是要向父组件传值的',
+      abc: ''
+    }
+  },
   created(){
     this.$emit('listen-child',this.msg)
   },
@@ -58,19 +67,13 @@ export default {
     }
   },
   components: {
-    comp
+    comp,
+    test
   },
   mounted(){
     console.log(this.$refs)
     this.abc = this.$refs.comp._data.comp
     console.log(111111111111111111111111)
-  },
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      a: '我是要向父组件传值的',
-      abc: ''
-    }
   }
 }
 </script>

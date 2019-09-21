@@ -5,12 +5,18 @@
 </template>
 
 <script>
+import Bus from './Bus.js'
     export default {
       name: "comp",
       data(){
         return{
           comp: 12345678
         }
+      },
+      mounted(){
+        Bus.$on('listen-brother',(data) => {
+          console.log(data)
+        })
       }
     }
 </script>
