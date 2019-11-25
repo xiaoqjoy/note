@@ -142,3 +142,39 @@ function loadPage(index, callback){
 }
 
 
+使用svn进行版本控制，每个文件夹下都有.svn文件夹，有些项目在脱离svn版本控制之后，想删除项目中所有的.svn文件夹，
+可用下面的方法进行快速删除：
+建立一个文本文件，取名为kill-svn-folders.reg（扩展名由txt改为reg），文件的内容如下：
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 && COLOR 9A && FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+find . -type d -name ".svn"|xargs rm -rf
+保存之后，双击这个reg文件。成功后，在每一个文件夹上点击右键都会有一个“Delete SVN Folders”的选项，点击之后，
+既可以删除这个文件下（包括子文件夹）所有的.svn文件夹。
+删除完成后，为了避免误操作，不小心把正处于版本管理中的.svn文件夹删除，最好把刚才的注册信息删除。删除方法是，
+打开注册表（在运行中用regedit命令），找到[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN] ，
+把DeleteSVN这个项删除，即可。
+
+
+
+//将下面data数组中id重复的数据去掉
+let data = [
+	{ id: 201801, name: '张三', age: 15, },
+	{ id: 201804, name: 'John', age: 18, },
+	{ id: 201802, name: '李四', age: 18, },
+	{ id: 201801, name: '张三', age: 15, },
+	{ id: 201805, name: 'Jack', age: 18, },
+	{ id: 201803, name: '王五', age: 10, },
+	{ id: 201805, name: 'Jack', age: 18, },
+	{ id: 201804, name: 'John', age: 18, },
+	{ id: 201805, name: 'Jack', age: 18, },
+];
+
+var hash = {};     
+
+this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组对象去重
+	hash[curVal.id] ? '' : hash[curVal.id] = true && preVal.push(curVal); 
+	return preVal 
+}, []);
