@@ -69,8 +69,33 @@ table{border-collapse:collapse;}
 enctype="multipart/form-data"    form表单提交
 
                 
-
-
+设置select样式
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      select:required:invalid {
+      color: #666;
+      }
+      option[value=""][disabled] {
+      display: none;
+      }
+      option {
+      color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Select box with a placeholder</h2>
+    <select name="drinks" required>
+      <option value="" disabled selected>Choose a drink</option>
+      <option value="coffee">Coffee</option>
+      <option value="tea">Tea</option>
+      <option value="milk">Milk</option>
+    </select>
+  </body>
+</html>
 
 
 
