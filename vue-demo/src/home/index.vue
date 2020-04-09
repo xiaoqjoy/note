@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>这是index页面，已实现路由跳转</p>
+    <p>这是index页面，已实现路由跳转11111111</p>
     <p>{{ count }}-----------------index页面</p>
   </div>
 </template>

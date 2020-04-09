@@ -1,9 +1,17 @@
 <template>
   <div id="test">
+    <p>666666666666666666666666666666666666</p>
+    <input type="text" v-model="number">
+    <button type="button" v-on:click="increment">增加</button>
+
+    <h1>{{ messageTxt }}</h1>
+
+
     <p v-clickTest:foo.a.b="message">222222222222222222222222222</p>
     <p style="color: red;">看看我从儿子处获得的消息：{{ helloChild }}</p>
     <textarea v-model="helloChild" placeholder="add multiple lines"></textarea>
     <HelloWorld v-bind:parm="message" v-on:listen-child="getMsg"></HelloWorld>
+    
     <p v-on:click="clickGetChild">子组件向父组件传值的方式</p>
     <comp></comp>
     <!--<comp>
@@ -28,20 +36,31 @@
       return {
         message: 'xiaoqi is a boy!',
         helloChild: '',
-        a: 'hello world!'
+        a: 'hello world!',
+        number: 0,
+        messageTxt: ''
       }
     },
     created(){
       
     },
     methods: {
+      increment: function() {
+        this.number ++
+      },
       add: function(){
-        this.$refs.input.value = 999999
+        this.$refs.input.value = 999999 
       },
       getMsg: function(msg){
         this.helloChild = msg;
       },
       clickGetChild: function(){
+      }
+    },
+
+    watch: {
+      number: function(){
+        return this.messageTxt = '22222222222'
       }
     },
     directives: {

@@ -178,3 +178,22 @@ this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组
 	hash[curVal.id] ? '' : hash[curVal.id] = true && preVal.push(curVal); 
 	return preVal 
 }, []);
+
+
+----------------------------------
+
+vue双向绑定的原理
+
+VUE实现双向数据绑定的原理就是利用了 Object.defineProperty() 这个方法重新定义了对象获取属性值(get)和设置属性值(set)的操作来实现的
+
+
+
+
+
+
+
+
+
+
+
+

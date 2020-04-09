@@ -16,6 +16,7 @@ import Bus from './Bus.js'
       mounted(){
         Bus.$on('listen-brother',(data) => {
           console.log(data)
+          
         })
       }
     }
