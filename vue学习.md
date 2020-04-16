@@ -188,6 +188,30 @@ VUE实现双向数据绑定的原理就是利用了 Object.defineProperty() 这�
 
 
 
+------------------------------------
+
+
+hash模式和history模式的不同
+
+
+hash  	hash虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面		hash模式背后的原理是onhashchange事件
+
+
+history		HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法(IE9+支持)
+
+
+
+---------------------------------------
+
+
+Vuex
+
+
+
+
+
+
+
 
 
 

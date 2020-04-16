@@ -13,11 +13,14 @@
       }
     },
     name: "index",
+    created(){
+      console.log(this.$store.state.count)
+    },
     mounted(){
       console.log(this.$store.state.name);    //调用vuex里面的状态值需要在mounted里执行
       console.log(this.$store.state.count);
-      this.$store.commit('increment');
-      this.$store.dispatch('incrementAsync')
+      //this.$store.commit('increment');
+      //this.$store.dispatch('incrementAsync')
     },
     methods:{
     }
