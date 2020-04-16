@@ -131,6 +131,8 @@ css zoom	设置或检索对象的缩放比例
 
 1px边框问题的解决方案
 
+//不同的手机有着不同的像素密度，即window.devicePixelRatio属性，它反应的是物理像素与逻辑像素的比值，IPhone6的dpr是2，也就是说，对于IPhone6来说，CSS的1px显示时会显示为2px的像素
+
 
 1、伪元素 + tranform: scaleY		//兼容性也比较好的，利用高度为1px的伪元素来模拟边框，在媒体查询中利用tranform: scaleY来进行缩放，
 									//需要设置transform: origin(0, 0)保证缩放时伪元素距离父元素的距离
@@ -165,8 +167,40 @@ h1:after {
 2、伪元素 + liner-gradient + sacle
 
 
-3、									
+```javascript
+h1:after {
+  display: block;
+  content: '';
+  height: 1px;
+  background: linear-gradient(0, #fff, #000);
+}
 
+@media screen and (min-device-pixel-ratio: 2),  (-webkit-min-device-pixel-ratio: 2) {
+  h1:after {
+    transform: scaleY(0.5);
+  }
+}
+```
+
+
+3、通过viewport实现
+
+```javascript
+const dpr = window.devicePixelRatio;
+
+// 创建meta视口标签
+const meta = document.createElement('meta') 
+
+// 设置name为viewport
+meta.setAttribute('name', 'viewport');
+
+// 动态初始缩放、最大缩放、最小缩放比例
+meta.setAttribute(
+  'content', 
+  `width=device-width, user-scalable=no, initial-scale=${1/dpr}, maximum-scale=${1/dpr}, minimum-scale=${1/dpr}`
+) 
+```							
+//不单单针对边框了，而是针对所有了，需要整体考虑
 
 
 
