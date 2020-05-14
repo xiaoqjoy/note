@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import Hello from "./components/hello";
 import Index from "./home/index";
+import Log from "./home/log";
 import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
@@ -11,14 +12,26 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false;
 Vue.config.silent = false;   //取消 Vue 所有的日志与警告
 
-console.log(Vue.config)
-
 var router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    { path: '/hello', name: 'hello', component: Hello },
-    { path: '/index', name: 'index', component: Index }
+    { 
+      path: '/hello', 
+      name: 'hello', 
+      component: Hello ,
+      children: [
+        {
+          path: '/hello/log',
+          component: Log
+        }
+      ]
+    },
+    { 
+      path: '/index', 
+      name: 'index', 
+      component: Index
+    }
   ]
 })
 
@@ -29,6 +42,6 @@ new Vue({
   template: '<App/>',
   router: router,
   mouted(){
-    router.push('/hello')
+    router.push('/index')
   }
 })

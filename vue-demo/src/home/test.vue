@@ -4,6 +4,7 @@
     <span>{{ name }}--------------------test page</span>
     <span>{{ count }}-------------------test page</span>
     <p>{{ num }}</p>
+
   </div>
 </template>
 
@@ -12,7 +13,11 @@
       data(){
         return{
           name: this.$store.state.name,
-          count: this.$store.state.count
+          count: this.$store.state.count,
+          a: 123,
+          b: 456,
+          firstName: 'Foo',
+          lastName: 'Bar'
         }
       },
       name: "test",
@@ -21,8 +26,11 @@
       },
       computed: {
         num(){
-          return 11
+          return this.a + this.b
         }
+      },
+      watch: {
+        
       },
       mounted(){
         
