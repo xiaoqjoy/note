@@ -19,6 +19,7 @@ import Bus from './Bus.js'
       methods: {
         clikeMe: function(){
             Bus.$emit('listen-brother',this.msg)
+            
         }
       }
     }

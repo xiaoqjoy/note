@@ -98,15 +98,119 @@ enctype="multipart/form-data"    form表单提交
 </html>
 
 
+----------------------------------------
+
+
+relative是不会使元素脱离文档流的，absolute和fixed则会！也就是说，
+relative会占据着移动之前的位置，但是absolute和fixed就不会
+
+
+----------------------------------------
+
+
+css清除浮动4种方法
+
+
+因为浮动会使当前标签产生向上浮的效果，同时会影响到前后标签、父级标签的位置及 width height 属性。
+而且同样的代码，在各种浏览器中显示效果也有可能不相同
+
+
+1、父级div定义 height              //只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题
+
+2、结尾处加空div标签 clear:both			//利用css提高的clear:both清除浮动，让父级div能自动获取到高度
+
+3、父级div定义 伪类:after 和 zoom			//IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题,建议定义公共类，以减少CSS代码
+
+4、父级div定义 overflow:hidden			//必须定义width或zoom:1，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度
+
+
+
+css zoom	设置或检索对象的缩放比例
+
+-------------------------------------------------
+
+1px边框问题的解决方案
+
+//不同的手机有着不同的像素密度，即window.devicePixelRatio属性，它反应的是物理像素与逻辑像素的比值，IPhone6的dpr是2，也就是说，对于IPhone6来说，CSS的1px显示时会显示为2px的像素
+
+
+1、伪元素 + tranform: scaleY		//兼容性也比较好的，利用高度为1px的伪元素来模拟边框，在媒体查询中利用tranform: scaleY来进行缩放，
+									//需要设置transform: origin(0, 0)保证缩放时伪元素距离父元素的距离
+
+```javascript
+h1 {
+  position: relative;
+}
+
+h1:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: red;
+  transform: scaleY(1);
+  transform-origin: 0 0;
+}
+
+@media screen and (min-device-pixel-ratio: 2),  (-webkit-min-device-pixel-ratio: 2) {
+  h1:after {
+    transform: scaleY(0.5);
+  }
+}
+
+```									
+									
+									
+2、伪元素 + liner-gradient + sacle
+
+
+```javascript
+h1:after {
+  display: block;
+  content: '';
+  height: 1px;
+  background: linear-gradient(0, #fff, #000);
+}
+
+@media screen and (min-device-pixel-ratio: 2),  (-webkit-min-device-pixel-ratio: 2) {
+  h1:after {
+    transform: scaleY(0.5);
+  }
+}
+```
+
+
+3、通过viewport实现
+
+```javascript
+const dpr = window.devicePixelRatio;
+
+// 创建meta视口标签
+const meta = document.createElement('meta') 
+
+// 设置name为viewport
+meta.setAttribute('name', 'viewport');
+
+// 动态初始缩放、最大缩放、最小缩放比例
+meta.setAttribute(
+  'content', 
+  `width=device-width, user-scalable=no, initial-scale=${1/dpr}, maximum-scale=${1/dpr}, minimum-scale=${1/dpr}`
+) 
+```							
+//不单单针对边框了，而是针对所有了，需要整体考虑
 
 
 
 
 
 
+--------------------------------------------------
 
 
-
+javascript实现一个简单的5秒倒计时
 
 
 

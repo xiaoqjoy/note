@@ -9,12 +9,13 @@
   </div>
 </template>
 
+
 <script>
   import Vue from 'vue';
   import Vuex from "vuex";
   import test from "./home/test";
 
-  Vue.use(Vuex);
+  Vue.use(Vuex);        
 
   const store = new Vuex.Store({
     state: {
@@ -38,13 +39,21 @@
     }
   })
  // store.commit('increment')
+  console.log(222222222222222222)
   console.log(store.state.count)
 
   export default {
     name: 'App',
     data(){
       return{
-        parm: this.$store.state.count
+        parm: this.$store.state.count,
+        num: ''
+      }
+    },
+    watch: {
+      '$route'(to,from){
+        var path = to.path;
+        console.log(path)
       }
     },
     store,

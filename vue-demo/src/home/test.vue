@@ -2,14 +2,21 @@
   <div>
     <p>this is test file!</p>
     <span>{{ name }}--------------------test page</span>
-    <span>{{ count }}-------------------test page</span>
+    <span  ref="dom">{{ count }}-------------------test page</span>
     <p>{{ num }}</p>
+<<<<<<< HEAD
 
+=======
+    <p>{{ parm }}</p>
+    <p>----------------------------------------------++++++++++++++++++++++++++</p>
+>>>>>>> 4549d6ddd466af713ace28af0898ac3d64529a66
   </div>
 </template>
 
 <script>
     export default {
+      name: "test",
+      props: ['parm'],
       data(){
         return{
           name: this.$store.state.name,
@@ -20,9 +27,14 @@
           lastName: 'Bar'
         }
       },
-      name: "test",
+      
       created(){
         console.log(this.$store)
+        console.log('+++++++++++++++++++++++++')
+        //setTimeout('console.log(this.$refs.dom)',0)
+        this.$nextTick(() => {
+          console.log(this.$refs.dom)
+        })
       },
       computed: {
         num(){
@@ -33,7 +45,8 @@
         
       },
       mounted(){
-        
+        console.log('---------------------')
+        console.log(this.$refs.dom)
       }
     }
 </script>
