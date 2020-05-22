@@ -178,3 +178,44 @@ this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组
 	hash[curVal.id] ? '' : hash[curVal.id] = true && preVal.push(curVal); 
 	return preVal 
 }, []);
+
+
+
+
+按照id的大小排序
+{
+	result:[
+	  {id:1,name:'中国银行'},
+	  {id:3,name:'北京银行'},
+	  {id:2,name:'河北银行'},
+	  {id:10,name:'保定银行'},
+	  {id:7,name:'涞水银行'}
+	]
+}
+
+function sortId(a,b){  
+	return a.id-b.id  
+}
+result.sort(sortId);
+console.log(result); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
