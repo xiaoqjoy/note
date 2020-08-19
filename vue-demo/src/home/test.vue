@@ -4,8 +4,12 @@
     <span>{{ name }}--------------------test page</span>
     <span  ref="dom">{{ count }}-------------------test page</span>
     <p>{{ num }}</p>
+<<<<<<< HEAD
+
+=======
     <p>{{ parm }}</p>
     <p>----------------------------------------------++++++++++++++++++++++++++</p>
+>>>>>>> 4549d6ddd466af713ace28af0898ac3d64529a66
   </div>
 </template>
 
@@ -16,7 +20,11 @@
       data(){
         return{
           name: this.$store.state.name,
-          count: this.$store.state.count
+          count: this.$store.state.count,
+          a: 123,
+          b: 456,
+          firstName: 'Foo',
+          lastName: 'Bar'
         }
       },
       
@@ -30,8 +38,11 @@
       },
       computed: {
         num(){
-          return 11
+          return this.a + this.b
         }
+      },
+      watch: {
+        
       },
       mounted(){
         console.log('---------------------')

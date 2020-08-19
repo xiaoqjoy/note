@@ -3,7 +3,7 @@
     <router-link to="/hello">Go to hello</router-link>
     <router-link to="/index">Go to index</router-link>
     <img src="./assets/logo.png">
-    <p>{{ parm }}-----------------APP页面</p>
+    <p>{{ parm }}-----------------APP页面1111111111</p>
     <ul>
       <li v-for="todo in todos" :key="todo.id">
         {{ todo.text }}
@@ -15,6 +15,8 @@
           v-bind:gridData="gridData"
           v-bind:gridColumns="gridColumns">
     </test>
+
+    <p>222222222222222266666666666666666</p>
     <router-view></router-view>
 
     <div id="demo">
@@ -70,7 +72,7 @@
     name: 'app',
     data(){
       return{
-        searchQuery: '',
+        searchQuery: '2222222222',
         gridColumns: ['name', 'power'],
         gridData: [
           { name: 'Chuck Norris', power: Infinity },

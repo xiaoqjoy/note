@@ -180,6 +180,32 @@ this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组
 }, []);
 
 
+<<<<<<< HEAD
+
+
+按照id的大小排序
+{
+	result:[
+	  {id:1,name:'中国银行'},
+	  {id:3,name:'北京银行'},
+	  {id:2,name:'河北银行'},
+	  {id:10,name:'保定银行'},
+	  {id:7,name:'涞水银行'}
+	]
+}
+
+function sortId(a,b){  
+	return a.id-b.id  
+}
+result.sort(sortId);
+console.log(result); 
+
+
+
+
+
+
+=======
 ----------------------------------
 
 vue双向绑定的原理
@@ -206,6 +232,7 @@ history		HTML5 History Interface 中新增的 pushState() 和 replaceState() 方
 
 Vuex
 
+>>>>>>> 4549d6ddd466af713ace28af0898ac3d64529a66
 
 
 
