@@ -201,7 +201,7 @@ history		HTML5 History Interface 中新增的 pushState() 和 replaceState() 方
 
 
 
----------------------------------------
+---------------------------------------  
 
 
 Vuex

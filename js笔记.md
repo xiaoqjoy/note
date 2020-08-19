@@ -137,6 +137,11 @@ css zoom	设置或检索对象的缩放比例
 1、伪元素 + tranform: scaleY		//兼容性也比较好的，利用高度为1px的伪元素来模拟边框，在媒体查询中利用tranform: scaleY来进行缩放，
 									//需要设置transform: origin(0, 0)保证缩放时伪元素距离父元素的距离
 
+
+
+-------------------------------------------------------
+
+
 ```javascript
 h1 {
   position: relative;
@@ -164,7 +169,7 @@ h1:after {
 ```									
 									
 									
-2、伪元素 + liner-gradient + sacle
+2、伪元素 + liner-gradient + sacle      推荐css写法
 
 
 ```javascript
@@ -197,13 +202,10 @@ meta.setAttribute('name', 'viewport');
 // 动态初始缩放、最大缩放、最小缩放比例
 meta.setAttribute(
   'content', 
-  `width=device-width, user-scalable=no, initial-scale=${1/dpr}, maximum-scale=${1/dpr}, minimum-scale=${1/dpr}`
+  `width=device-width, user-scalable=no, initial-scale=${1/dpr-}, maximum-scale=${1/dpr}, minimum-scale=${1/dpr}`
 ) 
 ```							
 //不单单针对边框了，而是针对所有了，需要整体考虑
-
-
-
 
 
 
@@ -211,6 +213,92 @@ meta.setAttribute(
 
 
 javascript实现一个简单的5秒倒计时
+
+var a = 5; 
+function time(){
+	a--;
+	console.log(a)
+   if(a == 0){
+      clearInterval(clear)
+   } 
+}
+
+var clear = setInterval(time, 1000)
+
+-------------------------------------------------------
+
+
+
+function c(callback){
+	console.log(6666)
+	callback();
+}
+
+function b(){
+	console.log(444)
+}
+
+c(b)
+
+
+function fn(par){
+	console.log(par)
+}
+
+function aaa(callback, data){
+	callback(data)
+}
+
+aaa(fn, '我是回调函数')
+
+
+/*
+* 结论：回调函数就是： 外函数调用内函数的过程。
+* 首先，studyEnglish应作为study的参数
+* 最后，study方法 调用了 studyEnglish方法
+* */
+
+
+
+let B = (b) => {
+	console.log(arguments)
+}
+
+B(56)
+
+
+function A(a){
+	console.log(arguments)
+}
+
+A(56,78,45)
+
+
+//JS传的是形参，可以传也可以不传，若方法里没有写参数却传入了参数，该如何拿到参数呢，答案就是arguments了
+
+-------------------------------------------------------
+
+var a = 10;
+let f = (n) => n + this.a;
+
+let m = {
+  a: 20
+}
+
+f.call(m,1)            //11
+
+//箭头函数通过 call() 或 apply() 方法调用一个函数时，只传入了一个参数，对 this 并没有影响
+
+
+
+https://www.cnblogs.com/wangtong111/p/11307231.html
+
+
+
+-------------------------------------------------
+
+
+
 
 
 
