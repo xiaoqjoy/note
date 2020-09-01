@@ -1,4 +1,4 @@
-# js小笔记
+﻿# js小笔记
 
 //图片自适应css代码
 
@@ -297,9 +297,23 @@ https://www.cnblogs.com/wangtong111/p/11307231.html
 
 -------------------------------------------------
 
+异步promise的用法示例：
 
+test(){
+        this.query().then(res => {      //这里的res就是2，resolve传过来的
+          alert(res)
+        })
+      },
 
-
+      query(){
+        return new Promise(function(resolve, reject){
+          if(1){
+            resolve(2)
+          }else{
+            reject(3)
+          }
+        })
+      }
 
 
 

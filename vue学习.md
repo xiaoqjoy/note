@@ -1,4 +1,4 @@
-mapState是state的语法糖,
+﻿mapState是state的语法糖,
 
 用法：
 <template>
@@ -180,7 +180,6 @@ this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组
 }, []);
 
 
-<<<<<<< HEAD
 
 
 按照id的大小排序
@@ -205,7 +204,6 @@ console.log(result);
 
 
 
-=======
 ----------------------------------
 
 vue双向绑定的原理
@@ -232,7 +230,6 @@ history		HTML5 History Interface 中新增的 pushState() 和 replaceState() 方
 
 Vuex
 
->>>>>>> 4549d6ddd466af713ace28af0898ac3d64529a66
 
 
 
