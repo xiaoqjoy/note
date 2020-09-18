@@ -26,7 +26,7 @@
     methods:{
       test(){
         this.query().then(res => {      //这里的res就是2，resolve传过来的
-          alert(res)
+          console.log(res)
         })
       },
 
