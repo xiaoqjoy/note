@@ -1,4 +1,4 @@
-# js小笔记
+﻿# js小笔记
 
 //图片自适应css代码
 
@@ -297,6 +297,32 @@ https://www.cnblogs.com/wangtong111/p/11307231.html
 
 -------------------------------------------------
 
+异步promise的用法示例：
+
+test(){
+        this.query().then(res => {      //这里的res就是2，resolve传过来的
+          alert(res)
+        })
+      },
+
+      query(){
+        return new Promise(function(resolve, reject){
+          if(1){
+            resolve(2)
+          }else{
+            reject(3)
+          }
+        })
+      }
+
+-------------------------------------------
+
+
+split() 方法用于把一个字符串分割成字符串数组
+
+
+"2:3:4:5".split(":")	//将返回["2", "3", "4", "5"]
+"|a|b|c".split("|")	//将返回["", "a", "b", "c"]
 
 
 

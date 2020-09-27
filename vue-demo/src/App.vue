@@ -23,6 +23,57 @@
     <input ref="username" type="text"  />
 
 
+    <el-input v-model="famount" maxlength="2" placeholder="请输入内容" @keyup.native="number"></el-input>
+
+    <el-input maxlength="7" v-model="num" placeholder="请输入内容" @keyup.native="limitNum"></el-input>
+
+
+    <el-table
+    :data="tableData"
+    border
+    style="width: 100%">
+    <el-table-column
+      fixed
+      prop="date"
+      label="日期"
+      width="150">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="姓名"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="province"
+      label="省份"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="city"
+      label="市区"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="address"
+      label="地址"
+      width="300">
+    </el-table-column>
+    <el-table-column
+      prop="zip"
+      label="邮编"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      fixed="right"
+      label="操作"
+      width="100">
+      <template slot-scope="scope">
+        <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
+        <el-button type="text" size="small">编辑</el-button>
+      </template>
+    </el-table-column>
+  </el-table>
+
   </div>
 </template>
 
@@ -37,7 +88,12 @@
   const store = new Vuex.Store({
     state: {
       count: 4,
-      name: '我是vuex'
+      name: '我是vuex',
+      age: 56,
+      obj: {
+        a: 1,
+        b: 'abcdefg'
+      }
     },
     mutations: {
       increment (state) {
@@ -67,6 +123,8 @@
         num: '',
         name: 'kkkkkkkkk',
         age: '4444444444444',
+        famount: '',
+        tableData: []
       }
     },
     created(){
@@ -109,7 +167,7 @@
 
 
       /*
-      * 结论：回调函数就是： 外函数调用内函数的过程。
+      * 结论：回调函数就是： 外函数调用内函数的过程
       * 首先，fn应作为aaa的参数
       * 最后，aaa方法 调用了 fn方法
       * */
@@ -170,6 +228,15 @@
     },
 
     methods: {
+      //文本框，整数数字，最多两位
+      number(){　　
+　　　   this.famount=this.famount.replace(/[^\.\d]/g,'');
+        this.famount=this.famount.replace('.','');
+　　  },
+      //文本框，仅数字和小数点，自动保留一位小数，整数部分最多5位
+      limitNum(){
+        this.num = this.num.replace(/[^\d.]/g,'');
+      },
       getUser(){
         console.log(this.$refs.username.value)
       }

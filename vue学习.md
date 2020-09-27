@@ -1,4 +1,4 @@
-mapState是state的语法糖,
+﻿mapState是state的语法糖,
 
 用法：
 <template>
@@ -180,7 +180,6 @@ this.sub_classList = this.sub_classList.reduce((preVal, curVal) => {    //数组
 }, []);
 
 
-
 按照id的大小排序
 {
 	result:[
@@ -199,9 +198,6 @@ result.sort(sortId);
 console.log(result); 
 
 
-
-
-----------------------------------
 
 vue双向绑定的原理    用v-model就可以实现
 
@@ -239,9 +235,6 @@ console.log(a)		// {a:2}
 
 因此绝大多数框架在这方面做了处理。
 而react在这方面的处理，就是直接规定了(对组件而言，它的)props是只读的，而不是可更改的；
-
-
-
 
 
 
