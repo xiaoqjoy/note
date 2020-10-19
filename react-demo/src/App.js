@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Todo from "./components/todo";
+import Test from "./components/test";
+
+import store from './store';
+
+
 
 function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+  return user.firstName + " " + user.lastName;
 }
 
 const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
+  firstName: "Harper",
+  lastName: "Perez",
 };
 
 const element = (
@@ -19,12 +25,13 @@ const element = (
 );
 
 const aElement = React.createElement(
-  'h1',
-  { className: 'greeting' },
-  'Hello, world!'
+  "h1",
+  { className: "greeting" },
+  "Hello, world!"
 );
 
-function Welcome(props) {                      //组件名称必须以大写字母开头
+function Welcome(props) {
+  //组件名称必须以大写字母开头
   return <h1>Hello, {props.name}</h1>;
 }
 
@@ -34,17 +41,21 @@ function formatDate(date) {
 
 function Avatar(props) {
   return (
-    <img className="Avatar" title={props.user.name} src={props.user.avatarUrl} alt={props.user.name} />
+    <img
+      className="Avatar"
+      title={props.user.name}
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    />
   );
 }
 
-function UserInfo(props) {    //提取组件
+function UserInfo(props) {
+  //提取组件
   return (
     <div className="UserInfo">
       <Avatar user={props.user} />
-      <div className="UserInfo-name">
-        {props.user.name}
-      </div>
+      <div className="UserInfo-name">{props.user.name}</div>
     </div>
   );
 }
@@ -57,23 +68,19 @@ function Comment(props) {
                 <div className="UserInfo-name">{props.author.name}</div>
             </div>*/}
       <UserInfo user={props.author} />
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
+      <div className="Comment-text">{props.text}</div>
+      <div className="Comment-date">{formatDate(props.date)}</div>
     </div>
   );
 }
 
 const comment = {
   date: new Date(),
-  text: 'I hope you enjoy learning React!',
+  text: "I hope you enjoy learning React!",
   author: {
-    name: 'Hello Kitty',
-    avatarUrl: 'http://placekitten.com/g/64/64'
-  }
+    name: "Hello Kitty",
+    avatarUrl: "http://placekitten.com/g/64/64",
+  },
 };
 
 class Clock extends React.Component {
@@ -83,10 +90,7 @@ class Clock extends React.Component {
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
@@ -95,7 +99,7 @@ class Clock extends React.Component {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date(),
     });
   }
 
@@ -139,16 +143,15 @@ function handleClick(e) {
   let p = new Person()*/
 
   function Person() {
-    this.name = 'little bear';
+    this.name = "little bear";
     this.age = 18;
-    console.log('我叫' + this.name + '我今年' + this.age + '岁')
+    console.log("我叫" + this.name + "我今年" + this.age + "岁");
     /*setInterval(() => {
         console.log('我叫' + this.name + '我今年' + this.age + '岁')
     },1000)*/
   }
-  let p = new Person()
+  let p = new Person();
   return p;
-
 }
 
 class Toggle extends React.Component {
@@ -161,8 +164,8 @@ class Toggle extends React.Component {
   }
 
   handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
+    this.setState((prevState) => ({
+      isToggleOn: !prevState.isToggleOn,
     }));
   }
 
@@ -170,7 +173,7 @@ class Toggle extends React.Component {
     return (
       <div>
         <button onClick={this.handleClick}>
-          {this.state.isToggleOn ? 'ON' : 'OFF'}
+          {this.state.isToggleOn ? "ON" : "OFF"}
         </button>
         <p>22222222222222222222222</p>
       </div>
@@ -197,28 +200,30 @@ class ShoppingList extends React.Component {
 }
 
 let pic = {
-  url: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+  url:
+    "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg",
 };
 
 class UserComponent extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      value: '6666666'
-    }
+      value: "6666666",
+    };
   }
-  getUser(){
-    console.log("neo")
+  getUser() {
+    console.log("neo");
   }
-  renderData(){
-    return <span>iiiiiiiiiiiiiiiiiiiiii</span>
+  renderData() {
+    return <span>iiiiiiiiiiiiiiiiiiiiii</span>;
   }
-  render(){
+  render() {
     return (
       <div className="user">
-        neo<img src={pic.url} title="香蕉" alt="user" />
+        neo
+        <img src={pic.url} title="香蕉" alt="user" />
         <input type="button" value="点击" onClick={this.getUser} />
-        <button onClick={() => console.log('button')}>1111click</button>
+        <button onClick={() => console.log("button")}>1111click</button>
         <p>{this.state.value}</p>
         <p>{this.renderData()}</p>
       </div>
@@ -227,7 +232,58 @@ class UserComponent extends React.Component {
 }
 
 
-class App extends Component {    //App组件类
+
+
+class App extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+          childrenMsg: '',
+          testMsg: '',
+          info: 'iiiiiiiiiiiiiiii',
+
+          inputValue: '',
+          list: [],
+          showMsg: false
+      }
+
+      this.state = store.getState;
+  }
+
+  getChildrenMsg = (result, msg) => {
+    this.setState({
+      childrenMsg: msg
+    })
+  }
+
+
+  //父组件在调用子组件时，通过ref属性，拿到整个子组件<Test ref='test'>
+  getTest = () => {
+    console.log(this.refs['test'])
+    this.setState({
+      testMsg: this.refs['test'].state.msg   
+    })
+  }
+
+
+
+  // 动态监听输入变化inputValue值
+  handleInput(e) {
+    // let inputValue = e.target.value; // 获取input值
+    // this.setState({
+    //   inputValue // 键值对相同时 可简写
+    // });
+    console.log(e)
+    console.log(store)
+    const action = {
+      type: 'change_input_value',
+      value: e.target.value
+    }
+    store.dispatch(action); // 解析action
+  }
+
+
+  //App组件类
   render() {
     return (
       <div className="App">
@@ -246,11 +302,29 @@ class App extends Component {    //App组件类
         <Clock />
         <Toggle />
         <ShoppingList></ShoppingList>
-        <a href="" className="click" onClick={handleClick}>click222222333333</a>
+        <a href="" className="click" onClick={handleClick}>
+          click222222333333
+        </a>
         <Welcome name="Sara" />
         <Welcome name="Cahal" />
         <Welcome name="Edite" />
-        <Comment date={comment.date} text={comment.text} author={comment.author} />
+        <Comment
+          date={comment.date}
+          text={comment.text}
+          author={comment.author}
+        />
+        <Todo msg={ this }/>
+        { this.state.childrenMsg }
+
+        <Test ref="test" info={ this.state.info }/>
+        <button onClick={ this.getTest }>btn</button>
+        { this.state.testMsg }
+
+
+        <input type="text" value={this.state.inputValue} onChange={this.handleInput}/>
+
+
+
       </div>
     );
   }
