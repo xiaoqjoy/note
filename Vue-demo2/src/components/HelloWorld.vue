@@ -63,7 +63,7 @@ export default {
   methods: {
     clikeMe: function(){
       console.log(this.a)
-      this.$emit('listen-child',this.a)
+      this.$emit('listen-child', this.a)
     }
   },
   components: {

@@ -15,6 +15,7 @@
     name: "index",
     created(){
       console.log(this.$store.state.count)
+      this.test();
     },
     mounted(){
       console.log(this.$store.state.name);    //调用vuex里面的状态值需要在mounted里执行
@@ -23,6 +24,21 @@
       //this.$store.dispatch('incrementAsync')
     },
     methods:{
+      test(){
+        this.query().then(res => {      //这里的res就是2，resolve传过来的
+          console.log(res)
+        })
+      },
+
+      query(){
+        return new Promise(function(resolve, reject){
+          if(1){
+            resolve(2)
+          }else{
+            reject(3)
+          }
+        })
+      }
     }
   }
 </script>
