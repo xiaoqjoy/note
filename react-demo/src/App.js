@@ -6,7 +6,13 @@ import Test from "./components/test";
 
 import store from './store';
 
+import { BrowserRouter as Router,Route} from 'react-router-dom';
 
+import home from './home';
+import Page1 from './components/page1';
+import Page2 from './components/page2';
+
+import Page from './components/page';
 
 function formatName(user) {
   return user.firstName + " " + user.lastName;
@@ -231,9 +237,6 @@ class UserComponent extends React.Component {
   }
 }
 
-
-
-
 class App extends Component {
   constructor(props){
       super(props);
@@ -241,7 +244,6 @@ class App extends Component {
           childrenMsg: '',
           testMsg: '',
           info: 'iiiiiiiiiiiiiiii',
-
           inputValue: '',
           list: [],
           showMsg: false
@@ -265,8 +267,6 @@ class App extends Component {
     })
   }
 
-
-
   // 动态监听输入变化inputValue值
   handleInput(e) {
     // let inputValue = e.target.value; // 获取input值
@@ -282,9 +282,17 @@ class App extends Component {
     store.dispatch(action); // 解析action
   }
 
+  goRouter = (res) => {
+    console.log(res)
+  }
+
 
   //App组件类
   render() {
+
+    let a = "55555";
+    let str=`Hello! ${a} hhhhhhhhhhhhhhhhhhhhhhh`;             //模板字符串的用法
+
     return (
       <div className="App">
         <UserComponent></UserComponent>
@@ -320,10 +328,26 @@ class App extends Component {
         <button onClick={ this.getTest }>btn</button>
         { this.state.testMsg }
 
-
         <input type="text" value={this.state.inputValue} onChange={this.handleInput}/>
 
+        <div>222222222222222222{a} {str} </div>
 
+
+        <h1 onClick={ this.goRouter }>go to else router</h1>
+
+
+
+        <Router>
+          <div>
+            <Route exact path="/" component={home} />
+            <Route path="/page1" component={Page1} />
+            <Route path="/page2" component={Page2} />
+
+            <Route path="/page" component={Page} />
+          </div>
+        </Router>
+
+        
 
       </div>
     );
