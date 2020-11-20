@@ -227,7 +227,7 @@ var clear = setInterval(time, 1000)
 
 -------------------------------------------------------
 
-
+回调函数的使用场景： 函数里面还需要再执行一层函数，有先后顺序
 
 function c(callback){
 	console.log(6666)
@@ -299,22 +299,38 @@ https://www.cnblogs.com/wangtong111/p/11307231.html
 
 异步promise的用法示例：
 
-test(){
-        this.query().then(res => {      //这里的res就是2，resolve传过来的
-          alert(res)
-        })
-      },
+function test(){
+	this.query().then(res => {    //这里的res就是2，resolve传过来的 
+	  alert(res)			
+	}).then(function(){           //用链式调用的方式执行回调函数 then方法可以接受两个回调
+	  console.log(res)
+	}).then(res => {
+	  alert(res)
+	},function(reason,res){     //针对reject失败的回调处理
+	  console.log(reason)    //fail
+	}).catch(function(reason,res){
+	  console.log(reason)    //把错误原因传到了reason参数中
+	})
+},
 
-      query(){
-        return new Promise(function(resolve, reject){
-          if(1){
-            resolve(2)
-          }else{
-            reject(3)
-          }
-        })
-      }
+function query(){     //返回一个Promise对象，在原型链上then、catch方法
+	return new Promise(function(resolve, reject){
+	  var num = Math.ceil(Math.random()*20);
+	  if(num <= 10){
+		resolve(num)
+	  }else{
+		reject('fail')
+	  }
+	})
+}
 
+	  
+Promise对象代表一个异步操作，
+  
+有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）
+	
+	
+	
 -------------------------------------------
 
 
