@@ -1,5 +1,7 @@
 import React from "react";
 
+import Page from "./page.js";   //这里引入了一个孙组件
+
 class Todo extends React.Component {
     constructor(props){
         super(props);
@@ -17,9 +19,15 @@ class Todo extends React.Component {
 
     render(){
         return (
-            <div onClick={ this.toParent }>1111111111</div>
+            <div>
+                <div onClick={ this.toParent }>1111111111</div>
+                -------------------------------------------------------++++++++++++++++
+                <Page />
+            </div>
+            
         )
     }
 }
+
 
 export default Todo;

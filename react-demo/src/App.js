@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import PropTypes from 'prop-types';    //react的类型检查PropTypes自React v15.5起已弃用，请使用prop-types
+
 import logo from "./logo.svg";
 import "./App.css";
 import Todo from "./components/todo";
@@ -246,7 +249,8 @@ class App extends Component {
           info: 'iiiiiiiiiiiiiiii',
           inputValue: '',
           list: [],
-          showMsg: false
+          showMsg: false,
+          test: ''
       }
 
       this.state = store.getState;
@@ -256,6 +260,10 @@ class App extends Component {
     this.setState({
       childrenMsg: msg
     })
+  }
+
+  getChildContext() {
+    return { test: "hello" };
   }
 
 
@@ -353,6 +361,10 @@ class App extends Component {
     );
   }
 }
+
+App.childContextTypes = {      // 多层级传值
+  test: PropTypes.string
+};
 
 export default App;
 
