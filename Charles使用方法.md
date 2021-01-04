@@ -4,3 +4,7 @@
 
 
 ignore 是 忽略相同次url的请求
+
+来源网址：
+
+Referer   查看页面地址
