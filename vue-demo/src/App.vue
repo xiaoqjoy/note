@@ -209,13 +209,6 @@
 
       console.log(newArr)
 
-
-
-
-
-
-
-
     },
     watch: {
       // '$route'(to,from){
