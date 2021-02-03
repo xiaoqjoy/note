@@ -6,9 +6,9 @@
       <div class="right"></div>
     </div>
 
-    <h1>222222222222</h1>
+    <h1>22211111222222222</h1>
 
-
+    <editor-bar v-model="detail" :isClear="isClear" @change="change"></editor-bar>
 
     <img src="./assets/logo.png">
     <router-link to="/hello">Go to hello</router-link>
@@ -83,6 +83,9 @@
   import Vuex from "vuex";
   import test from "./home/test";
 
+  import EditorBar from './wangEnduit'
+
+
   Vue.use(Vuex);        
 
   const store = new Vuex.Store({
@@ -112,8 +115,6 @@
     }
   })
  // store.commit('increment')
-  console.log(222222222222222222)
-  console.log(store.state.count)
 
   export default {
     name: 'App',
@@ -124,10 +125,16 @@
         name: 'kkkkkkkkk',
         age: '4444444444444',
         famount: '',
-        tableData: []
+        tableData: [],
+        isClear: false,
+        detail:""
+
       }
     },
     created(){
+
+
+
       var a = { name: 'kkkkk' };
 
       function fn(){
@@ -165,7 +172,6 @@
 
       aaa(fn, '我是回调函数')
 
-
       /*
       * 结论：回调函数就是： 外函数调用内函数的过程
       * 首先，fn应作为aaa的参数
@@ -188,8 +194,6 @@
 
 
       //JS传的是形参，可以传也可以不传，若方法里没有写参数却传入了参数，该如何拿到参数呢，答案就是arguments了
-
-
 
       var a = 10;
       let f = (n) => n + this.a;
@@ -221,6 +225,11 @@
     },
 
     methods: {
+      change(val) {
+
+        console.log(val)
+      
+      },
       //文本框，整数数字，最多两位
       number(){　　
 　　　   this.famount=this.famount.replace(/[^\.\d]/g,'');
@@ -242,7 +251,8 @@
     
     store,
     components: {
-      test
+      test,
+      EditorBar 
     }
   }
 </script>
