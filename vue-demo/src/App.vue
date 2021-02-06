@@ -9,13 +9,15 @@
     <h1>222222222222</h1>
 
 
+    <editor-bar v-model="detail" :isClear="isClear" @change="change"></editor-bar>
+
 
     <img src="./assets/logo.png">
     <router-link to="/hello">Go to hello</router-link>
     <router-link to="/index">Go to index</router-link>
     <router-view></router-view>
     <p>{{ parm }}-----------------APP页面</p>
-    <div>{{ fullName }}</div>
+    <div>{{ fullName }}fullname</div>
 
     <input type="text" v-model="name">
     <test />
@@ -83,6 +85,10 @@
   import Vuex from "vuex";
   import test from "./home/test";
 
+  import EditorBar from './wangEnduit'
+
+
+
   Vue.use(Vuex);        
 
   const store = new Vuex.Store({
@@ -124,7 +130,9 @@
         name: 'kkkkkkkkk',
         age: '4444444444444',
         famount: '',
-        tableData: []
+        tableData: [],
+        isClear: false,
+        detail:""
       }
     },
     created(){
@@ -221,6 +229,9 @@
     },
 
     methods: {
+      change(val) {
+        console.log(val)
+      },
       //文本框，整数数字，最多两位
       number(){　　
 　　　   this.famount=this.famount.replace(/[^\.\d]/g,'');
@@ -242,7 +253,8 @@
     
     store,
     components: {
-      test
+      test,
+      EditorBar 
     }
   }
 </script>
