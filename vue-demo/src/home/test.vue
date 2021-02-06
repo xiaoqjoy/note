@@ -27,7 +27,6 @@
       
       created(){
         console.log(this.$store)
-        console.log('+++++++++++++++++++++++++')
         //setTimeout('console.log(this.$refs.dom)',0)
         this.$nextTick(() => {
           console.log(this.$refs.dom)
@@ -42,7 +41,6 @@
         
       },
       mounted(){
-        console.log('---------------------')
         console.log(this.$refs.dom)
       }
     }
