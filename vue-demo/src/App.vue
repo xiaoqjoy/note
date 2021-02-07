@@ -133,8 +133,6 @@
     },
     created(){
 
-
-
       var a = { name: 'kkkkk' };
 
       function fn(){
