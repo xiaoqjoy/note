@@ -341,6 +341,130 @@ split() 方法用于把一个字符串分割成字符串数组
 "|a|b|c".split("|")	//将返回["", "a", "b", "c"]
 
 
+----------------------------------------------
+
+
+js浅拷贝与深拷贝
+
+
+js浅拷贝    
+
+1、for···in只循环第一层   
+2、Object.assign方法
+3、直接用=赋值
+
+
+
+深拷贝的方法
+
+1、采用递归去拷贝所有层级属性
+2、通过JSON对象来实现深拷贝 缺点： 无法实现对对象中方法的深拷贝，会显示为undefined
+3、通过jQuery的extend方法实现深拷贝
+4、使用扩展运算符实现深拷贝
+
+
+--------------------------------------------------
+
+
+
+多维数组的去重
+
+var temp = []
+function uniq(array){
+  var result = []
+  recursion(array) // 调用递归将多维数组变为一维数组再去重
+  for (var i = 0, len = temp.length;i < len;i ++){
+    for(var j = i + 1; j < len;j ++){
+      if (temp[i] === temp[j]) {
+        i ++
+        j = i
+      }
+    }
+    result.push(temp[i])
+  }
+  return result
+}
+ 
+// 新增递归函数
+function recursion(array){
+  var len = array.length
+  for (var i = 0; i < len ;i ++) {
+    if (typeof array[i] == 'object') { // 如若数组元素类型是object，则递归
+      recursion(array[i])
+    } else {
+      temp.push(array[i]) // 否则添加到temp数组中
+    }
+  }
+}
+var arr = [1,[2,3],[3,2,[1,6,[3,5,'3']]]]
+console.log(uniq(arr))
+
+//[2, 1, 6, 3, 5, "3"]
+
+
+--------------------------------------------------
+
+
+异步任务又可以分为微任务和宏任务
+
+
+微任务一般包括：原生Promise(有些实现的promise将then方法放到了宏任务中)、process.nextTick、Object.observe(已废弃)、 MutationObserver   先
+
+
+宏任务一般包括：整体代码script，setTimeout，setInterval、setImmediate   后
+
+
+
+
+--------------------------------------------------
+
+
+JS查询一个对象的所有属性
+
+var p = '';
+for(var i in obj){
+     p += "属性：" + i + ";"
+ }
+
+
+
+---------------------------------------------------
+
+
+for in总是得到对像的key或数组,字符串的下标,
+
+而for of和forEach一样,是直接得到值 
+
+结果for of不能对象用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

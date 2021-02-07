@@ -15,7 +15,7 @@
     <router-link to="/index">Go to index</router-link>
     <router-view></router-view>
     <p>{{ parm }}-----------------APP页面</p>
-    <div>{{ fullName }}</div>
+    <div>{{ fullName }}fullname</div>
 
     <input type="text" v-model="name">
     <test />
@@ -128,7 +128,6 @@
         tableData: [],
         isClear: false,
         detail:""
-
       }
     },
     created(){
@@ -224,9 +223,7 @@
 
     methods: {
       change(val) {
-
         console.log(val)
-      
       },
       //文本框，整数数字，最多两位
       number(){　　

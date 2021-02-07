@@ -9,6 +9,9 @@
 
 <script>
   import E from 'wangeditor'
+  import DropListMenu from './DropListMenu' 
+
+
   export default {
     name: 'editoritem',
     data() {
@@ -53,12 +56,18 @@
     },
     methods: {
       seteditor() {
-        // http://192.168.2.125:8080/admin/storage/create
 
+        //console.log(E)
+
+
+
+
+        // http://192.168.2.125:8080/admin/storage/create
         this.editor = new E(this.$refs.toolbar, this.$refs.editor)
 
+        this.editor.customConfig = this.editor.customConfig ? this.editor.customConfig : this.editor.config;
 
-        this.editor.customConfig = this.editor.customConfig ? this.editor.customConfig : this.editor.config;   //做兼容
+        console.log(this.editor)
 
 
         this.editor.customConfig.uploadImgShowBase64 = false // base 64 存储图片
@@ -68,6 +77,10 @@
         this.editor.customConfig.uploadImgMaxSize = 2 * 1024 * 1024 // 将图片大小限制为 2M
         this.editor.customConfig.uploadImgMaxLength = 6 // 限制一次最多上传 3 张图片
         this.editor.customConfig.uploadImgTimeout = 3 * 60 * 1000 // 设置超时时间
+
+
+        
+
 
         // 配置菜单
         this.editor.customConfig.menus = [
@@ -93,6 +106,17 @@
           'redo', // 重复
           'fullscreen' // 全屏
         ]
+
+        this.editor.customConfig.onblur = function () {
+            console.log("onblur")
+        }
+
+        this.editor.customConfig.onfocus = function () {
+            console.log("onfocus")
+        }
+
+        this.editor.menus.extend('DropMenu', DropListMenu)  // 配置扩展的菜单
+        this.editor.config.menus = this.editor.config.menus.concat('DropMenu')
 
         this.editor.customConfig.uploadImgHooks = {
           fail: (xhr, editor, result) => {
