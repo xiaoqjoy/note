@@ -59,9 +59,6 @@
 
         //console.log(E)
 
-
-
-
         // http://192.168.2.125:8080/admin/storage/create
         this.editor = new E(this.$refs.toolbar, this.$refs.editor)
 
@@ -77,10 +74,6 @@
         this.editor.customConfig.uploadImgMaxSize = 2 * 1024 * 1024 // 将图片大小限制为 2M
         this.editor.customConfig.uploadImgMaxLength = 6 // 限制一次最多上传 3 张图片
         this.editor.customConfig.uploadImgTimeout = 3 * 60 * 1000 // 设置超时时间
-
-
-        
-
 
         // 配置菜单
         this.editor.customConfig.menus = [

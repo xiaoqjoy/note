@@ -6,8 +6,12 @@
       <div class="right"></div>
     </div>
 
-    <h1>22211111222222222</h1>
+    <h1>Vue 拖拽组件</h1>
+    
+    <draggable @getDraggable="getDraggable" />
 
+
+    <h1>wangEnduit编辑器</h1>
     <editor-bar v-model="detail" :isClear="isClear" @change="change"></editor-bar>
 
     <img src="./assets/logo.png">
@@ -82,6 +86,7 @@
   import Vue from 'vue';
   import Vuex from "vuex";
   import test from "./home/test";
+  import draggable from "./home/draggable";
 
   import EditorBar from './wangEnduit'
 
@@ -225,6 +230,12 @@
       change(val) {
         console.log(val)
       },
+
+      getDraggable(val){
+        console.log(val)
+      },
+
+
       //文本框，整数数字，最多两位
       number(){　　
 　　　   this.famount=this.famount.replace(/[^\.\d]/g,'');
@@ -247,7 +258,8 @@
     store,
     components: {
       test,
-      EditorBar 
+      EditorBar,
+      draggable
     }
   }
 </script>
