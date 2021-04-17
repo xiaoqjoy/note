@@ -95,7 +95,7 @@
 
   const store = new Vuex.Store({
     state: {
-      count: 4,
+      count: '我是vuex-4444444',
       name: '我是vuex',
       age: 56,
       obj: {
@@ -250,7 +250,7 @@
       }
     },
     computed: {
-        fullName (){                //fullName 写法注意   不是定义函数
+      fullName (){                //fullName 写法注意   不是定义函数
         return this.name + this.age
       }
     },

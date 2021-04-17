@@ -10,7 +10,7 @@
 
 <script>
 import vuedraggable from 'vuedraggable';
-
+// http://www.itxst.com/vue-draggable/tutorial.html
 export default {
   name: 'HelloWorld',
   components: {vuedraggable},
