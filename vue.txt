@@ -19,3 +19,5 @@ $refs  this.$refs.comp._data.comp(读取子组件数据)  ref
 
 
 
+
+

@@ -8,10 +8,14 @@
     <p>----------------------------------------------++++++++++++++++++++++++++</p>
     <slot></slot>
 
+    <hello />
+
   </div>
 </template>
 
 <script>
+import hello from "../components/hello";
+
 export default {
   name: "test",
   props: ['parm'],
@@ -43,6 +47,9 @@ export default {
   },
   mounted() {
     console.log(this.$refs.dom)
+  },
+  components: {
+    hello
   }
 }
 </script>
