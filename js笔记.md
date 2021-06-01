@@ -438,7 +438,13 @@ for in总是得到对像的key或数组,字符串的下标,
 结果for of不能对象用
 
 
+-------------------------------------
 
+https://www.lodashjs.com/docs/lodash.find
+
+_.js   
+
+_.filter(users, function(o) { return !o.active; });     //找出所有的数组集合
 
 
 
