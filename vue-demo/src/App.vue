@@ -58,49 +58,50 @@
 
 
 <script>
-import Vue from 'vue';
-import Vuex from "vuex";
+// import Vue from 'vue';
+// import Vuex from "vuex";
 import test from "./home/test";
 import draggable from "./home/draggable";
 
 import EditorBar from './wangEnduit'
 
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
-const store = new Vuex.Store({
-  state: {
-    count: '我是vuex-4444444',
-    name: '我是vuex',
-    age: 56,
-    obj: {
-      a: 1,
-      b: 'abcdefg'
-    }
-  },
-  mutations: {
-    increment(state) {
-      state.count += 196
-    }
-  },
-  actions: {    //支持异步
-    /*increment(context){
-      context.commit('increment');
-    }*/
-    incrementAsync({ commit }) {
-      setTimeout(() => {
-        commit('increment')
-      }, 1000)
-    }
-  }
-})
+// const store = new Vuex.Store({
+//   state: {
+//     count: '我是vuex-4444444',
+//     name: '我是vuex',
+//     age: 56,
+//     obj: {
+//       a: 1,
+//       b: 'abcdefg'
+//     }
+//   },
+//   mutations: {
+//     increment(state) {
+//       state.count += 196
+//     }
+//   },
+//   actions: {    //支持异步
+//     /*increment(context){
+//       context.commit('increment');
+//     }*/
+//     incrementAsync({ commit }) {
+//       setTimeout(() => {
+//         commit('increment')
+//       }, 1000)
+//     }
+//   }
+// })
 // store.commit('increment')
 
 export default {
   name: 'App',
   data() {
     return {
-      parm: this.$store.state.count,
+      //parm: this.$store.state.count,
+      parm: 11,
       slot: '我是插槽变量',
       num: '',
       name: 'kkkkkkkkk',
@@ -231,7 +232,7 @@ export default {
     }
   },
 
-  store,
+  //store,
   components: {
     test,
     EditorBar,

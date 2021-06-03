@@ -7,6 +7,7 @@ import Index from "./home/index";
 import VueRouter from "vue-router";
 import Element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
+import store from "./store/index";
 
 Vue.use(VueRouter);
 
@@ -23,14 +24,17 @@ var router = new VueRouter({
 
 Vue.use(Element);
 
+//store.commit('run')
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   components: { App },
   template: '<App/>',
-  router: router,
-  mouted(){
-    router.push('/index')
+  router,
+  store,
+  mouted() {
+    router.push('/hello')
   }
 })
