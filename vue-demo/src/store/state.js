@@ -5,5 +5,7 @@ export default {
     { name: '李四' },
     { name: '王五' }
   ],
-  userName: ''
+  userName: '',
+  count: '0',
+  total: '1'
 }

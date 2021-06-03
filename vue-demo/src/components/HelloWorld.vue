@@ -6,6 +6,24 @@
 
     <button @click="btn">按钮</button>
 
+    <button @click="SOME_MUTATION">BTN</button>
+    <br/>
+    <br/>
+
+    <button @click="REDUCE">-</button>
+
+    <p>{{ count }}</p>
+
+    <button @click="ADD">+</button>
+
+    <br/>
+
+    <p>合计:<span>{{ total }}</span></p>
+
+    <br/>
+
+    <button @click="addElse">按钮1</button>
+
     <ul>
       <li v-for="(item, index) in listName" :key="index" @click="getName(item.name)">{{item.name}}</li>
     </ul>
@@ -29,7 +47,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
   created() {
     //this.$store.commit('run')
@@ -53,7 +71,7 @@ export default {
     splitData() {
       return this.list.slice(this.startIndex, this.startIndex + this.limitCount)
     },
-    ...mapState(['a', 'listName', 'userName']),
+    ...mapState(['a', 'listName', 'userName', 'count', 'total']),
     ...mapGetters(['setPar'])
   },
   data() {
@@ -63,7 +81,13 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['run', 'setName']),
+    ...mapMutations(['run', 'setName','SOME_MUTATION', 'ADD', 'REDUCE']),
+    ...mapActions(['addFn']),
+    addElse(){
+      this.addFn({
+        a: 2
+      })
+    },
     btn() {
       this.run()
     },
