@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>vue针对滚动元素内部大量元素，但只有部分元素可见，对dom懒渲染，节省内存的优化</p>
+    <p style="color: green">vue针对滚动元素内部大量元素，但只有部分元素可见，对dom懒渲染，节省内存的优化</p>
     <div class="list" style="height: 300px;overflow: scroll" ref="scrollDom" @scroll="scroll">
       <div :style="{height:list.length*40+'px'}"></div>
       <div style="position:absolute;width: 100%" :style="{top:startIndex*40+'px'}">

@@ -31,6 +31,6 @@ new Vue({
   template: '<App/>',
   router: router,
   mouted(){
-    router.push('/hello')
+    router.push('/index')
   }
 })
