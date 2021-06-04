@@ -7,8 +7,8 @@
     <button @click="btn">按钮</button>
 
     <button @click="SOME_MUTATION">BTN</button>
-    <br/>
-    <br/>
+    <br />
+    <br />
 
     <button @click="REDUCE">-</button>
 
@@ -16,11 +16,11 @@
 
     <button @click="ADD">+</button>
 
-    <br/>
+    <br />
 
     <p>合计:<span>{{ total }}</span></p>
 
-    <br/>
+    <br />
 
     <button @click="addElse">按钮1</button>
 
@@ -51,6 +51,7 @@ import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
   created() {
     //this.$store.commit('run')
+    console.log(this.$store)
 
 
     for (let i = 0; i < 10000; i++) {
@@ -62,7 +63,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store)
+    //console.log(this.$store)
   },
   computed: {
     limitCount() {
@@ -81,12 +82,14 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['run', 'setName','SOME_MUTATION', 'ADD', 'REDUCE']),
+    ...mapMutations(['run', 'setName', 'SOME_MUTATION', 'ADD', 'REDUCE']),
     ...mapActions(['addFn']),
-    addElse(){
+    addElse() {
       this.addFn({
         a: 2
       })
+      this.$store.dispatch("getData", { num: 88 });
+      //this.$store.dispatch("addFn", { a: 2 });    //这种执行action方式用的多
     },
     btn() {
       this.run()

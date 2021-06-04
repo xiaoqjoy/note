@@ -10,22 +10,28 @@ export default {
   setName(state, obj) {
     state.userName = obj.name
   },
-  [SOME_MUTATION](){
+  storeData(state, obj) {
+    state.num = obj.num
+  },
+  [SOME_MUTATION]() {
     alert('SOME_MUTATION')
   },
-  [SOME_MUTATION](){
+  [SOME_MUTATION]() {
     alert('SOME_MUTATION')
   },
-  [ADD](state, obj){
+  [ADD](state, obj) {
     console.log(obj.a)
     state.count++
     this.commit('TOTAL')
   },
-  [REDUCE](state){
+  [REDUCE](state) {
     state.count--
     this.commit('TOTAL')
   },
-  [TOTAL](state){
-    state.total = state.count*5
+  [TOTAL](state) {
+    state.total = state.count * 5
+  },
+  triggerInitData(state, obj) {
+    console.log(obj.a)
   },
 }

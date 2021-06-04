@@ -7,5 +7,6 @@ export default {
   ],
   userName: '',
   count: '0',
-  total: '1'
+  total: '1',
+  num: ''
 }
