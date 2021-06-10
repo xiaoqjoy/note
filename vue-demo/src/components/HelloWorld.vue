@@ -52,6 +52,7 @@ export default {
   created() {
     //this.$store.commit('run')
     console.log(this.$store)
+    this.$store.dispatch("getData", { num: 1 });
 
 
     for (let i = 0; i < 10000; i++) {
@@ -60,6 +61,15 @@ export default {
         name: 'name' + i,
         createTime: '2018-09-09'
       })
+    }
+  },
+  watch: {
+    "$store.state.num"(news, olds) {
+      if (news != olds) {
+        if (!news) {    //新赋值的值   这样可以用vuex触发随便哪个组件的事件  只需要在vuex states里存入一个状态值，当状态值改变时即触发事件
+          this.randomFn()
+        }
+      }
     }
   },
   mounted() {
@@ -84,11 +94,15 @@ export default {
   methods: {
     ...mapMutations(['run', 'setName', 'SOME_MUTATION', 'ADD', 'REDUCE']),
     ...mapActions(['addFn']),
+    randomFn() {
+      alert('vuex触发事件')
+    },
     addElse() {
+
       this.addFn({
         a: 2
       })
-      this.$store.dispatch("getData", { num: 88 });
+      this.$store.dispatch("getData", { num: 8888 });
       //this.$store.dispatch("addFn", { a: 2 });    //这种执行action方式用的多
     },
     btn() {

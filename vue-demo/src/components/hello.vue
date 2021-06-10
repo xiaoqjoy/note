@@ -12,6 +12,8 @@
     <button @click="initAllData">initAllData</button>
     <span>{{ $store.state.num }}</span>
 
+    <button @click="emitStore">whw</button>
+
   </div>
 </template>
 
@@ -29,7 +31,6 @@ export default {
   watch: {
     "$store.state.num"(news, olds) {
       if (news != olds) {
-        console.log('222222222222')
       }
     }
   },
@@ -40,6 +41,9 @@ export default {
     initAllData() {
 
       //this.$store.commit('triggerInitData', { a: true })
+    },
+    emitStore() {
+      this.$store.dispatch("getData", { num: false });
     }
   },
   components: {
