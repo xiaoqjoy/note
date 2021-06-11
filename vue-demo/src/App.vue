@@ -17,6 +17,10 @@ export default {
   methods: {
 
   },
+  mounted() {
+    window.document.documentElement.setAttribute('data-theme', 'dark')
+
+  },
 }
 </script>
 
