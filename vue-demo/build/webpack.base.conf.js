@@ -61,7 +61,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /\.sass$/,   //注意package.json sass版本 版本太高会报错
+        loaders: ['style', 'css', 'sass']
+      },
     ]
   },
   node: {

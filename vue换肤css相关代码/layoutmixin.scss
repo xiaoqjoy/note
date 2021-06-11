@@ -1,0 +1,559 @@
+// 主色调
+@mixin bg_m_v {
+  // $dbg_m_v: #F38700; //主色1 黑
+  // $wbg_m_v: #F38700; //主色1 白
+  [data-theme="dark"] & {
+    background-color: $dbg_m_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_m_v;
+  }
+}
+@mixin bg_m_f_v($ap) {
+  $ap: 1 !default;
+  [data-theme="dark"] & {
+    background-color: rgba(243, 135, 0, $ap); //主色2 黑
+  }
+  [data-theme="white"] & {
+    background-color: rgba(243, 135, 0, $ap); //主色2 白
+  }
+}
+// 背景色模块
+@mixin bg_o_v {
+  // $dbg_o_v: #21222E; //背景色模块 背景色 1  黑
+  // $wbg_o_v: #E1EBF0; //背景色模块 背景色 1  白
+  [data-theme="dark"] & {
+    background-color: $dbg_o_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_o_v;
+  }
+}
+@mixin bg_t_v {
+  // $dbg_t_v: #252633; //背景色模块 背景色 2  黑
+  // $wbg_t_v: #FFFFFF; //背景色模块 背景色 2  白
+  [data-theme="dark"] & {
+    background-color: $dbg_t_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_t_v;
+  }
+}
+@mixin bg_th_v {
+  // $dbg_th_v: #292A3A; //背景色模块 背景色 3  黑
+  // $wbg_th_v: #FFFFFF; //背景色模块 背景色 3  白
+  [data-theme="dark"] & {
+    background-color: $dbg_th_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_th_v;
+  }
+}
+// 左侧导航栏
+@mixin l_bg_v {
+  // $dl_bg_v: #1A1B27; //左侧导航 常规头 黑
+  // $wl_bg_v: #262938; //左侧导航 常规头 白
+  [data-theme="dark"] & {
+    background-color: $dl_bg_v !important;
+  }
+  [data-theme="white"] & {
+    background-color: $wl_bg_v !important;
+  }
+}
+@mixin l_bg_ck_v {
+  // $dl_bg_ck_v: #22232F;//左侧导航 选中 黑
+  // $wl_bg_ck_v: #13151D;//左侧导航 选中 白
+  [data-theme="dark"] & {
+    background-color: $dl_bg_ck_v !important;
+  }
+  [data-theme="white"] & {
+    background-color: $wl_bg_ck_v !important;
+  }
+}
+// 顶部标签
+@mixin t_bg_v {
+  // $dt_bg_v: #292a3a;//顶部页签 页签底色 黑
+  // $wt_bg_v: #E8ECF2;//顶部页签 页签底色 白
+  [data-theme="dark"] & {
+    background-color: $dt_bg_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wt_bg_v;
+  }
+}
+@mixin t_lb_v {
+  // $dt_lb_v: #323348;//顶部页签 分割线 黑
+  // $wt_lb_v: #E7EAF0;//顶部页签 分割线 白
+  [data-theme="dark"] & {
+    border-color: $dt_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wt_lb_v;
+  }
+}
+@mixin t_bg_ck_v {
+  // $dt_bg_ck_v: #35374D;//顶部页签 移入 黑
+  // $wt_bg_ck_v: #F5F6F9;//顶部页签 移入 白
+  [data-theme="dark"] & {
+    background-color: $dt_bg_ck_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wt_bg_ck_v;
+  }
+}
+// 表格一
+@mixin to_h_v {
+  // $dto_h_v: #363644; //表格1 表头 黑
+  // $wto_h_v: #F5F7F8 ; //表格1 表头 白
+  [data-theme="dark"] & {
+    background-color: $dto_h_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wto_h_v;
+  }
+}
+@mixin to_ll_v {
+  // $dto_ll_v: #393A49;//表格1 移入行 黑
+  // $wto_ll_v: #FEF6EB;//表格1 移入行 白
+  [data-theme="dark"] & {
+    background-color: $dto_ll_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wto_ll_v;
+  }
+}
+@mixin to_lb_v {
+  // $dto_lb_v: #37384D;//表格1 表格线 黑
+  // $wto_lb_v: #EDF1F5;//表格1 表格线 白
+  [data-theme="dark"] & {
+    border-color: $dto_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wto_lb_v;
+  }
+}
+// 表格2
+@mixin tt_h_v {
+  // $dtt_h_v: #2C2D3D; //表格2 表头 黑
+  // $wtt_h_v: #F5F7F8; //表格2 表头 白
+  [data-theme="dark"] & {
+    background-color: $dtt_h_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wtt_h_v;
+  }
+}
+@mixin tt_ll_v {
+  // $dtt_ll_v: #363743;//表格2 移入行 黑
+  // $wtt_ll_v: #FEF6EB;//表格2 移入行 白
+  [data-theme="dark"] & {
+    background-color: $dtt_ll_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wtt_ll_v;
+  }
+}
+@mixin tt_lb_v {
+  // $dtt_lb_v: #2D2E3F;//表格2 表格线 黑
+  // $wtt_lb_v: #EDF1F5;//表格2 表格线 白  
+  [data-theme="dark"] & {
+    border-color: $dtt_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wtt_lb_v;
+  }
+}
+@mixin tt_lbbg_v {
+  // $dtt_lb_v: #2D2E3F;//表格2 表格线 黑
+  // $wtt_lb_v: #EDF1F5;//表格2 表格线 白  
+  [data-theme="dark"] & {
+    background-color: $dtt_lb_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wtt_lb_v;
+  }
+}
+// 全局其他色 模块分割线
+@mixin lb_s_v {
+  // $dlb_s_v: #37384D; //分割线 黑
+  // $wlb_s_v: #E6EAEE;//分割线 白
+  [data-theme="dark"] & {
+    background-color: $dlb_s_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wlb_s_v;
+  }
+}
+@mixin l_lb_s_v {
+  // $dlb_s_v: #37384D; //分割线 黑
+  // $wlb_s_v: #E6EAEE;//分割线 白
+  [data-theme="dark"] & {
+    border-color: $dlb_s_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wlb_s_v;
+  }
+}
+
+@mixin ip_lb_v {
+  // $dip_lb_v: #37384d;//边框线 黑
+  // $wip_lb_v: #DDDDDD;//边框线 白
+  [data-theme="dark"] & {
+    border-color: $dip_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wip_lb_v;
+  }
+}
+@mixin mar_lb_v {
+  // $dmar_lb_v: #1D1E28;//行情边框分割线  黑
+  // $wmar_lb_v: #E1EBF0;//行情边框分割线  白
+  [data-theme="dark"] & {
+    border-color: $dmar_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wmar_lb_v;
+  }
+}
+@mixin cb_lb_v {
+  // $dcb_lb_v: #585966;//复选 单选 边框 黑
+  // $wcb_lb_v: #ABACB1;//复选 单选 边框 白
+  [data-theme="dark"] & {
+    border-color: $dcb_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wcb_lb_v;
+  }
+}
+@mixin cb_bg_v {
+  // $dcb_lb_v: #585966;//复选 单选 背景 黑
+  // $wcb_lb_v: #ABACB1;//复选 单选 背景 白
+  [data-theme="dark"] & {
+    background-color: $dcb_lb_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wcb_lb_v;
+  }
+}
+@mixin bderr_lb_v {
+  // $derr_lb_v: #FF4833;//报错颜色 黑
+  // $werr_lb_v: #FF4833;//报错颜色 白
+  [data-theme="dark"] & {
+    border-color: $derr_lb_v;
+  }
+  [data-theme="white"] & {
+    border-color: $werr_lb_v;
+  }
+}
+@mixin bg_dia_v {
+  // $dbg_dia_v: #2F303C; //弹窗select 黑
+  // $wbg_dia_v: #FFFFFF; //弹窗select 白
+  [data-theme="dark"] & {
+    background-color: $dbg_dia_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_dia_v;
+  }
+}
+@mixin bg_dia_ck_v {
+  // $dbg_dia_ck_v: #292A36; //弹窗select 选中 黑
+  // $wbg_dia_ck_v: #F2F5F8; //弹窗select 选中 白
+  [data-theme="dark"] & {
+    background-color: $dbg_dia_ck_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_dia_ck_v;
+  }
+}
+@mixin bg_dia_ll_v {
+  // $dbg_dia_ll_v: #414353; //弹窗select 移入 黑
+  // $wbg_dia_ll_v: #FEF6EB; //弹窗select 移入 白
+  [data-theme="dark"] & {
+    background-color: $dbg_dia_ll_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_dia_ll_v;
+  }
+}
+
+@mixin bg_fl_v {
+  // $dbg_fl_v: #414353; //内容浮窗 黑
+  // $wbg_fl_v: #FFFFFF; //内容浮窗 白
+  [data-theme="dark"] & {
+    background-color: $dbg_fl_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_fl_v;
+  }
+}
+@mixin lb_fl_v {
+  // $dbg_fl_v: #414353; //内容浮窗 黑
+  // $wbg_fl_v: #FFFFFF; //内容浮窗 白
+  [data-theme="dark"] & {
+    border-color: $dbg_fl_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wbg_fl_v;
+  }
+}
+@mixin bg_char_v {
+  // $dbg_char_v: rgba(65, 67, 83, 0.9); //图表浮窗 黑
+  // $wbg_char_v: rgba(255, 255, 255, 0.9); //图表浮窗 白
+  [data-theme="dark"] & {
+    background-color: $dbg_char_v;
+  }
+  [data-theme="white"] & {
+    background-color: $wbg_char_v;
+  }
+}
+
+@mixin in_bg_d_v {
+  // $din_bg_d_v: #333445;// input 禁用背景色 黑
+  // $win_bg_d_v: #F5F7FA;// input 禁用背景色 白
+  [data-theme="dark"] & {
+    background-color: $din_bg_d_v;
+  }
+  [data-theme="white"] & {
+    background-color: $win_bg_d_v;
+  }
+}
+
+@mixin bg_g_v {
+  // $dfc_g_v:#3EA982;//涨跌 绿色 黑
+  // $wfc_g_v:#2ABE4D;//涨跌 绿色 白
+  [data-theme="dark"] & {
+    background: $dfc_g_v;
+  }
+  [data-theme="white"] & {
+    background: $wfc_g_v;
+  }
+}
+@mixin bg_r_v {
+  // $dfc_r_v:#EA4B56;//涨跌 红色 黑
+  // $wfc_r_v:#EF4551;//涨跌 红色 白
+  [data-theme="dark"] & {
+    background: $dfc_r_v;
+  }
+  [data-theme="white"] & {
+    background: $wfc_r_v;
+  }
+}
+// 阴影
+@mixin bs_fl_v($kyes) {
+  // $dbs_v: rgba(0, 0, 0, 0.5); //阴影颜色 黑
+  // $wbs_v: rgba(124, 138, 160, 0.5); //阴影颜色 白
+  [data-theme="dark"] & {
+    box-shadow: $kyes $dbs_v;
+  }
+  [data-theme="white"] & {
+    box-shadow: $kyes $wbs_v;
+  }
+}
+
+@mixin lb_fl_all_v {
+  // $dlb_fl_v: #3B3D4E; //内容浮窗边框 黑
+  // $wlb_fl_v: #D5DBE1; //内容浮窗边框 白
+  [data-theme="dark"] & {
+    border-color: $dlb_fl_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wlb_fl_v;
+  }
+}
+@mixin to_m_lb_v {
+  // $dfc_m_v:#F38700;//主题色边框 黑
+  // $wfc_m_v:#F38700;//主题色边框 白
+  [data-theme="dark"] & {
+    border-color: $dfc_m_v;
+  }
+  [data-theme="white"] & {
+    border-color: $wfc_m_v;
+  }
+}
+@mixin fc_fff_v {
+  // $dfc_fff_v: #FFF;//纯色字体 黑
+  // $wfc_fff_v: #FFF;//纯色字体 白
+  [data-theme="dark"] & {
+    color: $dfc_fff_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_fff_v;
+  }
+}
+@mixin fc_m_v {
+  // $dfc_m_v:#F38700;//tab选中色，主题色 黑
+  // $wfc_m_v:#F38700;//tab选中色，主题色 白
+  [data-theme="dark"] & {
+    color: $dfc_m_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_m_v;
+  }
+}
+@mixin fc_h_v {
+  // $dfc_h_v:#E9EAF4;//标题颜色 黑
+  // $wfc_h_v:#333333;//标题颜色 白
+  [data-theme="dark"] & {
+    color: $dfc_h_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_h_v;
+  }
+}
+@mixin fc_ch_h_v {
+  // $dfc_h_v:#E9EAF4;//标题颜色 黑
+  // $wfc_fff_v: #FFF;//纯色字体 白
+  [data-theme="dark"] & {
+    color: $dfc_h_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_fff_v;
+  }
+}
+@mixin fc_c_v {
+  // $dfc_c_v:#ABACB7;//内容文字颜色 黑
+  // $wfc_c_v:#666666;//内容文字颜色 白
+  [data-theme="dark"] & {
+    color: $dfc_c_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_c_v;
+  }
+}
+@mixin fc_a_v {
+  // $dfc_a_v:#82828F;//辅助文字颜色 黑
+  // $wfc_a_v:#999999;//辅助文字颜色 白
+  [data-theme="dark"] & {
+    color: $dfc_a_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_a_v;
+  }
+}
+@mixin fc_d_v {
+  $dfc_d_v: #585966; //disable文字颜色 黑
+  $wfc_d_v: #cccccc; //disable文字颜色 白
+  [data-theme="dark"] & {
+    color: $dfc_d_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_d_v;
+  }
+}
+@mixin fc_g_v {
+  // $dfc_g_v:#3EA982;//涨跌 绿色 黑
+  // $wfc_g_v:#2ABE4D;//涨跌 绿色 白
+  [data-theme="dark"] & {
+    color: $dfc_g_v !important;
+  }
+  [data-theme="white"] & {
+    color: $wfc_g_v !important;
+  }
+}
+@mixin fc_r_v {
+  // $dfc_r_v:#EA4B56;//涨跌 红色 黑
+  // $wfc_r_v:#EF4551;//涨跌 红色 白
+  [data-theme="dark"] & {
+    color: $dfc_r_v !important;
+  }
+  [data-theme="white"] & {
+    color: $wfc_r_v !important;
+  }
+}
+@mixin fc_l_v {
+  // $dfc_l_v:#6C96F5;//链接颜色  黑
+  // $wfc_l_v:#3E53A0;//链接颜色  白
+  [data-theme="dark"] & {
+    color: $dfc_l_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_l_v;
+  }
+}
+@mixin fc_l_ck_v {
+  // $dfc_l_ck_v:#486CE5;//链接颜色 移入色  黑
+  // $wfc_l_ck_v:#3662F2;//链接颜色 移入色  白
+  [data-theme="dark"] & {
+    color: $dfc_l_ck_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_l_ck_v;
+  }
+}
+
+@mixin fc_i_i_v {
+  // $dfc_i_i_v:#ABACB7;//一般icon  黑
+  // $wfc_i_i_v:#888899;//一般icon  白
+  [data-theme="dark"] & {
+    color: $dfc_i_i_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_i_i_v;
+  }
+}
+@mixin fc_i_c_v {
+  // $dfc_i_c_v:#585966;//组件icon  黑
+  // $wfc_i_c_v:#ABACB1;//组件icon  白
+  [data-theme="dark"] & {
+    color: $dfc_i_c_v;
+  }
+  [data-theme="white"] & {
+    color: $wfc_i_c_v;
+  }
+}
+@mixin fcerr_v {
+  // $derr_lb_v: #FF4833;//报错颜色 黑
+  // $werr_lb_v: #FF4833;//报错颜色 白
+  [data-theme="dark"] & {
+    color: $derr_lb_v;
+  }
+  [data-theme="white"] & {
+    color: $werr_lb_v;
+  }
+}
+// 字体大小
+@mixin fz10_v {
+  font-size: 10px;
+}
+@mixin fz12_v {
+  font-size: 12px;
+}
+@mixin fz13_v {
+  font-size: 13px;
+}
+@mixin fz14_v {
+  font-size: 14px;
+}
+@mixin fz16_v {
+  font-size: 16px;
+}
+@mixin fz15_v {
+  font-size: 15px;
+}
+@mixin fz17_v {
+  font-size: 17px;
+}
+@mixin fz18_v {
+  font-size: 18px;
+}
+@mixin fz19_v {
+  font-size: 19px;
+}
+@mixin fz20_v {
+  font-size: 20px;
+}
+@mixin fz21_v {
+  font-size: 21px;
+}
+@mixin fz22_v {
+  font-size: 22px;
+}
+@mixin fz23_v {
+  font-size: 23px;
+}
+@mixin fz24_v {
+  font-size: 24px;
+}
+@mixin fz26_v {
+  font-size: 26px;
+}

@@ -18,7 +18,9 @@ export default {
 
   },
   mounted() {
-    window.document.documentElement.setAttribute('data-theme', 'dark')
+    //window.document.documentElement.setAttribute('data-theme', 'dark')
+
+    window.document.documentElement.setAttribute('data-theme', 'white')
 
   },
 }

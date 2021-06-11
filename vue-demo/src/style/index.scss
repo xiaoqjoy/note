@@ -1,0 +1,10 @@
+@mixin cb_bg_v {
+  // $dcb_lb_v: #585966;//复选 单选 背景 黑
+  // $wcb_lb_v: #ABACB1;//复选 单选 背景 白
+  [data-theme="dark"] & {
+    background-color: black;
+  }
+  [data-theme="white"] & {
+    background-color: green;
+  }
+}

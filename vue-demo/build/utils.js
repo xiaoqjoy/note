@@ -30,7 +30,7 @@ exports.cssLoaders = function (options) {
   }
 
   // generate loader string to be used with extract text plugin
-  function generateLoaders (loader, loaderOptions) {
+  function generateLoaders(loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
 
     if (loader) {
@@ -60,7 +60,16 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    scss: generateLoaders('sass').concat(    //在vue项目中全局引入一个 .scss文件  首先要下载 ： npm install sass - resources - loader--save - dev  https://segmentfault.com/a/1190000015228321
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          // 需要全局引入的sass文件，这里引入了的scss文件，在所有的.vue文件都可以用到这份css样式，
+          // 下面的resources接受一个数组，可以添加多个scss文件
+          resources: [path.resolve(__dirname, '../src/style/index.scss')]
+        }
+      }
+    ),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }

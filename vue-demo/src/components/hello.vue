@@ -29,6 +29,7 @@
 <script>
 import HelloWorld from "@/components/HelloWorld";
 import test from "@/components/test";
+
 export default {
   name: "hello",
   data() {
@@ -52,6 +53,7 @@ export default {
       //this.$store.commit('triggerInitData', { a: true })
     },
     emitStore() {
+      window.document.documentElement.setAttribute('data-theme', 'dark')
       this.$store.dispatch("getData", { num: false });
     }
   },
@@ -62,13 +64,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .box {
   height: 30px;
   width: calc(100% - 100px);
   /* calc 混合计算绝对单位（比如百分比与视口单元）与相对单位（比如像素） */
   border: 1px solid red;
   height: calc(100vh - 200px);
+  @include cb_bg_v;
   /* 100vh视口的高度 */
 }
 .foo {
